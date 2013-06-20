@@ -1,0 +1,25 @@
+div(role="navigation").col-xs-12.col-sm-3.sidebar-offcanvas
+	- if (page.metadata.title == "Frequently Asked Questions")
+		a(href="/faq.html").faqbtn.list-group-item.active.active-url Frequently Asked Questions
+	- else
+		a(href="/faq.html").faqbtn.list-group-item Frequently Asked Questions
+	- each val, key in locals.menu
+		- if (contents[key] && _.isString(val))
+			div.list-group
+				h4.list-group-item.menu-header #{val}
+				- each item in _.sortBy(contents[key], function(v){ return v.metadata.position})
+					- if (page.metadata.title == item.title)
+						a(href=item.url).list-group-item.active.active-url #{item.title}
+					- else
+						a(href=item.url).list-group-item #{item.title}
+		- else if (contents[key] && _.isObject(val))
+			div.list-group
+				h4.list-group-item.menu-header #{val.name}
+				- each v, k in val.items
+					h5.list-group-item.sub-menu-header #{v}
+					- each sub_item_v, sub_item_k in _.sortBy(contents[key][k], function(v){ return v.metadata.position })
+						- if (page.metadata.title == sub_item_v.title)
+							a(href=sub_item_v.url).list-group-item.active.active-url #{sub_item_v.title}
+						- else
+							a(href=sub_item_v.url).list-group-item #{sub_item_v.title}
+

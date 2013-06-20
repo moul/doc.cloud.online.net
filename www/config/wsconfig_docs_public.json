@@ -1,0 +1,27 @@
+{
+	"contents": "../documentation/docs_public/contents",
+	"templates": "../documentation/templates",
+	"output": "../dist/docs_public",
+
+	"baseUrl": "/",
+
+	"ignore": ["**/.*.swo", "**/.*.swp", "**/.DS_Store"],
+
+	"port": 8080,
+
+	"locals": {
+		"title": "labs.online.net documentation",
+		"author": "labs.online.net",
+		"menu" : {
+			"faq": "FAQ",
+			"account": "Account managment",
+			"howto": "Getting started",
+			"network": "Network",
+			"advanced": "Advanced topics"
+		}
+	},
+
+	"require": {
+		"_": "underscore"
+	}
+}
