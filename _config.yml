@@ -1,2 +1,24 @@
-name: Your New Jekyll Site
+name: Ocs Documentation
 pygments: true
+permalink: none
+menu:
+  api_reference:
+    - test
+    - test2
+  guide:
+    - test3
+locales:
+  fr:
+    api_reference: API REF FR
+    guide: GUIDE FR
+  en:
+    api_reference: REF en
+    guide: guide en
+
+languages:
+  - en:
+    url: /en
+    name: English
+  - fr:
+    url: /fr
+    name: Francais

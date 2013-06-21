@@ -1,9 +1,11 @@
-To run jekyll server:
+#Documentation
+
+##To run jekyll server:
 `jekyll server --watch`
 
-TODO:
+##TODO:
 - multi languages
 - multi API version
-- dynamic search
+- dynamic search (indextank ?)
 - Guides
 - API Reference

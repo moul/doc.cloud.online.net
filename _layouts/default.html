@@ -18,8 +18,25 @@
         <div class="container">
           <div class="site">
             <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">home</a>
+              <h1 class="title"><a href="/{{page.lang}}">{{ site.name }}</a></h1>
+              <a class="extra" href="/{{page.lang}}">home</a>
+            </div>
+            <div class="menu">
+              {% for menu in site.menu %}
+                {% assign m = menu[0] %}
+                {{ site.locales[page.lang][m] }}
+                {% for pa in menu[1] %}
+                  {% capture url %}/{{page.lang}}/{{menu[0]}}/{{pa}}.html{% endcapture %}
+
+                  {% for p in site.pages %}
+                    {% if p.lang == page.lang %}
+                      {% if p.url == url %}
+                      <li><a href="{{p.url}}">{{p.title}}</a></li>
+                      {% endif %}
+                    {% endif %}
+                  {% endfor %}
+                {% endfor %}
+              {% endfor %}
             </div>
 
                 {{ content }}
@@ -27,16 +44,13 @@
             <div class="footer">
               <div class="contact">
                 <p>
-                  Your Name<br />
-                  What You Are<br />
-                  your@email.com
+                  <a href="http://ocshq.com/">ocs</a><br />
                 </p>
-              </div>
-              <div class="contact">
-                <p>
-                  <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
-                  <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
-                </p>
+                {% for l in site.languages %}
+                  <a href="{{l.url}}">{{l.name}}</a>
+                {% endfor %}
+
+                <a href>
               </div>
             </div>
           </div>
