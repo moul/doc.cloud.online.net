@@ -1,13 +1,12 @@
-#Documentation
+# Documentation
 
-##To run jekyll server:
+## To run jekyll server:
 `jekyll server --watch`
 
-##TODO:
+## TODO:
 - multi API version
 - dynamic search (indextank ?)
 
-##Ideas
+## Ideas
 Import project README.md file with only on git url like [this](https://github.com/recurser/jekyll-plugins):
-```repository: git://recursive-design.com/jekyll-plugins.git```
-
+    ```repository: git://recursive-design.com/jekyll-plugins.git```
