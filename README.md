@@ -8,5 +8,4 @@
 - dynamic search (indextank ?)
 
 ## Ideas
-Import project README.md file with only on git url like [this](https://github.com/recurser/jekyll-plugins):
-    ```repository: git://recursive-design.com/jekyll-plugins.git```
+- Import project README.md file with only a git url, example [this](https://github.com/recurser/jekyll-plugins)
