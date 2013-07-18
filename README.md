@@ -3,6 +3,7 @@
 ## To install server and run it:
 `sudo gem install jekyll --no-rdoc`
 `jekyll server --watch`
+`$browser localhost:4000/fr/`
 
 ## TODO:
 - multi API version
