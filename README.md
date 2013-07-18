@@ -1,7 +1,7 @@
 # Documentation
 
 ## To install server and run it:
-`sudo gem install jekyll`
+`sudo gem install jekyll --no-rdoc`
 `jekyll server --watch`
 
 ## TODO:
