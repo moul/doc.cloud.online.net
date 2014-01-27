@@ -18,6 +18,7 @@
 				"url": "/documentation/",
 				"isSub": false
 			},
+
 			{
 				"name": "Getting started",
 				"url": "#",
@@ -36,7 +37,99 @@
 						"url": "/documentation/howto/setup_dns.html"
 					}
 				]
+			},
 
+			{
+				"name": "Managing your account",
+				"url": "#",
+				"isSub": true,
+				"submenu": [
+					{
+						"name": "Generating your API key",
+						"url": "/documentation/managing_account/generating_apikey"
+					},
+					{
+						"name": "Billing informations",
+						"url": "/documentation/managing_account/billing_informations"
+					}
+				]
+			},
+
+			{
+				"name": "Instances",
+				"url": "#",
+				"isSub": true,
+				"submenu": [
+					{
+						"name": "Create",
+						"url": "/documentation/instances/create.html"
+					},
+					{
+						"name": "Snapshot",
+						"url": "/documentation/instances/snapshot.html"
+					},
+					{
+						"name": "Restore",
+						"url": "/documentation/instances/restore.html"
+					},
+					{
+						"name": "Cleanup",
+						"url": "/documentation/instances/cleanup.html"
+					}
+
+				]
+			},
+
+			{
+				"name": "Storage",
+				"url": "#",
+				"isSub": true,
+				"submenu": [
+					{
+						"name": "Create",
+						"url": "/documentation/storage/create.html"
+					},
+					{
+						"name": "Attach",
+						"url": "/documentation/storage/attach.html"
+					},
+					{
+						"name": "Detach",
+						"url": "/documentation/storage/detach.html"
+					},
+					{
+						"name": "Snapshot",
+						"url": "/documentation/storage/snapshot.html"
+					},
+					{
+						"name": "Restore",
+						"url": "/documentation/storage/restore.html"
+					},
+					{
+						"name": "Delete",
+						"url": "/documentation/storage/delete.html"
+					}
+				]
+			},
+
+			{
+				"name": "DNS",
+				"url": "#",
+				"isSub": true,
+				"submenu": [
+					{
+						"name": "General",
+						"url": "/documentation/dns/general.html"
+					},
+					{
+						"name": "Transfer",
+						"url": "/documentation/dns/transfer.html"
+					},
+					{
+						"name": "Manage",
+						"url": "/documentation/dns/manage.html"
+					}
+				]
 			}
 		]
 	}
