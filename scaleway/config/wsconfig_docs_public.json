@@ -1,0 +1,43 @@
+{
+	"contents": "../documentation/docs_public/contents",
+	"templates": "../documentation/templates",
+	"output": "../documentation/docs_public/build",
+
+	"baseUrl": "/documentation",
+
+	"ignore": ["**/.*.swo", "**/.*.swp"],
+
+	"port": 8080,
+
+	"locals": {
+		"title": "Scaleway documentation",
+		"author": "Scaleway",
+		"menu" : [
+			{
+				"name": "Home",
+				"url": "/documentation/",
+				"isSub": false
+			},
+			{
+				"name": "Getting started",
+				"url": "#",
+				"isSub": true,
+				"submenu": [
+					{
+						"name": "Launch your first instance",
+						"url": "/documentation/howto/launch_instance.html"
+					},
+					{
+						"name": "Add extra storage",
+						"url": "/documentation/howto/add_storage.html"
+					},
+					{
+						"name": "Set up your domain with Scaleway",
+						"url": "/documentation/howto/setup_dns.html"
+					}
+				]
+
+			}
+		]
+	}
+}

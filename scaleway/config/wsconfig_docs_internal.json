@@ -1,0 +1,27 @@
+{
+	"contents": "../documentation/docs_internal/contents",
+	"templates": "../documentation/templates",
+	"output": "../documentation/docs_internal/build",
+	"baseUrl": "/internal",
+	"locals": {
+		"title": "Scaleway internal documentation",
+		"author": "Scaleway",
+		"menu" : [
+			{
+				"name": "Home",
+				"url": "/internal/",
+				"isSub": false
+			},
+			{
+				"name": "User browsing",
+				"url": "/internal/user_browsing.html",
+				"isSub": false
+			}
+		]
+	},
+	"ignore": ["**/.*.swo", "**/.*.swp"],
+	"require": {
+		"_": "underscore"
+	},
+	"port": 8080
+}

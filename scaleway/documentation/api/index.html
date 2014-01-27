@@ -1,0 +1,260 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Welcome to the Scaleway API documentation. This API provides access to Scaleway services.</title><link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"><link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.min.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700|Inconsolata|Raleway:200"><style>/* Highlight.js Theme */
+.tomorrow-comment,pre .comment,pre .title{color:#8e908c}.tomorrow-red,pre .attribute,pre .css .class,pre .css .id,pre .css .pseudo,pre .html .doctype,pre .regexp,pre .ruby .constant,pre .tag,pre .variable,pre .xml .doctype,pre .xml .pi,pre .xml .tag .title{color:#c82829}.tomorrow-orange,pre .built_in,pre .constant,pre .literal,pre .number,pre .params,pre .preprocessor{color:#f5871f}.tomorrow-yellow,pre .class,pre .css .rules .attribute,pre .ruby .class .title{color:#eab700}.tomorrow-green,pre .header,pre .inheritance,pre .ruby .symbol,pre .string,pre .value,pre .xml .cdata{color:#718c00}.tomorrow-aqua,pre .css .hexcolor{color:#3e999f}.tomorrow-blue,pre .coffeescript .title,pre .function,pre .javascript .title,pre .perl .sub,pre .python .decorator,pre .python .title,pre .ruby .function .title,pre .ruby .title .keyword{color:#4271ae}.tomorrow-purple,pre .javascript .function,pre .keyword{color:#8959a8}pre code{display:block;background:#fff;color:#4d4d4c;font-family:Menlo,Monaco,Consolas,monospace;line-height:1.5;border:1px solid #ccc;padding:10px}</style><style type="text/css">body,
+h4,
+h5 {
+  font-family: 'Roboto' sans-serif !important;
+}
+h1,
+h2,
+h3,
+.aglio {
+  font-family: 'Raleway' sans-serif !important;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a {
+  display: none;
+}
+h1:hover a,
+h2:hover a,
+h3:hover a,
+h4:hover a,
+h5:hover a {
+  display: inline;
+}
+code {
+  color: #444;
+  background-color: #ddd;
+  font-family: 'Inconsolata' monospace !important;
+}
+a[data-target] {
+  cursor: pointer;
+}
+h4 {
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.back-to-top {
+  position: fixed;
+  z-index: 1;
+  bottom: 0px;
+  right: 24px;
+  padding: 4px 8px;
+  background-color: #eee;
+  text-decoration: none !important;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-left: 1px solid rgba(0,0,0,0.1);
+  border-right: 1px solid rgba(0,0,0,0.1);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.panel {
+  overflow: hidden;
+}
+.panel-heading code {
+  color: #c7254e;
+  background-color: transparent;
+}
+.panel-heading h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+a.list-group-item {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+a.list-group-item.heading {
+  background-color: #f5f5f5;
+}
+.list-group-item.collapse {
+  display: none;
+}
+</style></head><body><a href="#top" class="text-muted back-to-top"><i class="fa fa-toggle-up"></i>&nbsp;Back to top</a><div class="container"><div class="row"><nav id="nav" style="margin-top: 38px;" class="col-md-3 collapse hidden-sm hidden-xs"><div class="list-group"><a href="#containers" class="list-group-item heading">Containers</a><a href="#containers-list-containers" class="list-group-item"><i class="fa fa-arrow-circle-down"></i>&nbsp;List containers</a><a href="#containers-create-container" class="list-group-item"><i class="fa fa-plus-square"></i>&nbsp;Create container</a><a href="#containers-container-info" class="list-group-item"><i class="fa fa-arrow-circle-down"></i>&nbsp;Container info</a><a href="#containers-edit-container" class="list-group-item"><i class="fa fa-pencil"></i>&nbsp;Edit container</a><a href="#containers-delete-container" class="list-group-item"><i class="fa fa-warning"></i>&nbsp;Delete container</a><a href="#containers-list-container-objects" class="list-group-item"><i class="fa fa-arrow-circle-down"></i>&nbsp;List container objects</a><a href="#containers-create-container-object" class="list-group-item"><i class="fa fa-plus-square"></i>&nbsp;Create container object</a><a href="#containers-container-object-info" class="list-group-item"><i class="fa fa-arrow-circle-down"></i>&nbsp;Container object info</a><a href="#containers-edit-container-object" class="list-group-item"><i class="fa fa-pencil"></i>&nbsp;Edit container object</a><a href="#containers-delete-container-object" class="list-group-item"><i class="fa fa-warning"></i>&nbsp;Delete container object</a></div><div class="list-group"><a href="#servers" class="list-group-item heading">Servers</a><a href="#servers-server-list" class="list-group-item"><i class="fa fa-arrow-circle-down"></i>&nbsp;Server list</a><a href="#servers-create-server" class="list-group-item"><i class="fa fa-plus-square"></i>&nbsp;Create server</a><a href="#servers-server-info" class="list-group-item"><i class="fa fa-arrow-circle-down"></i>&nbsp;Server info</a><a href="#servers-edit-server" class="list-group-item"><i class="fa fa-pencil"></i>&nbsp;Edit server</a><a href="#servers-delete-server" class="list-group-item"><i class="fa fa-warning"></i>&nbsp;Delete server</a><a href="#servers-list-server-actions" class="list-group-item"><i class="fa fa-arrow-circle-down"></i>&nbsp;List server actions</a><a href="#servers-run-server-action" class="list-group-item"><i class="fa fa-plus-square"></i>&nbsp;Run server action</a><a href="#servers-list-server-sessions" class="list-group-item"><i class="fa fa-arrow-circle-down"></i>&nbsp;List server sessions</a><a href="#servers-get-server-session-info" class="list-group-item"><i class="fa fa-arrow-circle-down"></i>&nbsp;Get server session info</a><a href="#servers-list-server-tags" class="list-group-item"><i class="fa fa-arrow-circle-down"></i>&nbsp;List server tags</a><a href="#servers-attach-tag-to-server" class="list-group-item"><i class="fa fa-plus-square"></i>&nbsp;Attach tag to server</a><a href="#servers-detach-tag-from-server" class="list-group-item"><i class="fa fa-warning"></i>&nbsp;Detach tag from server</a></div><div class="list-group"><a href="#tags" class="list-group-item heading">Tags</a><a href="#tags-list-tags" class="list-group-item"><i class="fa fa-arrow-circle-down"></i>&nbsp;List tags</a><a href="#tags-tag-info" class="list-group-item"><i class="fa fa-arrow-circle-down"></i>&nbsp;Tag info</a><a href="#tags-add-tag" class="list-group-item"><i class="fa fa-plus-square"></i>&nbsp;Add tag</a><a href="#tags-edit-tag" class="list-group-item"><i class="fa fa-pencil"></i>&nbsp;Edit tag</a><a href="#tags-delete-tag" class="list-group-item"><i class="fa fa-warning"></i>&nbsp;Delete tag</a><a href="#tags-list-tag-metadata" class="list-group-item"><i class="fa fa-arrow-circle-down"></i>&nbsp;List tag metadata</a><a href="#tags-create-tag-metadata" class="list-group-item"><i class="fa fa-plus-square"></i>&nbsp;Create tag metadata</a><a href="#tags-update-tag-metadata" class="list-group-item"><i class="fa fa-pencil"></i>&nbsp;Update tag metadata</a><a href="#tags-delete-tag-metadata" class="list-group-item"><i class="fa fa-warning"></i>&nbsp;Delete tag metadata</a></div><div class="list-group"><a href="#volumes" class="list-group-item heading">Volumes</a><a href="#volumes-list-volumes" class="list-group-item"><i class="fa fa-arrow-circle-down"></i>&nbsp;List volumes</a><a href="#volumes-create-volume" class="list-group-item"><i class="fa fa-plus-square"></i>&nbsp;Create volume</a><a href="#volumes-volume-info" class="list-group-item"><i class="fa fa-arrow-circle-down"></i>&nbsp;Volume info</a></div></nav><div class="col-md-9"><div><header><div class="page-header"><h1 id="top">Welcome to the Scaleway API documentation. This API provides access to Scaleway services.</h1></div></header><div class="description"><h2 id="request-and-response">Request and response</h2>
+<p>the scaleway api works over https and is accessed from the <code>api.scaleway.com</code> domain.</p>
+<p>all data is sent and received as json.</p>
+<h2 id="constructing-requests">Constructing Requests</h2>
+<p>Requests are made of two components:</p>
+<ul>
+<li>API version</li>
+<li>Resource path</li>
+</ul>
+<p>To construct a proper request, you will need to format the URI as follows:</p>
+<p><code>https://api.scaleway.com/{version}/{ressource}</code></p>
+<p>An example request, to retrieves detailed informations about an instance might be:</p>
+<pre><code>$curl -i https://api.scaleway.com/v1/servers/Server-198779b8-e4b5-<span class="number">4876</span>-9e2f-aa09c1ce9ebf
+
+HTTP/<span class="number">1.1</span> <span class="number">200</span> OK
+Content-Type: application/json; charset=utf-<span class="number">8</span>
+Status: <span class="number">200</span> OK
+X-RateLimit-Limit: <span class="number">5000</span>
+X-RateLimit-Remaining: <span class="number">4999</span>
+X-RateLimit-Reset: <span class="number">1389359739</span>
+<span class="keyword">...</span>
+
+{
+  <span class="string">"server"</span>: {
+    <span class="string">"id"</span>: xxxx,
+    <span class="string">"image_id"</span>: yyyy,
+    <span class="string">"name"</span>: <span class="string">"zzzz"</span>,
+    <span class="keyword">...</span>
+  }
+}</code></pre>
+<h2 id="error">Error</h2>
+<p>Scaleway uses conventional HTTP response codes to indicate success or failure of an API request. In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error that resulted from the provided information (e.g. a required parameter was missing, a charge failed, etc.), and codes in the 5xx range indicate an error with Scaleway’s servers.</p>
+<h3 id="http-status-code-summary">HTTP Status Code Summary</h3>
+<ul>
+<li>200 OK - Everything worked as expected.</li>
+<li>400 Bad Request - Often missing a required parameter.</li>
+<li>401 Unauthorized - No valid API key provided.</li>
+<li>402 Request Failed - Parameters were valid but request failed.</li>
+<li>404 Not Found - The requested item doesn’t exist.</li>
+<li>500, 502, 503, 504 Server errors - something went wrong on Scaleway’s end.</li>
+</ul>
+<p>Not all errors map cleanly onto HTTP response codes, however. When a request is valid but does not complete successfully (e.g. an instance can not be launch), we return a 402 error code.</p>
+<h3 id="attributes">Attributes</h3>
+<ul>
+<li>type:<ul>
+<li>invalid_request_error: Occured when your request has an invalid parameters</li>
+<li>api_error: API errors is used in case of problem with Scaleway’s servers</li>
+</ul>
+</li>
+<li>message:<ul>
+<li>A human readable error giving more details about the error</li>
+</ul>
+</li>
+<li>code (Optional):<ul>
+<li>For ressources errors, it’s a short string describing error that occurred.</li>
+</ul>
+</li>
+<li>param (Optional):<ul>
+<li>The parameter the error relates to if the error is parameter-specific.</li>
+</ul>
+</li>
+</ul>
+<h3 id="pagination">Pagination</h3>
+<p>Methods returning multiple items are paginated to 25 items by default.
+You can specify further pages with the ?page parameter. You can also set a custom page size up to 500 with the ?limit parameter.</p>
+<pre><code><span class="comment">$curl</span> <span class="literal">-</span><span class="comment">i</span> <span class="comment">https://api</span><span class="string">.</span><span class="comment">scaleway</span><span class="string">.</span><span class="comment">com/v1/servers/Server</span><span class="literal">-</span><span class="comment">198779b8</span><span class="literal">-</span><span class="comment">e4b5</span><span class="literal">-</span><span class="comment">4876</span><span class="literal">-</span><span class="comment">9e2f</span><span class="literal">-</span><span class="comment">aa09c1ce9ebf/tags?page=5&amp;limit=150</span>
+
+<span class="comment">HTTP/1</span><span class="string">.</span><span class="comment">1</span> <span class="comment">200</span> <span class="comment">OK</span>
+<span class="comment">Content</span><span class="literal">-</span><span class="comment">Type:</span> <span class="comment">application/json;</span> <span class="comment">charset=utf</span><span class="literal">-</span><span class="comment">8</span>
+<span class="comment">Status:</span> <span class="comment">200</span> <span class="comment">OK</span>
+<span class="comment">X</span><span class="literal">-</span><span class="comment">RateLimit</span><span class="literal">-</span><span class="comment">Limit:</span> <span class="comment">5000</span>
+<span class="comment">X</span><span class="literal">-</span><span class="comment">RateLimit</span><span class="literal">-</span><span class="comment">Remaining:</span> <span class="comment">4999</span>
+<span class="comment">X</span><span class="literal">-</span><span class="comment">RateLimit</span><span class="literal">-</span><span class="comment">Reset:</span> <span class="comment">1389359739</span>
+<span class="comment">Link:</span> &lt;<span class="comment">https://api</span><span class="string">.</span><span class="comment">scaleway</span><span class="string">.</span><span class="comment">com/v1/servers/Server</span><span class="literal">-</span><span class="comment">198779b8</span><span class="literal">-</span><span class="comment">e4b5</span><span class="literal">-</span><span class="comment">4876</span><span class="literal">-</span><span class="comment">9e2f</span><span class="literal">-</span><span class="comment">aa09c1ce9ebf/tags?page=1&amp;limit=150</span>&gt;<span class="comment">;</span> <span class="comment">rel="first"</span><span class="string">,</span> &lt;<span class="comment">https://api</span><span class="string">.</span><span class="comment">scaleway</span><span class="string">.</span><span class="comment">com/v1/servers/Server</span><span class="literal">-</span><span class="comment">198779b8</span><span class="literal">-</span><span class="comment">e4b5</span><span class="literal">-</span><span class="comment">4876</span><span class="literal">-</span><span class="comment">9e2f</span><span class="literal">-</span><span class="comment">aa09c1ce9ebf/tags?page=4&amp;limit=150</span>&gt;<span class="comment">;</span> <span class="comment">rel="prev"</span><span class="string">,</span> &lt;<span class="comment">https://api</span><span class="string">.</span><span class="comment">scaleway</span><span class="string">.</span><span class="comment">com/v1/servers/Server</span><span class="literal">-</span><span class="comment">198779b8</span><span class="literal">-</span><span class="comment">e4b5</span><span class="literal">-</span><span class="comment">4876</span><span class="literal">-</span><span class="comment">9e2f</span><span class="literal">-</span><span class="comment">aa09c1ce9ebf/tags?page=6&amp;limit=150</span>&gt;<span class="comment">;</span> <span class="comment">rel="next"</span><span class="string">,</span> &lt;<span class="comment">https://api</span><span class="string">.</span><span class="comment">scaleway</span><span class="string">.</span><span class="comment">com/v1/servers/Server</span><span class="literal">-</span><span class="comment">198779b8</span><span class="literal">-</span><span class="comment">e4b5</span><span class="literal">-</span><span class="comment">4876</span><span class="literal">-</span><span class="comment">9e2f</span><span class="literal">-</span><span class="comment">aa09c1ce9ebf/tags?page=10&amp;limit=150</span>&gt;<span class="comment">;</span> <span class="comment">rel="last"</span><span class="string">,</span>
+<span class="string">.</span><span class="string">.</span><span class="string">.</span>
+
+<span class="comment">{</span>
+  <span class="comment">"tags":</span> <span class="comment">{</span>
+    <span class="string">.</span><span class="string">.</span><span class="string">.</span>
+  <span class="comment">}</span>
+<span class="comment">}</span></code></pre>
+<h2 id="resources">Resources</h2>
+</div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="containers">Containers&nbsp;<a href="#containers"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h1 id="resources-related-to-scaleway-containers-">resources related to scaleway Containers.</h1>
+<h4 id="containers-list-containers">List containers&nbsp;<a href="#containers-list-containers"><i class="fa fa-link"></i></a></h4><p>Retrieves containers granted for current user</p>
+<section id="containers-list-containers-get" class="panel panel-info"><div class="panel-heading"><a href="#containers-list-containers-get" class="btn btn-xs btn-primary">GET</a>&nbsp;<code>/containers?limit</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>limit</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Maximum number of objects, default value is 10</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="containers-create-container">Create container&nbsp;<a href="#containers-create-container"><i class="fa fa-link"></i></a></h4><p>Creates and provisions a new container</p>
+<section id="containers-create-container-post" class="panel panel-success"><div class="panel-heading"><a href="#containers-create-container-post" class="btn btn-xs btn-success">POST</a>&nbsp;<code>/containers</code></div><ul class="list-group"></ul></section><h4 id="containers-container-info">Container info&nbsp;<a href="#containers-container-info"><i class="fa fa-link"></i></a></h4><p>Retrieves detailed info about a container</p>
+<section id="containers-container-info-get" class="panel panel-info"><div class="panel-heading"><a href="#containers-container-info-get" class="btn btn-xs btn-primary">GET</a>&nbsp;<code>/containers/{container_id}</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>container_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Container unique identifier</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="containers-edit-container">Edit container&nbsp;<a href="#containers-edit-container"><i class="fa fa-link"></i></a></h4><p>Updates info of a container</p>
+<section id="containers-edit-container-put" class="panel panel-warning"><div class="panel-heading"><a href="#containers-edit-container-put" class="btn btn-xs btn-warning">PUT</a>&nbsp;<code>/containers/{container_id}</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>container_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Container unique identifier</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="containers-delete-container">Delete container&nbsp;<a href="#containers-delete-container"><i class="fa fa-link"></i></a></h4><p>Deletes and deprovisions a container</p>
+<section id="containers-delete-container-delete" class="panel panel-danger"><div class="panel-heading"><a href="#containers-delete-container-delete" class="btn btn-xs btn-danger">DELETE</a>&nbsp;<code>/containers/{container_id}</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>container_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Container unique identifier</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="containers-list-container-objects">List container objects&nbsp;<a href="#containers-list-container-objects"><i class="fa fa-link"></i></a></h4><p>Retrieves container objects</p>
+<section id="containers-list-container-objects-get" class="panel panel-info"><div class="panel-heading"><a href="#containers-list-container-objects-get" class="btn btn-xs btn-primary">GET</a>&nbsp;<code>/containers/{container_id}/objects?limit</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>container_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Container unique identifier</p>
+</dd><dt>limit</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Maximum number of objects, default value is 10</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="containers-create-container-object">Create container object&nbsp;<a href="#containers-create-container-object"><i class="fa fa-link"></i></a></h4><p>Creates a new object in a container</p>
+<section id="containers-create-container-object-post" class="panel panel-success"><div class="panel-heading"><a href="#containers-create-container-object-post" class="btn btn-xs btn-success">POST</a>&nbsp;<code>/containers/{container_id}/objects</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>container_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Container unique identifier</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="containers-container-object-info">Container object info&nbsp;<a href="#containers-container-object-info"><i class="fa fa-link"></i></a></h4><p>Retrieves detailed info about a container object</p>
+<section id="containers-container-object-info-get" class="panel panel-info"><div class="panel-heading"><a href="#containers-container-object-info-get" class="btn btn-xs btn-primary">GET</a>&nbsp;<code>/containers/{container_id}/objects/{object_id}</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>container_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Container object unique identifier</p>
+</dd><dt>object_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Container object path</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="containers-edit-container-object">Edit container object&nbsp;<a href="#containers-edit-container-object"><i class="fa fa-link"></i></a></h4><p>Updates info of a container</p>
+<section id="containers-edit-container-object-put" class="panel panel-warning"><div class="panel-heading"><a href="#containers-edit-container-object-put" class="btn btn-xs btn-warning">PUT</a>&nbsp;<code>/containers/{container_id}/objects/{object_id}</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>container_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Container unique identifier</p>
+</dd><dt>object_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Container object path</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="containers-delete-container-object">Delete container object&nbsp;<a href="#containers-delete-container-object"><i class="fa fa-link"></i></a></h4><p>Deletes and deprovisions a container</p>
+<section id="containers-delete-container-object-delete" class="panel panel-danger"><div class="panel-heading"><a href="#containers-delete-container-object-delete" class="btn btn-xs btn-danger">DELETE</a>&nbsp;<code>/containers/{container_id}/objects/{object_id}</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>container_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Container unique identifier</p>
+</dd><dt>object_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Container object path</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="servers">Servers&nbsp;<a href="#servers"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h1 id="resources-related-to-scaleway-servers-">resources related to scaleway Servers.</h1>
+<h4 id="servers-server-list">Server list&nbsp;<a href="#servers-server-list"><i class="fa fa-link"></i></a></h4><p>Retrieves servers granted for current user</p>
+<section id="servers-server-list-get" class="panel panel-info"><div class="panel-heading"><a href="#servers-server-list-get" class="btn btn-xs btn-primary">GET</a>&nbsp;<code>/servers?limit&amp;organization_id&amp;image_id&amp;ip</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>limit</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Maximum number of objects, default value is 100</p>
+</dd><dt>organization</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Filter by organization</p>
+</dd><dt>image</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Filter by image</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="servers-create-server">Create server&nbsp;<a href="#servers-create-server"><i class="fa fa-link"></i></a></h4><p>Creates and provisions a new server<br />This creates a server and also creates and assigns a default tag (type:server and name:default). Server has default state:off.</p>
+<section id="servers-create-server-post" class="panel panel-success"><div class="panel-heading"><a href="#servers-create-server-post" class="btn btn-xs btn-success">POST</a>&nbsp;<code>/servers</code></div><ul class="list-group"></ul></section><h4 id="servers-server-info">Server info&nbsp;<a href="#servers-server-info"><i class="fa fa-link"></i></a></h4><p>Retrieves detailed info about a server</p>
+<section id="servers-server-info-get" class="panel panel-info"><div class="panel-heading"><a href="#servers-server-info-get" class="btn btn-xs btn-primary">GET</a>&nbsp;<code>/servers/{server_id}</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>server_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Server unique identifier</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="servers-edit-server">Edit server&nbsp;<a href="#servers-edit-server"><i class="fa fa-link"></i></a></h4><p>Updates info of a server</p>
+<section id="servers-edit-server-put" class="panel panel-warning"><div class="panel-heading"><a href="#servers-edit-server-put" class="btn btn-xs btn-warning">PUT</a>&nbsp;<code>/servers/{server_id}</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>server_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Server unique identifier</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="servers-delete-server">Delete server&nbsp;<a href="#servers-delete-server"><i class="fa fa-link"></i></a></h4><p>Deletes and deprovisions a server</p>
+<section id="servers-delete-server-delete" class="panel panel-danger"><div class="panel-heading"><a href="#servers-delete-server-delete" class="btn btn-xs btn-danger">DELETE</a>&nbsp;<code>/servers/{server_id}</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>server_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Server unique identifier</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="servers-list-server-actions">List server actions&nbsp;<a href="#servers-list-server-actions"><i class="fa fa-link"></i></a></h4><p>Lists available actions for the specified server</p>
+<section id="servers-list-server-actions-get" class="panel panel-info"><div class="panel-heading"><a href="#servers-list-server-actions-get" class="btn btn-xs btn-primary">GET</a>&nbsp;<code>/servers/{server_id}/action</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>server_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Server unique identifier</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="servers-run-server-action">Run server action&nbsp;<a href="#servers-run-server-action"><i class="fa fa-link"></i></a></h4><p>Runs an action on server</p>
+<section id="servers-run-server-action-post" class="panel panel-success"><div class="panel-heading"><a href="#servers-run-server-action-post" class="btn btn-xs btn-success">POST</a>&nbsp;<code>/servers/{server_id}/action</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>server_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Server unique identifier</p>
+</dd><dt>action</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Action name (see list-server-actions)</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="servers-list-server-sessions">List server sessions&nbsp;<a href="#servers-list-server-sessions"><i class="fa fa-link"></i></a></h4><p>Retrieves server sessions</p>
+<section id="servers-list-server-sessions-get" class="panel panel-info"><div class="panel-heading"><a href="#servers-list-server-sessions-get" class="btn btn-xs btn-primary">GET</a>&nbsp;<code>/servers/{server_id}/sessions?limit&amp;active</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>server_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Server unique identifier</p>
+</dd><dt>limit</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Maximum number of objects, default value is 100</p>
+</dd><dt>active</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Filter by active, default is false</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="servers-get-server-session-info">Get server session info&nbsp;<a href="#servers-get-server-session-info"><i class="fa fa-link"></i></a></h4><p>Retrieves detailed info about a server session</p>
+<section id="servers-get-server-session-info-get" class="panel panel-info"><div class="panel-heading"><a href="#servers-get-server-session-info-get" class="btn btn-xs btn-primary">GET</a>&nbsp;<code>/servers/{server_id}/sessions/{session_id}</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>server_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Server unique identifier</p>
+</dd><dt>session_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Server session unique identifier</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="servers-list-server-tags">List server tags&nbsp;<a href="#servers-list-server-tags"><i class="fa fa-link"></i></a></h4><p>Retrieves attached tags list for a server</p>
+<section id="servers-list-server-tags-get" class="panel panel-info"><div class="panel-heading"><a href="#servers-list-server-tags-get" class="btn btn-xs btn-primary">GET</a>&nbsp;<code>/servers/{server_id}/tags?limit</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>server_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Server unique identifier</p>
+</dd><dt>limit</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Maximum number of objects, default value is 100</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="servers-attach-tag-to-server">Attach tag to server&nbsp;<a href="#servers-attach-tag-to-server"><i class="fa fa-link"></i></a></h4><p>Attachs tag to a server<br />Attach an already existing tag to a server</p>
+<section id="servers-attach-tag-to-server-post" class="panel panel-success"><div class="panel-heading"><a href="#servers-attach-tag-to-server-post" class="btn btn-xs btn-success">POST</a>&nbsp;<code>/servers/{server_id}/tags</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>server_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Server unique identifier</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="servers-detach-tag-from-server">Detach tag from server&nbsp;<a href="#servers-detach-tag-from-server"><i class="fa fa-link"></i></a></h4><p>Detach tag from server</p>
+<section id="servers-detach-tag-from-server-delete" class="panel panel-danger"><div class="panel-heading"><a href="#servers-detach-tag-from-server-delete" class="btn btn-xs btn-danger">DELETE</a>&nbsp;<code>/servers/{server_id}/tags/{tag_id}</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>server_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Server unique identifier</p>
+</dd><dt>tag_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Tag unique identifier</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="tags">Tags&nbsp;<a href="#tags"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h1 id="resources-related-to-scaleway-tags-">resources related to scaleway Tags.</h1>
+<h4 id="tags-list-tags">List tags&nbsp;<a href="#tags-list-tags"><i class="fa fa-link"></i></a></h4><p>Retrieves tags granted for user<br />Retrieves tags and associated metadatas</p>
+<section id="tags-list-tags-get" class="panel panel-info"><div class="panel-heading"><a href="#tags-list-tags-get" class="btn btn-xs btn-primary">GET</a>&nbsp;<code>/tags?limit&amp;server_id&amp;name</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>limit</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Maximum number of objects, default value is 100</p>
+</dd><dt>server_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Filter tags attached to an server</p>
+</dd><dt>name</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Filter by tag name</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="tags-tag-info">Tag info&nbsp;<a href="#tags-tag-info"><i class="fa fa-link"></i></a></h4><p>Retrieves detailed info about a tag</p>
+<section id="tags-tag-info-get" class="panel panel-info"><div class="panel-heading"><a href="#tags-tag-info-get" class="btn btn-xs btn-primary">GET</a>&nbsp;<code>/tags/{tag_id}</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>tag_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Tag unique identifier</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="tags-add-tag">Add tag&nbsp;<a href="#tags-add-tag"><i class="fa fa-link"></i></a></h4><p>Creates and provisions a new tag</p>
+<section id="tags-add-tag-post" class="panel panel-success"><div class="panel-heading"><a href="#tags-add-tag-post" class="btn btn-xs btn-success">POST</a>&nbsp;<code>/tags</code></div><ul class="list-group"></ul></section><h4 id="tags-edit-tag">Edit tag&nbsp;<a href="#tags-edit-tag"><i class="fa fa-link"></i></a></h4><p>Updates info of a tag</p>
+<section id="tags-edit-tag-put" class="panel panel-warning"><div class="panel-heading"><a href="#tags-edit-tag-put" class="btn btn-xs btn-warning">PUT</a>&nbsp;<code>/tags/{tag_id}</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>tag_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>tag unique identifier</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="tags-delete-tag">Delete tag&nbsp;<a href="#tags-delete-tag"><i class="fa fa-link"></i></a></h4><p>Deletes and deprovisions a tag</p>
+<section id="tags-delete-tag-delete" class="panel panel-danger"><div class="panel-heading"><a href="#tags-delete-tag-delete" class="btn btn-xs btn-danger">DELETE</a>&nbsp;<code>/tags/{tag_id}</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>tag_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Tag unique identifier</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="tags-list-tag-metadata">List tag metadata&nbsp;<a href="#tags-list-tag-metadata"><i class="fa fa-link"></i></a></h4><p>Retrieves tags granted for user</p>
+<section id="tags-list-tag-metadata-get" class="panel panel-info"><div class="panel-heading"><a href="#tags-list-tag-metadata-get" class="btn btn-xs btn-primary">GET</a>&nbsp;<code>/tags/{tag_id}/metadatas?limit</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>tag_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Container unique identifier</p>
+</dd><dt>limit</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Maximum number of objects, default value is 100</p>
+</dd><dt>key</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Filter by key</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="tags-create-tag-metadata">Create tag metadata&nbsp;<a href="#tags-create-tag-metadata"><i class="fa fa-link"></i></a></h4><p>Creates metadata</p>
+<section id="tags-create-tag-metadata-post" class="panel panel-success"><div class="panel-heading"><a href="#tags-create-tag-metadata-post" class="btn btn-xs btn-success">POST</a>&nbsp;<code>/tags/{tag_id}/metadatas</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>tag_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Container unique identifier</p>
+</dd><dt>metadata_key</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Metadata key</p>
+</dd><dt>metadata_value</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>New metadata value</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="tags-update-tag-metadata">Update tag metadata&nbsp;<a href="#tags-update-tag-metadata"><i class="fa fa-link"></i></a></h4><p>Updates info of a container</p>
+<section id="tags-update-tag-metadata-put" class="panel panel-warning"><div class="panel-heading"><a href="#tags-update-tag-metadata-put" class="btn btn-xs btn-warning">PUT</a>&nbsp;<code>/tags/{tag_id}/metadatas/{metadata_key}</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>tag_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Container unique identifier</p>
+</dd><dt>metadata_key</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Metadata key</p>
+</dd><dt>metadata_value</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>New metadata value</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section><h4 id="tags-delete-tag-metadata">Delete tag metadata&nbsp;<a href="#tags-delete-tag-metadata"><i class="fa fa-link"></i></a></h4><p>Deletes and deprovisions a tag</p>
+<section id="tags-delete-tag-metadata-delete" class="panel panel-danger"><div class="panel-heading"><a href="#tags-delete-tag-metadata-delete" class="btn btn-xs btn-danger">DELETE</a>&nbsp;<code>/tags/{tag_id}/metadatas/{metadata_key}</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>tag_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Tag unique identifier</p>
+</dd><dt>metadata_key</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Metadata key</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="volumes">Volumes&nbsp;<a href="#volumes"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h1 id="resources-related-to-scaleway-volumes-">resources related to scaleway Volumes.</h1>
+<h4 id="volumes-list-volumes">List volumes&nbsp;<a href="#volumes-list-volumes"><i class="fa fa-link"></i></a></h4><p>Lists volumes</p>
+<section id="volumes-list-volumes-get" class="panel panel-info"><div class="panel-heading"><a href="#volumes-list-volumes-get" class="btn btn-xs btn-primary">GET</a>&nbsp;<code>/volumes</code></div><ul class="list-group"></ul></section><h4 id="volumes-create-volume">Create volume&nbsp;<a href="#volumes-create-volume"><i class="fa fa-link"></i></a></h4><p>Creates a new volume<br />This creates a volume. Volume is not attached by default.</p>
+<section id="volumes-create-volume-post" class="panel panel-success"><div class="panel-heading"><a href="#volumes-create-volume-post" class="btn btn-xs btn-success">POST</a>&nbsp;<code>/volumes</code></div><ul class="list-group"></ul></section><h4 id="volumes-volume-info">Volume info&nbsp;<a href="#volumes-volume-info"><i class="fa fa-link"></i></a></h4><p>Retrieves detailed info about a volume</p>
+<section id="volumes-volume-info-get" class="panel panel-info"><div class="panel-heading"><a href="#volumes-volume-info-get" class="btn btn-xs btn-primary">GET</a>&nbsp;<code>/volumes/{volume_id}</code></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>volume_id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<p>Volume unique identifier</p>
+</dd></dl></li></ul><ul class="list-group"></ul></section></div></div></div></div></div></div><p style="text-align: center;" class="text-muted">Generated by <a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a> on 21 Jan 2014</p><div id="localFile" style="display: none; position: absolute; top: 0; left: 0; width: 100%; color: white; background: red; font-size: 150%; text-align: center; padding: 1em;">This page may not display correctly when opened as a local file. Instead, view it from a web server.
+
+</div></body><script src="//code.jquery.com/jquery-1.10.1.min.js"></script><script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script><script type="text/javascript">
+(function() {
+  if (location.protocol === 'file:') {
+    document.getElementById('localFile').style.display = 'block';
+  }
+
+}).call(this);
+</script><script type="text/javascript">
+(function() {
+  $('table').addClass('table');
+
+}).call(this);
+</script></html>
