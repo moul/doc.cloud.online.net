@@ -25,7 +25,7 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/documentation', express.static(path.join(__dirname, 'documentation/docs/build')));
+app.use('/documentation', express.static(path.join(__dirname, 'documentation/docs_public/build')));
 app.use('/internal', express.static(path.join(__dirname, 'documentation/docs_internal/build')));
 app.use('/api/v1', express.static(path.join(__dirname, 'documentation/api')));
 
