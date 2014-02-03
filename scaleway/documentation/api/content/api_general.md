@@ -1,9 +1,9 @@
 FORMAT: 1A
 
 
-#Welcome to the Scaleway API documentation. This API provides access to Scaleway services.
+# Welcome to the Scaleway API documentation. This API provides access to Scaleway services.
 
-##Request and response 
+## Request and response 
 
 the scaleway api works over https and is accessed from the `api.scaleway.com` domain.
 
@@ -44,12 +44,12 @@ X-RateLimit-Reset: 1389359739
 ```
 
 
-##Error
+## Error
 
 Scaleway uses conventional HTTP response codes to indicate success or failure of an API request. In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error that resulted from the provided information (e.g. a required parameter was missing, a charge failed, etc.), and codes in the 5xx range indicate an error with Scaleway's servers.
 
 
-###HTTP Status Code Summary
+### HTTP Status Code Summary
 
 - 200 OK - Everything worked as expected.
 - 400 Bad Request - Often missing a required parameter.
@@ -60,7 +60,7 @@ Scaleway uses conventional HTTP response codes to indicate success or failure of
 
 Not all errors map cleanly onto HTTP response codes, however. When a request is valid but does not complete successfully (e.g. an instance can not be launch), we return a 402 error code.
 
-###Attributes
+### Attributes
 
 - type:
  - invalid_request_error: Occured when your request has an invalid parameters
@@ -73,7 +73,7 @@ Not all errors map cleanly onto HTTP response codes, however. When a request is 
  - The parameter the error relates to if the error is parameter-specific.
 
 
-###Pagination
+### Pagination
 
 Methods returning multiple items are paginated to 25 items by default.
 You can specify further pages with the ?page parameter. You can also set a custom page size up to 500 with the ?limit parameter.
@@ -98,5 +98,3 @@ Link: <https://api.scaleway.com/v1/servers/Server-198779b8-e4b5-4876-9e2f-aa09c1
 ```
 
 ##Resources
-
-
