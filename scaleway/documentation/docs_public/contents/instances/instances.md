@@ -1,26 +1,30 @@
 ---
-title: Launch your first instance
+title: Instance operations
 template: article.jade
 ---
 
 #### Intro
 
-A Scaleway instance is physical server, each instance that you create is a physical instance dedicated for your personnal use.
-It's easy to use, the entire process take only a couple of minutes!
+A Scaleway instance is physical server, each instance that you create is totally  dedicated for your personnal use.
 
-This guide gonna show you how to create and access your new server.
+This guid is about instance operations such as create, edit, delete.
 
-#### Step 1 - Sign in
+#### Sign in
 
 In a first time go to the [Scaleway dashboard](xxx) and log in with your email and password.
 
 Once logged, click on the “Create Server” button at the top left of the sidebar
 
-#### Step 2 - Choose an organization
+
+### Instance creation
+
+Once logged, click on the “Create Server” button at the top left of the sidebar
+
+#### Step 1 - Choose an organization
 
 Empty
 
-#### Step 3 - Name & Tags your instance
+#### Step 2 - Name & Tags your instance
 
 First, you have to name your server, an instance name as the following specifications: It can be from 1 to 64 characters without symbols.
 
@@ -71,32 +75,34 @@ A security group acts as a firewall that controls the traffic for one or more in
 Well, it's now time to start your instance, just click the "Create server" button. In few seconds your instance will be ready to use.
 If you have not configured your ssh key, you will receive an email with the root password.
 
-#### Step 7 - Connect your instance
 
-##### Login from OSX and Linux
+### Edit instance
 
-##### 1 - Launch a terminal
+At any time you can edit your instance and update it name, tags, etc.
 
-On a Mac or Linux computer, open your terminal program and in the shell just type the following command :
+#### Step 1- Choose the instance to edit
 
-```sh
-ssh root@your_instance_ip
-```
+From the Servers link in the menu you will land on the instances list page. Then, select the server you want to edit.
 
-##### 2 - Allow the connection to the host
+#### Step 2- Update instance
 
-Answer "yes" when the prompt asks if you want to connect to the host.
+At the moment you can modify your instance name and tags set.
 
-##### 3 - Done
+Instance name as the following specifications: It can be from 1 to 64 characters without symbols.
 
-You are now ask to type your root password (root password was emailed previously) and press enter.
+A tags as is a string with the following restrictions :
 
-Well done, you are now connected to your instance!
+- Maximum number of tags per resource: 10
+- Maximum length: 255 Unicode characters
 
-##### Login from Windows
+Tags are case sensitive.
 
-On windows, you will need a small apllication named PuTTy, and ssh client. You can download putty [here](xxx)
-Once PuTTY is downloaded and installed, just start the program.
+### Delete instance
 
-Fill in the "Hostname" with your instance IP address and click connect. You are now connected to your instance from windows!
+To delete an instance just go to your instances list.
 
+#### Step 1- Instance deleting
+
+Choose in the servers list the instance you want to terminate and click delete on the instances menu. Then, confirm the instance removing.
+
+Your instance will be kill instantly and billing will be interupt.

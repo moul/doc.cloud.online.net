@@ -3,13 +3,13 @@ title: Set up your domains with Scaleway
 template: article.jade
 ---
 
-##Intro
+#### Intro
 
 Scaleway offer a simple, easy to use DNS manager for your domains.
 
 This guide gonna show you how to manage your domains with Scaleway & how to use Scaleway DNS manager.
 
-##Step 1 - Change your Domain Name Server
+#### Step 1 - Change your Domain Name Server
 
 The first thing you need to do to set up your domain is to set your Domain Name Server to point to Scaleway DNS.
 
@@ -44,7 +44,7 @@ for detailed information.
    Expiration Date: 29-apr-2014
 ```
 
-##Step 2 - Domain configuration
+#### Step 2 - Domain configuration
 
 First go to the [Scaleway Dashboard](xxx).
 
@@ -52,7 +52,7 @@ From the menu, move to DNS Section and click "Create DNS zone" fill domain name 
 
 You will reach a page where you can enter all of your domain details.
 
-##Step 3 - Entry types
+#### Step 3 - Entry types
 
 - A records
 
@@ -76,7 +76,7 @@ The MX Records designate the order in which the mail servers should be attempted
 
 `mx1.mydomain.com 10`
 
-##Step 4 - Testing
+#### Step 4 - Testing
 
 Once you have configured your domains, you can test everything works fine. (It can take some time to be update)
 

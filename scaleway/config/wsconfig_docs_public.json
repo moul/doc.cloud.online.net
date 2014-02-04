@@ -61,20 +61,12 @@
 				"isSub": true,
 				"submenu": [
 					{
-						"name": "Create",
-						"url": "/documentation/instances/create.html"
+						"name": "Create, edit and delete instances",
+						"url": "/documentation/instances/instances.html"
 					},
 					{
-						"name": "Snapshot",
-						"url": "/documentation/instances/snapshot.html"
-					},
-					{
-						"name": "Restore",
-						"url": "/documentation/instances/restore.html"
-					},
-					{
-						"name": "Cleanup",
-						"url": "/documentation/instances/cleanup.html"
+						"name": "Create, launch and delete images",
+						"url": "/documentation/instances/images.html"
 					}
 
 				]
@@ -86,31 +78,32 @@
 				"isSub": true,
 				"submenu": [
 					{
-						"name": "Create",
-						"url": "/documentation/storage/create.html"
+						"name": "Create, attach, detach and delete a volume",
+						"url": "/documentation/storage/volumes.html"
 					},
 					{
-						"name": "Attach",
-						"url": "/documentation/storage/attach.html"
-					},
-					{
-						"name": "Detach",
-						"url": "/documentation/storage/detach.html"
-					},
-					{
-						"name": "Snapshot",
+						"name": "Create, restore, delete a snapshot",
 						"url": "/documentation/storage/snapshot.html"
-					},
-					{
-						"name": "Restore",
-						"url": "/documentation/storage/restore.html"
-					},
-					{
-						"name": "Delete",
-						"url": "/documentation/storage/delete.html"
 					}
 				]
 			},
+
+			{
+				"name": "S3",
+				"url": "#",
+				"isSub": true,
+				"submenu": [
+					{
+						"name": "Use with S3",
+						"url": "/documentation/s3/use_with_s3.html"
+					},
+					{
+						"name": "Basics",
+						"url": "/documentation/s3/basics.html"
+					}
+				]
+			},
+
 
 			{
 				"name": "DNS",

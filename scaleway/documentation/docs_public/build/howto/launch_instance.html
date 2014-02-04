@@ -1,21 +1,21 @@
-<!DOCTYPE html><html><head><title>Launch your first instance - Scaleway documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"/><style type="text/css"><body>{ padding-top: 60px; padding-bottom: 40px; }</body><div class="sidebar-nav">{ padding: 9px 0; } </div></style></head><body><nav role="nagivation" class="navbar navbar-default"><div class="navbar-header"><button type="button" data-toggle="collapse" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand">Scaleway</a></div><div class="collapse navbar-collapse"><ul class="nav navbar-nav"><li><a href="/documentation/">Home</a></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Getting started<b class="caret"></b></a><ul role="menu" class="dropdown-menu"><li><a href="/documentation/howto/launch_instance.html">Launch your first instance</a></li><li><a href="/documentation/howto/add_storage.html">Add extra storage</a></li><li><a href="/documentation/howto/setup_dns.html">Set up your domain with Scaleway</a></li></ul></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Managing your account<b class="caret"></b></a><ul role="menu" class="dropdown-menu"><li><a href="/documentation/managing_account/generating_apikey">Generating your API key</a></li><li><a href="/documentation/managing_account/billing_informations">Billing informations</a></li></ul></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Instances<b class="caret"></b></a><ul role="menu" class="dropdown-menu"><li><a href="/documentation/instances/create.html">Create</a></li><li><a href="/documentation/instances/snapshot.html">Snapshot</a></li><li><a href="/documentation/instances/restore.html">Restore</a></li><li><a href="/documentation/instances/cleanup.html">Cleanup</a></li></ul></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Storage<b class="caret"></b></a><ul role="menu" class="dropdown-menu"><li><a href="/documentation/storage/create.html">Create</a></li><li><a href="/documentation/storage/attach.html">Attach</a></li><li><a href="/documentation/storage/detach.html">Detach</a></li><li><a href="/documentation/storage/snapshot.html">Snapshot</a></li><li><a href="/documentation/storage/restore.html">Restore</a></li><li><a href="/documentation/storage/delete.html">Delete</a></li></ul></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">DNS<b class="caret"></b></a><ul role="menu" class="dropdown-menu"><li><a href="/documentation/dns/general.html">General</a></li><li><a href="/documentation/dns/transfer.html">Transfer</a></li><li><a href="/documentation/dns/manage.html">Manage</a></li></ul></li></ul></div></nav><div class="container"><h3>Launch your first instance</h3><h2 id="intro">Intro</h2>
+<!DOCTYPE html><html><head><title>Launch your first instance - Scaleway documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"/><style type="text/css"><body>{ padding-top: 60px; padding-bottom: 40px; }</body><div class="sidebar-nav">{ padding: 9px 0; } </div></style></head><body><nav role="nagivation" class="navbar navbar-default"><div class="navbar-header"><button type="button" data-toggle="collapse" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand">Scaleway</a></div><div class="collapse navbar-collapse"><ul class="nav navbar-nav"><li><a href="/documentation/">Home</a></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Getting started<b class="caret"></b></a><ul role="menu" class="dropdown-menu"><li><a href="/documentation/howto/launch_instance.html">Launch your first instance</a></li><li><a href="/documentation/howto/add_storage.html">Add extra storage</a></li><li><a href="/documentation/howto/setup_dns.html">Set up your domain with Scaleway</a></li></ul></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Managing your account<b class="caret"></b></a><ul role="menu" class="dropdown-menu"><li><a href="/documentation/managing_account/generating_apikey">Generating your API key</a></li><li><a href="/documentation/managing_account/billing_informations">Billing informations</a></li></ul></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Instances<b class="caret"></b></a><ul role="menu" class="dropdown-menu"><li><a href="/documentation/instances/instances.html">Create, edit and delete instances</a></li><li><a href="/documentation/instances/images.html">Create, launch and delete images</a></li></ul></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Storage<b class="caret"></b></a><ul role="menu" class="dropdown-menu"><li><a href="/documentation/storage/volumes.html">Create, attach, detach and delete a volume</a></li><li><a href="/documentation/storage/snapshot.html">Create, restore, delete a snapshot</a></li></ul></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">S3<b class="caret"></b></a><ul role="menu" class="dropdown-menu"><li><a href="/documentation/s3/use_with_s3.html">Use with S3</a></li><li><a href="/documentation/s3/basics.html">Basics</a></li></ul></li><li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">DNS<b class="caret"></b></a><ul role="menu" class="dropdown-menu"><li><a href="/documentation/dns/general.html">General</a></li><li><a href="/documentation/dns/transfer.html">Transfer</a></li><li><a href="/documentation/dns/manage.html">Manage</a></li></ul></li></ul></div></nav><div class="container"><h3>Launch your first instance</h3><h4 id="intro">Intro</h4>
 <p>A Scaleway instance is physical server, each instance that you create is a physical instance dedicated for your personnal use.
 It&#39;s easy to use, the entire process take only a couple of minutes!</p>
 <p>This guide gonna show you how to create and access your new server.</p>
-<h2 id="step-1-sign-in">Step 1 - Sign in</h2>
+<h4 id="step-1-sign-in">Step 1 - Sign in</h4>
 <p>In a first time go to the <a href="/documentation/howto/xxx">Scaleway dashboard</a> and log in with your email and password.</p>
-<p>Once logged, click on the “Create Server” button at the top right of the sidebar</p>
-<h2 id="step-2-choose-an-organization">Step 2 - Choose an organization</h2>
+<p>Once logged, click on the “Create Server” button at the top left of the sidebar</p>
+<h4 id="step-2-choose-an-organization">Step 2 - Choose an organization</h4>
 <p>Empty</p>
-<h2 id="step-3-name-tags-your-instance">Step 3 - Name &amp; Tags your instance</h2>
+<h4 id="step-3-name-tags-your-instance">Step 3 - Name &amp; Tags your instance</h4>
 <p>First, you have to name your server, an instance name as the following specifications: It can be from 1 to 64 characters without symbols.</p>
-<p>To help you manage your instances, and other resources, you can assign your own metadata to each resource in the form of tags. A tags as is a string with the following restrictions :</p>
+<p>To help you to manage your instances, and other resources, you can assign your own metadata to each resource in the form of tags. A tags as is a string with the following restrictions :</p>
 <ul>
 <li>Maximum number of tags per resource: 10</li>
 <li>Maximum length: 255 Unicode characters</li>
 </ul>
-<p>Tag are case sensitive.</p>
-<h2 id="step-4-choose-your-image">Step 4 - Choose your image</h2>
+<p>Tags are case sensitive.</p>
+<h4 id="step-4-choose-your-image">Step 4 - Choose your image</h4>
 <p>To create your server, you have 3 options, use:</p>
 <ul>
 <li>Scaleway images</li>
@@ -29,7 +29,7 @@ It&#39;s easy to use, the entire process take only a couple of minutes!</p>
 <li>Snapshots</li>
 </ul>
 <p>It&#39;s the list of your instance snapshot, it allow you to start a new instance form a previous one. It could be really usefull for scaling.</p>
-<h2 id="step-5-add-storage">Step 5 - Add storage</h2>
+<h4 id="step-5-add-storage">Step 5 - Add storage</h4>
 <p>You can add some volume to your instance, it can be an existing volume or new one.
 An existing volume is a disk snapshot that you take previously</p>
 <p>Volume size is limit to 1Tb and there is no limit on the amount of volumes you can attach to your server.</p>
@@ -41,21 +41,24 @@ An existing volume is a disk snapshot that you take previously</p>
 <li><p>Ultra low latency
 SSD disk to deliver faster disk I/O performance, it&#39;s perfect if you need heavy read/write</p>
 </li>
+<li><p>Choose security group</p>
+</li>
 </ul>
-<h2 id="step-6-create-your-server">Step 6 - Create your server</h2>
+<p>A security group acts as a firewall that controls the traffic for one or more instances.</p>
+<h4 id="step-6-create-your-server">Step 6 - Create your server</h4>
 <p>Well, it&#39;s now time to start your instance, just click the &quot;Create server&quot; button. In few seconds your instance will be ready to use.
 If you have not configured your ssh key, you will receive an email with the root password.</p>
-<h2 id="step-7-connect-your-instance">Step 7 - Connect your instance</h2>
-<h3 id="login-from-osx-and-linux">Login from OSX and Linux</h3>
-<h4 id="1-launch-a-terminal">1 - Launch a terminal</h4>
+<h4 id="step-7-connect-your-instance">Step 7 - Connect your instance</h4>
+<h5 id="login-from-osx-and-linux">Login from OSX and Linux</h5>
+<h5 id="1-launch-a-terminal">1 - Launch a terminal</h5>
 <p>On a Mac or Linux computer, open your terminal program and in the shell just type the following command :</p>
 <pre><code class="lang-sh">ssh root@your_instance_ip</code></pre>
-<h4 id="2-allow-the-connection-to-the-host">2 - Allow the connection to the host</h4>
+<h5 id="2-allow-the-connection-to-the-host">2 - Allow the connection to the host</h5>
 <p>Answer &quot;yes&quot; when the prompt asks if you want to connect to the host.</p>
-<h4 id="3-done">3 - Done</h4>
+<h5 id="3-done">3 - Done</h5>
 <p>You are now ask to type your root password (root password was emailed previously) and press enter.</p>
 <p>Well done, you are now connected to your instance!</p>
-<h3 id="login-from-windows">Login from Windows</h3>
+<h5 id="login-from-windows">Login from Windows</h5>
 <p>On windows, you will need a small apllication named PuTTy, and ssh client. You can download putty <a href="/documentation/howto/xxx">here</a>
 Once PuTTY is downloaded and installed, just start the program.</p>
 <p>Fill in the &quot;Hostname&quot; with your instance IP address and click connect. You are now connected to your instance from windows!</p>

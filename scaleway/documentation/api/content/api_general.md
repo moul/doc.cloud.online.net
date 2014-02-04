@@ -1,13 +1,10 @@
 FORMAT: 1A
 
-
 # Welcome to the Scaleway API documentation. This API provides access to Scaleway services.
 
-## Request and response 
+## Request and response
 
-the scaleway api works over https and is accessed from the `api.scaleway.com` domain.
-
-all data is sent and received as json.
+The scaleway api works over https and is accessed from the `api.scaleway.com` domain. All data is sent and received as json. All data is sent and received as json.
 
 ## Constructing Requests
 
@@ -23,31 +20,36 @@ To construct a proper request, you will need to format the URI as follows:
 An example request, to retrieves detailed informations about an instance might be:
 
 ```
-$curl -i https://api.scaleway.com/v1/servers/Server-198779b8-e4b5-4876-9e2f-aa09c1ce9ebf
+curl -i 'https://api.scaleway.com/v1/organizations' --header "X-Auth-Token: fa6316e3-3c71-4304-8a08-f9d07207e240"
 
-HTTP/1.1 200 OK
-Content-Type: application/json; charset=utf-8
-Status: 200 OK
-X-RateLimit-Limit: 5000
-X-RateLimit-Remaining: 4999
-X-RateLimit-Reset: 1389359739
-...
+HTTP/1.0 200 OK
+Content-Type: application/json
+Content-Length: 213
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: content-type, x-auth-token, location
+Access-Control-Allow-Headers: content-type, x-auth-token, location
+Access-Control-Allow-Methods: POST, PUT, DELETE, GET, OPTIONS, PATCH, HEAD
+Access-Control-Allow-Credentials: true
+Server: nginx
+Date: Mon, 03 Feb 2014 16:55:04 GMT
 
 {
-  "server": {
-    "id": xxxx,
-    "image_id": yyyy,
-    "name": "zzzz",
-    ...
-  }
+  "organizations": [
+    {
+      "id": "22222222-1111-4111-8111-222222222222",
+      "name": "General Inc"
+    },
+    {
+      "id": "11111111-1111-4111-8111-111111111111",
+      "name": "Scaleway"
+    }
+  ]
 }
 ```
-
 
 ## Error
 
 Scaleway uses conventional HTTP response codes to indicate success or failure of an API request. In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error that resulted from the provided information (e.g. a required parameter was missing, a charge failed, etc.), and codes in the 5xx range indicate an error with Scaleway's servers.
-
 
 ### HTTP Status Code Summary
 
@@ -72,14 +74,13 @@ Not all errors map cleanly onto HTTP response codes, however. When a request is 
 - param (Optional):
  - The parameter the error relates to if the error is parameter-specific.
 
-
 ### Pagination
 
 Methods returning multiple items are paginated to 25 items by default.
-You can specify further pages with the ?page parameter. You can also set a custom page size up to 500 with the ?limit parameter.
+You can specify further pages with the ?page parameter. You can also set a custom page size up to 500 with the ?page_size parameter.
 
 ```
-$curl -i https://api.scaleway.com/v1/servers/Server-198779b8-e4b5-4876-9e2f-aa09c1ce9ebf/tags?page=5&limit=150
+$curl -i https://api.scaleway.com/v1/servers/Server-198779b8-e4b5-4876-9e2f-aa09c1ce9ebf/tags?page=5&page_size=150
 
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
@@ -87,7 +88,7 @@ Status: 200 OK
 X-RateLimit-Limit: 5000
 X-RateLimit-Remaining: 4999
 X-RateLimit-Reset: 1389359739
-Link: <https://api.scaleway.com/v1/servers/Server-198779b8-e4b5-4876-9e2f-aa09c1ce9ebf/tags?page=1&limit=150>; rel="first", <https://api.scaleway.com/v1/servers/Server-198779b8-e4b5-4876-9e2f-aa09c1ce9ebf/tags?page=4&limit=150>; rel="prev", <https://api.scaleway.com/v1/servers/Server-198779b8-e4b5-4876-9e2f-aa09c1ce9ebf/tags?page=6&limit=150>; rel="next", <https://api.scaleway.com/v1/servers/Server-198779b8-e4b5-4876-9e2f-aa09c1ce9ebf/tags?page=10&limit=150>; rel="last",
+Link: <https://api.scaleway.com/v1/servers/Server-198779b8-e4b5-4876-9e2f-aa09c1ce9ebf/tags?page=1&page_size=150>; rel="first", <https://api.scaleway.com/v1/servers/Server-198779b8-e4b5-4876-9e2f-aa09c1ce9ebf/tags?page=4&limit=150>; rel="prev", <https://api.scaleway.com/v1/servers/Server-198779b8-e4b5-4876-9e2f-aa09c1ce9ebf/tags?page=6&limit=150>; rel="next", <https://api.scaleway.com/v1/servers/Server-198779b8-e4b5-4876-9e2f-aa09c1ce9ebf/tags?page=10&limit=150>; rel="last",
 ...
 
 {
@@ -97,4 +98,5 @@ Link: <https://api.scaleway.com/v1/servers/Server-198779b8-e4b5-4876-9e2f-aa09c1
 }
 ```
 
-##Resources
+## Resources
+
