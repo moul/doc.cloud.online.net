@@ -58,7 +58,7 @@ Retrieve details info about an organization
 		"type": "unknown_resource"
 	}
 
-#### Invite creation [/organizations/{organization_id}/invite]
+#### Invite creation [/organizations/{organization_id}/invites]
 Create an invitation for a new user in the specified organization
 ##### [POST]
 
@@ -79,7 +79,7 @@ Create an invitation for a new user in the specified organization
 			"lastname": "Smith
 		}
 
-+ Response 200 (application/json)
++ Response 201 (application/json)
 
 	{
 		"invite": {
@@ -178,18 +178,22 @@ Create a new token for specified user
 			"expires": false
 		}
 
-+ Response 200 (application/json)
++ Response 201 (application/json)
 
-	{
-		"token": {
-			"expires": null,
-			"id": "b8fcd81e-b015-4bfa-9a0e-53b71ef58f58",
-			"inherits_user_perms": true,
-			"permissions": [],
-			"roles": [],
-			"user_id": "22222222-1111-4111-8111-111111111111"
+	+ Headers
+		Location: http://api.scaleway.com/v1/tokens/7db33cf3-b43b-4457-aaf7-ac7c7fae378e
+
+	+ Body
+		{
+			"token": {
+				"expires": null,
+				"id": "7db33cf3-b43b-4457-aaf7-ac7c7fae378e",
+				"inherits_user_perms": true,
+				"permissions": [],
+				"roles": [],
+				"user_id": "22222222-1111-4111-8111-111111111111"
+			}
 		}
-	}
 
 + Response 401 (application/json)
 

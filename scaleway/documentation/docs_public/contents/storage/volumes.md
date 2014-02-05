@@ -30,7 +30,7 @@ Create a volume from scratch
 
 Create from a snapshot volume [See volume snapshot documentation](xxxx)
 
-#### Step 2 - Create new volume
+##### Step 2 - Create new volume
 
 First, you have to name your volume, a volume name as the following specifications: It can be from 1 to 64 characters without symbols.
 
@@ -43,6 +43,11 @@ Then select the volume type you need :
 
 - Ultra low latency
 SSD disk to deliver faster disk I/O performance, it's perfect if you need heavy read/write
+
+##### Step 2 - Create from existing volume
+
+The process is the that explain in Step 2, the only difference is that you don't have to choose a size for the volume but a snapshot form a previous one.
+Once it's ok, just create it!
 
 #### Attach a volume
 
