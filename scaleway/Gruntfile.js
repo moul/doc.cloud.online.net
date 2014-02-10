@@ -9,7 +9,9 @@ module.exports = function(grunt) {
 				files:{
 					'documentation/api/index.html': [
 						'documentation/api/content/api_general.md',
+						'documentation/api/content/dns.md',
 						'documentation/api/content/auth.md',
+						'documentation/api/content/ticket.md',
 		/*'documentation/api/_build/containers.md',*/
 		/*'documentation/api/_build/organizations.md',*/
 		/*'documentation/api/_build/servers.md',*/
