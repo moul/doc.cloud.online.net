@@ -6,21 +6,21 @@ template: article.jade
 #### Intro
 
 Snapshot are extremly usefull in production like in development environment.
-A snapshot is a copy of a Scaleway volume.
+A snapshot is a copy of a HyperScale volume.
 
-This documentation will show you how to use Scaleway snapshots to backup specifi volumes, recover it, and delete it.
+This documentation will show you how to use HyperScale snapshots to backup specifi volumes, recover it, and delete it.
 
 #### Sign in
 
-In a first time go to the [Scaleway dashboard](xxx) and log in with your email and password.
+In a first time go to the [HyperScale dashboard](xxx) and log in with your email and password.
 
 #### Create a new snapshot
 
 It's easy, first power-off the instance on which you want to create a volume snapshot.
 
-You can do it from the Scaleway dashboard or form the command line using this command: `sudo halt`
+You can do it from the HyperScale dashboard or form the command line using this command: `sudo halt`
 
-Then, click on Volumes on the Scaleway console, the list of volumes will appear.
+Then, click on Volumes on the HyperScale console, the list of volumes will appear.
 
 Select the volumes you want to snapshot on the list and click the "Snapshot" button. A popup will appear asking you for the snapshot name, description, tags and if you want to start the server once the snapshot is achieve.
 

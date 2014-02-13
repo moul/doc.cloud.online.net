@@ -1,21 +1,21 @@
 {
 	"contents": "../documentation/docs_public/contents",
 	"templates": "../documentation/templates",
-	"output": "../documentation/docs_public/build",
+	"output": "../dist/docs_public",
 
-	"baseUrl": "/documentation",
+	"baseUrl": "/",
 
 	"ignore": ["**/.*.swo", "**/.*.swp"],
 
 	"port": 8080,
 
 	"locals": {
-		"title": "Scaleway documentation",
-		"author": "Scaleway",
+		"title": "HyperScale documentation",
+		"author": "HyperScale",
 		"menu" : [
 			{
 				"name": "Home",
-				"url": "/documentation/",
+				"url": "/",
 				"isSub": false
 			},
 
@@ -26,15 +26,15 @@
 				"submenu": [
 					{
 						"name": "Launch your first instance",
-						"url": "/documentation/howto/launch_instance.html"
+						"url": "/howto/launch_instance.html"
 					},
 					{
 						"name": "Add extra storage",
-						"url": "/documentation/howto/add_storage.html"
+						"url": "/howto/add_storage.html"
 					},
 					{
-						"name": "Set up your domain with Scaleway",
-						"url": "/documentation/howto/setup_dns.html"
+						"name": "Set up your domain with HyperScale",
+						"url": "/howto/setup_dns.html"
 					}
 				]
 			},
@@ -46,11 +46,11 @@
 				"submenu": [
 					{
 						"name": "Generating your API key",
-						"url": "/documentation/managing_account/generating_apikey"
+						"url": "/managing_account/generating_apikey"
 					},
 					{
 						"name": "Billing informations",
-						"url": "/documentation/managing_account/billing_informations"
+						"url": "/managing_account/billing_informations"
 					}
 				]
 			},
@@ -62,11 +62,11 @@
 				"submenu": [
 					{
 						"name": "Create, edit and delete instances",
-						"url": "/documentation/instances/instances.html"
+						"url": "/instances/instances.html"
 					},
 					{
 						"name": "Create, launch and delete images",
-						"url": "/documentation/instances/images.html"
+						"url": "/instances/images.html"
 					}
 
 				]
@@ -79,11 +79,11 @@
 				"submenu": [
 					{
 						"name": "Create, attach, detach and delete a volume",
-						"url": "/documentation/storage/volumes.html"
+						"url": "/storage/volumes.html"
 					},
 					{
 						"name": "Create, restore, delete a snapshot",
-						"url": "/documentation/storage/snapshot.html"
+						"url": "/storage/snapshot.html"
 					}
 				]
 			},
@@ -95,11 +95,11 @@
 				"submenu": [
 					{
 						"name": "Use with S3",
-						"url": "/documentation/s3/use_with_s3.html"
+						"url": "/s3/use_with_s3.html"
 					},
 					{
 						"name": "Basics",
-						"url": "/documentation/s3/basics.html"
+						"url": "/s3/basics.html"
 					}
 				]
 			},
@@ -112,15 +112,15 @@
 				"submenu": [
 					{
 						"name": "General",
-						"url": "/documentation/dns/general.html"
+						"url": "/dns/general.html"
 					},
 					{
 						"name": "Transfer",
-						"url": "/documentation/dns/transfer.html"
+						"url": "/dns/transfer.html"
 					},
 					{
 						"name": "Manage",
-						"url": "/documentation/dns/manage.html"
+						"url": "/dns/manage.html"
 					}
 				]
 			}

@@ -6,7 +6,7 @@ template: article.jade
 #### Intro
 
 It could happen that you need top add more storage to your existing servers.
-Scaleway allow you to attach more storage volume to an existing instance.
+HyperScale allow you to attach more storage volume to an existing instance.
 
 This guide gonna show you how to create and attach additional volume to an existing instance
 

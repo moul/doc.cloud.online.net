@@ -5,12 +5,12 @@ template: article.jade
 
 ####Login register user
 
-A register user arrive on scaleway.com and click signin button || A register user arrive on console.scaleway.com
+A register user arrive on hyperscale.com and click signin button || A register user arrive on console.hyperscale.com
 
 - User has to type a login
 - User has to type a password
 - User has to click the login button
-- User is redirect to the Scaleway console
+- User is redirect to the HyperScale console
 
 ####Server creation
 

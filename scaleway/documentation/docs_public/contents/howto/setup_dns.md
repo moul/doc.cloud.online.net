@@ -1,26 +1,26 @@
 ---
-title: Set up your domains with Scaleway
+title: Set up your domains with HyperScale
 template: article.jade
 ---
 
 #### Intro
 
-Scaleway offer a simple, easy to use DNS manager for your domains.
+HyperScale offer a simple, easy to use DNS manager for your domains.
 
-This guide gonna show you how to manage your domains with Scaleway & how to use Scaleway DNS manager.
+This guide gonna show you how to manage your domains with HyperScale & how to use HyperScale DNS manager.
 
 #### Step 1 - Change your Domain Name Server
 
-The first thing you need to do to set up your domain is to set your Domain Name Server to point to Scaleway DNS.
+The first thing you need to do to set up your domain is to set your Domain Name Server to point to HyperScale DNS.
 
 From your registrar control panel, find the section called "Domain Name Server" or "DNS"
 
-Change the nameserver to point on Scaleway name server, just fill namservers fields with the following.
+Change the nameserver to point on HyperScale name server, just fill namservers fields with the following.
 
-- nsx.scaleway.com
-- nsx.scaleway.com
-- nsx.scaleway.com
-- nsx.scaleway.com
+- nsx.hyperscale.com
+- nsx.hyperscale.com
+- nsx.hyperscale.com
+- nsx.hyperscale.com
 
 Once done, save your changes.
 
@@ -36,9 +36,9 @@ with many different competing registrars. Go to http://www.internic.net
 for detailed information.
 
    Domain Name: yourdomain.com
-   Name Server: nsx.scaleway.com
-   Name Server: nsx.scaleway.com
-   Name Server: nsx.scaleway.com
+   Name Server: nsx.hyperscale.com
+   Name Server: nsx.hyperscale.com
+   Name Server: nsx.hyperscale.com
    Updated Date: 21-jan-2014
    Creation Date: 29-apr-2011
    Expiration Date: 29-apr-2014
@@ -46,7 +46,7 @@ for detailed information.
 
 #### Step 2 - Domain configuration
 
-First go to the [Scaleway Dashboard](xxx).
+First go to the [HyperScale Dashboard](xxx).
 
 From the menu, move to DNS Section and click "Create DNS zone" fill domain name with your domain name ex: `mydomain.com`.
 
@@ -56,7 +56,7 @@ You will reach a page where you can enter all of your domain details.
 
 - A records
 
-Use this record to point a name on the IP address of a Scaleway instance for example.
+Use this record to point a name on the IP address of a HyperScale instance for example.
 
 `test.mydomain.com A xxx.xxx.xxx.xxx`
 

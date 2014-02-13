@@ -1,18 +1,18 @@
 ---
-title: 3S SSV Scaleway Scalable Volumes/Storage
+title: 3S SSV HyperScale Scalable Volumes/Storage
 template: article.jade
 ---
 
 #### Intro
 
-You can add extra storage on a running instance by adding Scaleway volumes to an existing server.
+You can add extra storage on a running instance by adding HyperScale volumes to an existing server.
 A volume is at most attach to one instance.
 
 This guide is about volumes managment
 
 #### Sign in
 
-In a first time go to the [Scaleway dashboard](xxx) and log in with your email and password.
+In a first time go to the [HyperScale dashboard](xxx) and log in with your email and password.
 
 Then, click on the “Volumes” button on the left sidebar
 

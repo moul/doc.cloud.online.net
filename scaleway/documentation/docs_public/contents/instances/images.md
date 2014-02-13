@@ -5,13 +5,13 @@ template: article.jade
 
 #### Intro
 
-Scaleway images are really usefull if you want to clone an instance to another or to publish an instance image to the market place.
+HyperScale images are really usefull if you want to clone an instance to another or to publish an instance image to the market place.
 
 Here's how to create your instance image
 
 #### Sign in
 
-In a first time go to the [Scaleway dashboard](xxx) and log in with your email and password.
+In a first time go to the [HyperScale dashboard](xxx) and log in with your email and password.
 
 Then, click on the “Servers” button on the left sidebar
 

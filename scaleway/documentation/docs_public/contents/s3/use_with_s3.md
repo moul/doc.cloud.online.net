@@ -1,11 +1,11 @@
 ---
-title: Use ScalewayS3 with S3
+title: Use HyperScaleS3 with S3
 template: article.jade
 ---
 
 #### Intro
 
-ScalewayS3 is 100% S3 compliant, this guide will show you how to use existing S3 toolsto use Scaleway S3 in CLI
+HyperScaleS3 is 100% S3 compliant, this guide will show you how to use existing S3 toolsto use HyperScale S3 in CLI
 
 #### Step 1 - Get your token
 
@@ -22,7 +22,7 @@ Download it on github [here](https://github.com/s3tools/s3cmd)
 
 #### Step 3 - Configure S3cmd
 
-Now we will configure S3cmd for use scaleway, following a basic configuration example to use Scaleway S3 with S3cmd
+Now we will configure S3cmd for use scaleway, following a basic configuration example to use HyperScale S3 with S3cmd
 
 ```
 $cat ~/.s3cfg

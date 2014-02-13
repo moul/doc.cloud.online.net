@@ -5,13 +5,13 @@ template: article.jade
 
 #### Intro
 
-A Scaleway instance is physical server, each instance that you create is totally  dedicated for your personnal use.
+A HyperScale instance is physical server, each instance that you create is totally  dedicated for your personnal use.
 
 This guid is about instance operations such as create, edit, delete.
 
 #### Sign in
 
-In a first time go to the [Scaleway dashboard](xxx) and log in with your email and password.
+In a first time go to the [HyperScale dashboard](xxx) and log in with your email and password.
 
 Once logged, click on the “Create Server” button at the top left of the sidebar
 
@@ -39,7 +39,7 @@ Tags are case sensitive.
 
 To create your server, you have 3 options, use:
 
-- Scaleway images
+- HyperScale images
 
 They are standard OS Images, we propose today some linux operating systems, such as Ubuntu, Fedora or Debian... What else ? (list is update permanently).
 

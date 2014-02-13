@@ -4,12 +4,23 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		clean: {
+			dist: {
+				files: [{
+					dot: true,
+					src: [
+						'dist/*',
+						'dist/.git*'
+					]
+				}]
+			}
+		},
 		aglio: {
 			api1:{
 				files:{
-					'documentation/api/index.html': [
+					'dist/api/index.html': [
 						'documentation/api/content/api_general.md',
-						'documentation/api/content/dns.md',
+		/*'documentation/api/content/dns.md',*/
 						'documentation/api/content/auth.md',
 						'documentation/api/content/ticket.md',
 		/*'documentation/api/_build/containers.md',*/
@@ -36,8 +47,9 @@ module.exports = function(grunt) {
 			}
 		}
 	});
-	grunt.loadNpmTasks('grunt-aglio');
-	grunt.loadNpmTasks('grunt-wintersmith');
-
-	grunt.registerTask('default', ['aglio', 'wintersmith']);
+	/*grunt.loadNpmTasks('grunt-clean');*/
+	/*grunt.loadNpmTasks('grunt-aglio');*/
+	/*grunt.loadNpmTasks('grunt-wintersmith');*/
+	require('load-grunt-tasks')(grunt);
+	grunt.registerTask('default', ['clean', 'aglio', 'wintersmith']);
 };

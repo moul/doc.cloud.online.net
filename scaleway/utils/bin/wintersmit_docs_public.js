@@ -8,8 +8,8 @@ var wsconfig = wintersmith(path.join(__dirname, '../../config/wsconfig_docs_publ
 
 // Build the content tree and render it to outputDir.
 wsconfig.build(function(error) {
-  if (error) throw error;
-  console.log('Done!');
+	if (error) throw error;
+	console.log('Done!');
 });
 
 // Start the preview server. Calls callback when server is up and running or if an error occurs.

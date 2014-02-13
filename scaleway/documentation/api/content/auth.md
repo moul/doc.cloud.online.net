@@ -21,7 +21,7 @@ Retrieves organizations granted for current user
                 },
                 {
                     "id": "11111111-1111-4111-8111-111111111111",
-                    "name": "Scaleway"
+                    "name": "HyperScale"
                 }
             ]
         }
@@ -52,7 +52,7 @@ Retrieve details info about an organization
         {
             "organization": {
                 "id": "11111111-1111-4111-8111-111111111111",
-                "name": "Scaleway"
+                "name": "HyperScale"
             }
         }
 
@@ -503,7 +503,7 @@ Retrieve information for the specified user
                     },
                     {
                         "id": "11111111-1111-4111-8111-111111111111",
-                        "name": "Scaleway"
+                        "name": "HyperScale"
                     }
                 ],
                 "roles": [
@@ -517,14 +517,14 @@ Retrieve information for the specified user
                     {
                         "organization": {
                             "id": "11111111-1111-4111-8111-111111111111",
-                            "name": "Scaleway"
+                            "name": "HyperScale"
                         },
                         "role": "admin"
                     },
                     {
                         "organization": {
                             "id": "11111111-1111-4111-8111-111111111111",
-                            "name": "Scaleway"
+                            "name": "HyperScale"
                         },
                         "role": "ocs_admin"
                     }

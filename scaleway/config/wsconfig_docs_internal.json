@@ -1,20 +1,22 @@
 {
 	"contents": "../documentation/docs_internal/contents",
 	"templates": "../documentation/templates",
-	"output": "../documentation/docs_internal/build",
-	"baseUrl": "/internal",
+	"output": "../dist/docs_internal",
+
+	"baseUrl": "/",
+
 	"locals": {
-		"title": "Scaleway internal documentation",
-		"author": "Scaleway",
+		"title": "HyperScale internal documentation",
+		"author": "HyperScale",
 		"menu" : [
 			{
 				"name": "Home",
-				"url": "/internal/",
+				"url": "/",
 				"isSub": false
 			},
 			{
 				"name": "User browsing",
-				"url": "/internal/user_browsing.html",
+				"url": "/user_browsing.html",
 				"isSub": false
 			}
 		]

@@ -1,5 +1,5 @@
 ---
-title: Scaleway internal documentation homepage
+title: HyperScale internal documentation homepage
 template: article.jade
 ---
 
