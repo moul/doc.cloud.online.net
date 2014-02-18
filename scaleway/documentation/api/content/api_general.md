@@ -20,51 +20,56 @@ To construct a proper request, you will need to format the URL as follows:
 
 `https://api.hyperscale.com/{version}/{ressource}`
 
-Example: `https://api.hyperscale.com/v1/users`
+Example: `https://api.hyperscale.com/v1/users/22222222-1111-4111-8111-111111111111`
 
 An example request, to retrieves detailed informations about a user might be:
 
 ```
-curl -i 'https://api.hyperscale.com/v1/users' --header "X-Auth-Token: 59517bee-4ccb-43fa-95d0-f52292aad10a"
+curl -i 'https://api.hyperscale.com/v1/users/22222222-1111-4111-8111-111111111111' --header "X-Auth-Token: 59517bee-4ccb-43fa-95d0-f52292aad10a"
 
 HTTP/1.0 200 OK
 Content-Type: application/json
 
 {
-    "tickets": {
-        "assigned_at": null,
-        "assigned_by": null,
-        "assigned_to": [],
-        "closed_at": null,
-        "created_at": "2014-02-10T14:44:12+00:00",
-        "created_by": {
-            "firstname": "Paul",
-            "fullname": "Paul Rodriguez",
-            "id": "22222222-1111-4111-8111-111111111111",
-            "lastname": "Rodriguez"
-        },
-        "finish_at": null,
-        "id": "afdca632-3d3e-4ddc-9fc3-3ad29af01c6c",
-        "queue": "AUTH",
-        "resolved": "False",
-        "start_at": null,
-        "state": "OPEN",
-        "subject": "This is another ticket",
-        "tags": [
+    "user": {
+        "email": "js@mail.ext",
+        "firstname": "John",
+        "fullname": "John Smith",
+        "id": "22222222-1111-4111-8111-111111111111",
+        "lastname": "Smith",
+        "organizations": [
             {
-                "name": "this"
+                "id": "22222222-1111-4111-8111-222222222222",
+                "name": "General Inc"
             },
             {
-                "name": "is"
-            },
-            {
-                "name": "another"
-            },
-            {
-                "name": "ticket"
+                "id": "11111111-1111-4111-8111-111111111111",
+                "name": "HyperScale"
             }
         ],
-        "updated_at": "2014-02-10T14:44:12+00:00"
+        "roles": [
+            {
+                "organization": {
+                    "id": "22222222-1111-4111-8111-222222222222",
+                    "name": "General Inc"
+                },
+                "role": "admin"
+            },
+            {
+                "organization": {
+                    "id": "11111111-1111-4111-8111-111111111111",
+                    "name": "HyperScale"
+                },
+                "role": "admin"
+            },
+            {
+                "organization": {
+                    "id": "11111111-1111-4111-8111-111111111111",
+                    "name": "HyperScale"
+                },
+                "role": "ocs_admin"
+            }
+        ]
     }
 }
 ```
@@ -80,7 +85,7 @@ Basic Authentication process:
 - Supply an "X-Auth-Token" header followed by the token you get previously, e.g. "4e0b46e4-7c1d-44d4-8ba6-dc5f80694397"
 
 ```
-curl -X GET -H "X-Auth-Token: 4e0b46e4-7c1d-44d4-8ba6-dc5f80694397" -H "Content-Type: application/json" https://api.hyperscale.fr/v1/api/{ressources}
+curl -X GET -H "X-Auth-Token: 4e0b46e4-7c1d-44d4-8ba6-dc5f80694397" -H "Content-Type: application/json" https://api.hyperscale.fr/v1/{ressources}
 ```
 
 ## Errors
