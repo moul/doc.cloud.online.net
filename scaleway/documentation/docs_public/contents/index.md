@@ -1,5 +1,5 @@
 ---
-title: HyperScale documentation homepage
+title: Home
 template: article.jade
 ---
 

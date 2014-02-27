@@ -8,22 +8,10 @@
 	"locals": {
 		"title": "HyperScale internal documentation",
 		"author": "HyperScale",
-		"menu" : [
-			{
-				"name": "Home",
-				"url": "/",
-				"isSub": false
-			},
-			{
-				"name": "User browsing",
-				"url": "/user_browsing.html",
-				"isSub": false
-			}
-		]
+		"menu": {
+
+		}
 	},
 	"ignore": ["**/.*.swo", "**/.*.swp"],
-	"require": {
-		"_": "underscore"
-	},
 	"port": 8080
 }

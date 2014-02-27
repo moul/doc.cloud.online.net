@@ -8,19 +8,20 @@ nav(role='nagivation').navbar.navbar-default
 
 	div.collapse.navbar-collapse
 		ul.nav.navbar-nav
-				- each item in locals.menu
-					- if (item.isSub == false)
-						- if (page.metadata.title == item.name)
-							li.active
-								a(href= item.url) #{item.name}
-						- else
-							li
-								a(href= item.url) #{item.name}
+			- each val, key in contents
+				- if (contents[key]['markdown'])
+					- if (page.metadata.title == val.title)
+						li.active
+							a(href= val.url) #{val.title}
 					- else
-						li.dropdown
-							a(href="#", data-toggle="dropdown").dropdown-toggle #{item.name}
-								b.caret
-							ul(role="menu").dropdown-menu
-								- each sub_item in item.submenu
-									li
-										a(href=sub_item.url) #{sub_item.name}
+						li
+							a(href= val.url) #{val.title}
+				- else
+					li.dropdown
+						- console.log(locals.menu[key])
+						a(href="#", data-toggle="dropdown").dropdown-toggle #{locals.menu[key]}
+							b.caret
+						ul(role="menu").dropdown-menu
+							- each sub_item in val
+								li
+									a(href=sub_item.url) #{sub_item.title}
