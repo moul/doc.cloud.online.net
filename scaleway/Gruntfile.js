@@ -21,8 +21,9 @@ module.exports = function(grunt) {
 					'dist/api/index.html': [
 						'documentation/api/content/api_general.md',
 		/*'documentation/api/content/dns.md',*/
-						'documentation/api/content/auth.md',
+						'documentation/api/content/account.md',
 						'documentation/api/content/ticket.md',
+						'documentation/api/content/metadata.md',
 		/*'documentation/api/_build/containers.md',*/
 		/*'documentation/api/_build/organizations.md',*/
 		/*'documentation/api/_build/servers.md',*/

@@ -148,7 +148,7 @@ Input and output data must be valid JSON with appropriate Content-Type header se
 
 + Response 401 (application/json)
         {
-            "message": "Invalid authentication token: 77e4717b-b475-46f2-862e-404f77419672",
+            "message": "The header 'X-Auth-Token' is missing",
             "type": "invalid_auth"
         }
 

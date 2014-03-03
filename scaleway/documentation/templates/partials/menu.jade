@@ -18,7 +18,6 @@ nav(role='nagivation').navbar.navbar-default
 							a(href= val.url) #{val.title}
 				- else
 					li.dropdown
-						- console.log(locals.menu[key])
 						a(href="#", data-toggle="dropdown").dropdown-toggle #{locals.menu[key]}
 							b.caret
 						ul(role="menu").dropdown-menu

@@ -1,9 +1,10 @@
 ### group Ticket
 Resources related to scaleway Ticket
 
-#### Ticket creation [/ticket]
-Create a new ticket
-##### [POST]
+#### Tickets Collection [/ticket]
+A collection of tickets with all their details
+
+##### Create a new ticket [POST]
 
 + Parameters
 
@@ -67,28 +68,11 @@ Create a new ticket
             }
         }
 
-+ Response 400 (application/json)
++ Response 400
 
-        {
-            "fields": {
-                "subject": [
-                    "required key not provided"
-                ]
-            },
-            "message": "Validation Error",
-            "type": "invalid_request_error"
-        }
++ Response 401
 
-+ Response 401 (application/json)
-
-        {
-            "message": "Authentication error",
-            "type": "invalid_auth"
-        }
-
-#### List all tickets [/ticket]
-Retrieve a list of tickets
-##### [GET]
+##### List all tickets  [GET]
 
 + Request
 
@@ -176,20 +160,17 @@ Retrieve a list of tickets
             ]
         }
 
-+ Response 401 (application/json)
++ Response 401
 
-        {
-            "message": "Authentication error",
-            "type": "invalid_auth"
-        }
-
-#### Get an existing ticket [/ticket/{ticket_id}]
-Retrieve informations of an existing tickets
-##### [GET]
+#### Ticket [/ticket/{ticket_id}]
+A single ticket with all its details
 
 + Parameters
     
     + ticket_id (required, string, `afdca632-3d3e-4ddc-9fc3-3ad29af01c6c`)... Ticket unique identifier
+
+##### Retrieve a ticket [GET]
+Retrieve details about a ticket
 
 + Request
 
@@ -237,23 +218,12 @@ Retrieve informations of an existing tickets
             }
         }
 
-+ Response 404 (application/json)
++ Response 401
 
-        {
-            "message": "Not found",
-            "type": "unknown_resource"
-        }
++ Response 404
 
-+ Response 401 (application/json)
-
-        {
-            "message": "Authentication error",
-            "type": "invalid_auth"
-        }
-
-#### Update an existing ticket [/ticket/{ticket_id}]
+##### Update a ticket [PATCH]
 Change state of an existing tickets
-##### [PATCH]
 
 + Parameters
 
@@ -313,35 +283,21 @@ Change state of an existing tickets
             }
         }
 
-+ Response 400 (application/json)
++ Response 400
 
-        {
-            "fields": {
-                "xxx": [
-                    "extra keys not allowed"
-                ]
-            },
-            "message": "Validation Error",
-            "type": "invalid_request_error"
-        }
++ Response 401
 
-+ Response 404 (application/json)
++ Response 404
 
-        {
-            "message": "Not found",
-            "type": "unknown_resource"
-        }
 
-+ Response 401 (application/json)
+#### Ticket Answers [/ticket/{ticket_id}/answers]
 
-        {
-            "message": "Authentication error",
-            "type": "invalid_auth"
-        }
++ Parameters
 
-### Ticket response creation [/ticket/{ticket_id}/answers]
-Create a new response to an existing ticket
-##### [POST]
+    + ticket_id (required, string, `afdca632-3d3e-4ddc-9fc3-3ad29af01c6c`)... Ticket unique identifier
+
+##### Create a new reply [POST]
+Create a new reply on an existing ticket
 
 + Parameters
 
@@ -378,39 +334,14 @@ Create a new response to an existing ticket
             }
         }
 
-+ Response 400 (application/json)
++ Response 400
 
-        {
-            "fields": {
-                "xxx": [
-                    "extra keys not allowed"
-                ]
-            },
-            "message": "Validation Error",
-            "type": "invalid_request_error"
-        }
++ Response 401
 
-+ Response 404 (application/json)
++ Response 404
 
-        {
-            "message": "Not found",
-            "type": "unknown_resource"
-        }
-
-+ Response 401 (application/json)
-
-        {
-            "message": "Authentication error",
-            "type": "invalid_auth"
-        }
-
-### Get ticket response creation [/ticket/{ticket_id}/answers]
-Retrieve a list of responses for an existing ticket
-##### [GET]
-
-+ Parameters
-
-    + ticket_id (required, string, `afdca632-3d3e-4ddc-9fc3-3ad29af01c6c`)... Ticket unique identifier
+##### Get ticket answers [GET]
+Retrieve a list of answers for an existing ticket
 
 + Response 200 (application/json)
 
@@ -445,16 +376,6 @@ Retrieve a list of responses for an existing ticket
             ]
         }
 
-+ Response 404 (application/json)
++ Response 401
 
-        {
-            "message": "Not found",
-            "type": "unknown_resource"
-        }
-
-+ Response 401 (application/json)
-
-        {
-            "message": "Authentication error",
-            "type": "invalid_auth"
-        }
++ Response 404
