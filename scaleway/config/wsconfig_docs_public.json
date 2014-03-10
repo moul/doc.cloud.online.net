@@ -24,7 +24,8 @@
 			},
 			"s3": "S3",
 			"network": "Network",
-			"dns": "DNS"
+			"dns": "DNS",
+			"faq": "FAQ"
 		}
 	},
 

@@ -13,7 +13,7 @@ div(role="navigation").col-xs-6.col-sm-3.sidebar-offcanvas
 				h4.list-group-item #{val.name}
 				- each v, k in val.items
 					h5(style="margin:0; margin-bottom: -1px").list-group-item #{v}
-					- each sub_item_v, sub_item_k in _.sortBy(contents[key][k], function(v){ return v.metadata.position})
+					- each sub_item_v, sub_item_k in _.sortBy(contents[key][k], function(v){ return v.metadata.position })
 						- if (page.metadata.title == sub_item_v.title)
 							a(href=sub_item_v.url).list-group-item.active #{sub_item_v.title}
 						- else
