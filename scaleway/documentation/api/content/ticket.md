@@ -72,7 +72,7 @@ A collection of tickets with all their details
 
 + Response 401
 
-##### List all tickets  [GET]
+##### List all tickets [GET]
 
 + Request
 

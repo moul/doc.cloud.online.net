@@ -10,13 +10,25 @@
 	"port": 8080,
 
 	"locals": {
-		"title": "HyperScale documentation",
-		"author": "HyperScale",
+		"title": "cloud.online.net documentation",
+		"author": "cloud.online.net",
 		"menu" : {
 			"howto": "Getting started",
-			"instances": "Instances",
-			"storage": "Storage",
-			"s3": "S3"
+			"servers": {
+				"name": "Servers",
+				"items": {
+					"instances": "Instances",
+					"images": "Images",
+					"volumes": "Volumes"
+				}
+			},
+			"s3": "S3",
+			"network": "Network",
+			"dns": "DNS"
 		}
+	},
+
+	"require": {
+		"_": "underscore"
 	}
 }

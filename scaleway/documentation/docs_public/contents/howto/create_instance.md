@@ -1,41 +1,29 @@
 ---
-title: Launch your first instance
+title: Create your first instance
 template: article.jade
+position: 1
 ---
 
-#### Intro
+Each instance that you create is a physical server dedicated for your personnal use.
+After you've launched your instance, you can connect to it and use it.
 
-A HyperScale instance is physical server, each instance that you create is a physical instance dedicated for your personnal use.
-It's easy to use, the entire process take only a couple of minutes!
+The following procedure is intended to help you launch an instance quickly.
 
-This guide gonna show you how to create and access your new server.
+#### Step 1 - Name & Tags your instance
 
-#### Step 1 - Sign in
+Then you land on the instance creation page and have to name your server
 
-In a first time go to the [HyperScale dashboard](xxx) and log in with your email and password.
+To help you to manage your instances, and other resources, you can assign your own metadata to each resource in the form of tags.
 
-Once logged, click on the “Create Server” button at the top left of the sidebar
+![Create server basic information](../../imgs/img_tmp_srv_basic_informations.png "Temporaire")
 
-#### Step 2 - Choose an organization
+#### Step 2 - Choose your image
 
-Empty
+Since you have set instance basic informations, you have to choose which image your server will use.
 
-#### Step 3 - Name & Tags your instance
+3 choices :
 
-First, you have to name your server, an instance name as the following specifications: It can be from 1 to 64 characters without symbols.
-
-To help you to manage your instances, and other resources, you can assign your own metadata to each resource in the form of tags. A tags as is a string with the following restrictions :
-
-- Maximum number of tags per resource: 10
-- Maximum length: 255 Unicode characters
-
-Tags are case sensitive.
-
-#### Step 4 - Choose your image
-
-To create your server, you have 3 options, use:
-
-- HyperScale images
+- Images
 
 They are standard OS Images, we propose today some linux operating systems, such as Ubuntu, Fedora or Debian... What else ? (list is update permanently).
 
@@ -47,10 +35,12 @@ This section provide you custom images build by the community, they often run wi
 
 It's the list of your instance snapshot, it allow you to start a new instance form a previous one. It could be really usefull for scaling.
 
-#### Step 5 - Add storage
+![Create server images](../../imgs/img_tmp_srv_images.png "Temporaire")
 
-You can add some volume to your instance, it can be an existing volume or new one.
-An existing volume is a disk snapshot that you take previously
+#### Step 3 - Add storage
+
+You have to add at least one volume to your instance, it can be an existing volume or new one.
+An existing volume is a [snapshot](/servers/volumes/snapshot.html) that you take previously.
 
 Volume size is limit to 1Tb and there is no limit on the amount of volumes you can attach to your server.
 
@@ -62,20 +52,19 @@ Your volume can be of type :
 - Ultra low latency
 SSD disk to deliver faster disk I/O performance, it's perfect if you need heavy read/write
 
-- Choose security group
+![Create server volumes](../../imgs/img_tmp_srv_volumes.png "Temporaire")
 
-A security group acts as a firewall that controls the traffic for one or more instances.
-
-#### Step 6 - Create your server
+#### Step 4 - Create your server
 
 Well, it's now time to start your instance, just click the "Create server" button. In few seconds your instance will be ready to use.
+
 If you have not configured your ssh key, you will receive an email with the root password.
 
-#### Step 7 - Connect your instance
+#### Step 6 - Connect your instance
 
 ##### Login from OSX and Linux
 
-##### 1 - Launch a terminal
+- 1 - Launch a terminal
 
 On a Mac or Linux computer, open your terminal program and in the shell just type the following command :
 
@@ -83,19 +72,25 @@ On a Mac or Linux computer, open your terminal program and in the shell just typ
 ssh root@your_instance_ip
 ```
 
-##### 2 - Allow the connection to the host
+- 2 - Allow the connection to the host
 
 Answer "yes" when the prompt asks if you want to connect to the host.
 
-##### 3 - Done
+- 3 - Done
 
 You are now ask to type your root password (root password was emailed previously) and press enter.
+
+```sh
+The authenticity of host 'myhost.ext (54.195.242.119)' can't be established.
+RSA key fingerprint is 4f:ba:65:cf:14:64:a7:1e:b6:07:7c:00:71:95:21:fa.
+Are you sure you want to continue connecting (yes/no)?
+```
 
 Well done, you are now connected to your instance!
 
 ##### Login from Windows
 
-On windows, you will need a small apllication named PuTTy, and ssh client. You can download putty [here](xxx)
+On windows, you will need a small apllication named PuTTy, and ssh client. You can download putty [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
 Once PuTTY is downloaded and installed, just start the program.
 
 Fill in the "Hostname" with your instance IP address and click connect. You are now connected to your instance from windows!

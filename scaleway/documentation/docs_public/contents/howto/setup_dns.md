@@ -1,28 +1,32 @@
 ---
-title: Set up your domains with HyperScale
+title: Set up your domains
 template: article.jade
+position: 3
 ---
 
-#### Intro
+We offer a simple and easy to use DNS manager for your domains.
 
-HyperScale offer a simple, easy to use DNS manager for your domains.
+This article will guide you through the process of managing your domains and how to use the DNS manager.
 
-This guide gonna show you how to manage your domains with HyperScale & how to use HyperScale DNS manager.
+This guide assumes you've have the following :
+
+- A registered domain name (e.g. myserver.com) using a domain registrar.
+- An active instance, with a public IP address (e.g 1.2.3.4).
 
 #### Step 1 - Change your Domain Name Server
 
-The first thing you need to do to set up your domain is to set your Domain Name Server to point to HyperScale DNS.
+The first thing you need to do to set up your domain is to change your Domain Name Server
 
 From your registrar control panel, find the section called "Domain Name Server" or "DNS"
 
-Change the nameserver to point on HyperScale name server, just fill namservers fields with the following.
+Change the nameserver to point on our, just fill namservers fields with the following.
 
 - nsx.hyperscale.com
 - nsx.hyperscale.com
 - nsx.hyperscale.com
 - nsx.hyperscale.com
 
-Once done, save your changes.
+And save your changes.
 
 You can verify that new name servers are registered with `whois` command.
 
@@ -46,9 +50,11 @@ for detailed information.
 
 #### Step 2 - Domain configuration
 
-First go to the [HyperScale Dashboard](xxx).
+Now we need move into the [console](https://console.cloud.online.net).
 
-From the menu, move to DNS Section and click "Create DNS zone" fill domain name with your domain name ex: `mydomain.com`.
+Within the DNS section, click "Create DNS zone", and fill domain name with your domain name ex: `mydomain.com`
+
+![DNS](../imgs/img_tmp_dns.png "Temporaire")
 
 You will reach a page where you can enter all of your domain details.
 
@@ -56,7 +62,7 @@ You will reach a page where you can enter all of your domain details.
 
 - A records
 
-Use this record to point a name on the IP address of a HyperScale instance for example.
+Use this record to point a name on the IP address of an instance.
 
 `test.mydomain.com A xxx.xxx.xxx.xxx`
 
