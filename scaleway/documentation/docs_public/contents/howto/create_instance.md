@@ -4,7 +4,7 @@ template: article.jade
 position: 1
 ---
 
-Each instance that you create is a physical server dedicated for your personnal use.
+Each instance that you create is a physical server dedicated for your personal use.
 After you've launched your instance, you can connect to it and use it.
 
 The following procedure is intended to help you launch an instance quickly.
@@ -25,7 +25,7 @@ Since you have set instance basic informations, you have to choose which image y
 
 - Images
 
-They are standard OS Images, we propose today some linux operating systems, such as Ubuntu, Fedora or Debian... What else ? (list is update permanently).
+They are standard OS Images, we propose today some Linux operating systems, such as Ubuntu, Fedora or Debian... What else ? (list is update permanently).
 
 - Market place
 
@@ -33,7 +33,7 @@ This section provide you custom images build by the community, they often run wi
 
 - Snapshots
 
-It's the list of your instance snapshot, it allow you to start a new instance form a previous one. It could be really usefull for scaling.
+It's the list of your instance snapshot, it allow you to start a new instance form a previous one. It could be really use full for scaling.
 
 ![Create server images](../../imgs/img_tmp_srv_images.png "Temporaire")
 

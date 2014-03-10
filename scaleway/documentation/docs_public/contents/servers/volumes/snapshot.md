@@ -4,7 +4,7 @@ template: article.jade
 position: 2
 ---
 
-Snapshots are extremly usefull in production like in development environment.
+Snapshots are extremely use full in production like in development environment.
 A snapshot is a copy of a volume.
 
 This documentation will show you how to use Snapshot to backup specifics volumes, recover it, and delete it.
@@ -15,17 +15,17 @@ First power-off the instance on which you want to create a volume snapshot.
 
 You can do it from the console or form the command line using this command: `sudo halt`
 
-Then, click on "Volumes" from the left-hand menu in the onsole, the list of volumes will appear.
+Then, click on "Volumes" from the left-hand menu in the console, the list of volumes will appear.
 
 ![Console](../../imgs/img_tmp_dashboard.png "Temporaire")
 
 Select the volumes you want to snapshot on the list and click the "Snapshot" button.
 
-A popup will appear asking you for the snapshot name, description, tags and if you want to start the server once the snapshot is achieve.
+A pop-up will appear asking you for the snapshot name, description, tags and if you want to start the server once the snapshot is achieve.
 
 ![Console](../../imgs/img_tmp_dashboard.png "Temporaire")
 
-In few minutess your snapshot will be ready and will appear in the snapshots section.
+In few minutes your snapshot will be ready and will appear in the snapshots section.
 
 #### Restore a snapshot
 

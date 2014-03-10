@@ -4,7 +4,7 @@ template: article.jade
 position: 1
 ---
 
-Images are really usefull if you want to clone an instance to another or to publish an instance image to the market place.
+Images are really use full if you want to clone an instance to another or to publish an instance image to the market place.
 
 This article will guide you through the process of creating an image from the console.
 
@@ -18,13 +18,13 @@ This article will guide you through the process of creating an image from the co
 
 From the list of servers, select the instance that you want to create an image for.
 
-Once on the instance details page, on the submenu, click create an instance image.
+Once on the instance details page, on the sub menu, click create an instance image.
 
 ![Create server basic information](../../imgs/img_tmp_srv_basic_informations.png "Temporaire")
 
 #### Step 2 - Image creation
 
-A popup appear before the operation start and you are asked for:
+A pop-up appear before the operation start and you are asked for:
 
 - Image name
 

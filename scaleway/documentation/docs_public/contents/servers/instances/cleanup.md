@@ -16,6 +16,6 @@ Click on the "Instances” button on left-side menu, you will arrive on your ins
 Choose in the servers list the instance you want to terminate and click "Delete".
 Then just confirm the instance removing.
 
-Your instance will be removed instantly and billing will be interupt.
+Your instance will be removed instantly and billing will be interrupt.
 
 ![Console](../../imgs/img_tmp_dashboard.png "Temporaire")

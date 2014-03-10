@@ -5,7 +5,7 @@ position: 2
 ---
 
 The following procedure is intended to help you to edit an instance.
-At any time you can edit a ruuning instance and update it name, tags, etc.
+At any time you can edit a running instance and update it name, tags, etc.
 
 #### Step 1- Choose the instance to edit
 

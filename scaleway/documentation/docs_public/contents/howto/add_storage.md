@@ -23,11 +23,11 @@ Then you will be ask to choose if you wish to "Create new volume" or "Create fro
 
 #### Step 2 - Create new volume
 
-Volume creation occured in 3 steps :
+Volume creation occurred in 3 steps :
 
 - Name your volume
 
-- Set the volume size (must be at least 1Gb and can't exceed 1Tb)
+- Set the volume size (must be at least 1GB and can't exceed 1Tb)
 
 - Select the volume type
 
@@ -49,7 +49,7 @@ Well, you are now on your volume details page, just click "More" button, attach.
 
 ![Volumes list](../imgs/img_tmp_volumes.png "Temporaire")
 
-A popin show you the list of servers you own, select the instance you attach the volume and it's done!
+A pop-in show you the list of servers you own, select the instance you attach the volume and it's done!
 
 
 

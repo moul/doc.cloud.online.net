@@ -4,7 +4,7 @@ template: article.jade
 position: 2
 ---
 
-Images are really usefull if you want to clone an instance to another or to publish an instance image to the market place.
+Images are really use full if you want to clone an instance to another or to publish an instance image to the market place.
 
 This article will guide you through the process of restoring an instance from an image.
 
