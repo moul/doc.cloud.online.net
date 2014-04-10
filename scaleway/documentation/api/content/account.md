@@ -420,5 +420,7 @@ Retrieve details about a user
 
 + Response 404
 
+#####
+
 
 

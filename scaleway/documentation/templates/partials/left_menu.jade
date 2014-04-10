@@ -2,20 +2,20 @@ div(role="navigation").col-xs-6.col-sm-3.sidebar-offcanvas
 	- each val, key in locals.menu
 		- if (contents[key] && _.isString(val))
 			div.list-group
-				h4.list-group-item #{val}
+				h4(style="text-align:center; background: #232A2E; color: #FFFFFF").list-group-item #{val}
 				- each item in _.sortBy(contents[key], function(v){ return v.metadata.position})
 					- if (page.metadata.title == item.title)
-						a(href=item.url).list-group-item.active #{item.title}
+						a(href=item.url, style="background: #27C295; border-color: #27C295").list-group-item.active #{item.title}
 					- else
 						a(href=item.url).list-group-item #{item.title}
 		- else if (contents[key] && _.isObject(val))
 			div.list-group
-				h4.list-group-item #{val.name}
+				h4(style="text-align:center; background: #232A2E; color: #FFFFFF").list-group-item #{val.name}
 				- each v, k in val.items
-					h5(style="margin:0; margin-bottom: -1px").list-group-item #{v}
+					h5(style="margin:0; margin-bottom: -1px; color: #2D353A; background: #F5F5F5").list-group-item #{v}
 					- each sub_item_v, sub_item_k in _.sortBy(contents[key][k], function(v){ return v.metadata.position })
 						- if (page.metadata.title == sub_item_v.title)
-							a(href=sub_item_v.url).list-group-item.active #{sub_item_v.title}
+							a(href=sub_item_v.url, style="background: #27C295; border-color: #27C295;").list-group-item.active #{sub_item_v.title}
 						- else
 							a(href=sub_item_v.url).list-group-item #{sub_item_v.title}
 
