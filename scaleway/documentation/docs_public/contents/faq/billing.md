@@ -1,14 +1,22 @@
 ---
 title: Pricing & Billing FAQ
 template: article.jade
-position: 1
+position: 3
 ---
 
-Is internal bandwidth charged?
+How am I billed ?
 
-How much does Scaleway cost ?
+Each resources is billed per hour up. Payement occured at oncer at the end.
+
+Is internal bandwidth charged ?
+
+How much does your service cost ?
+
+Cost depends on the resources used, you can see all resources pricing here
 
 What is the frequency of billing ?
+
+We charge you on the 1st day of each month after usage.
 
 Why my services are suspended ?
 
@@ -31,3 +39,5 @@ Is it possible to receive emails when an alert is reached ?
 How many emails alert I will receive if the estimated costs exceed the threshold ?
 
 The estimated costs are they a forecast of the invoice that I will receive at the end of the month ?
+
+Am I charged while my server is in a powered-off state ?

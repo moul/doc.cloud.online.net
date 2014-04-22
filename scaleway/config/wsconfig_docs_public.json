@@ -10,8 +10,8 @@
 	"port": 8080,
 
 	"locals": {
-		"title": "cloud.online.net documentation",
-		"author": "cloud.online.net",
+		"title": "labs.online.net documentation",
+		"author": "labs.online.net",
 		"menu" : {
 			"howto": "Getting started",
 			"servers": {
@@ -22,9 +22,8 @@
 					"volumes": "Volumes"
 				}
 			},
-			"s3": "S3",
 			"network": "Network",
-			"dns": "DNS",
+			"s3": "S3",
 			"faq": "FAQ"
 		}
 	},

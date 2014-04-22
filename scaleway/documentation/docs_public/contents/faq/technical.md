@@ -1,24 +1,24 @@
 ---
 title: Technical FAQ
 template: article.jade
-position: 1
+position: 2
 ---
 
 Which operating system is supported ?
 
 Why are you on a 32-bit architecture ?
 
-Is it possible to buy extra's public IP?
+Is it possible to buy extra's public IP ?
 
-What is the maximum number per account of public IP
+What is the maximum number per account of public IP ?
 
 Do you offer snapshots and snapshots automatically ?
 
 What are the different ways to access my resources ?
 
-What is the limit of instances per account?
+What is the limit of instances per account ?
 
-Is the transfer of data between multiple instances free?
+Is the transfer of data between multiple instances free ?
 
 What kind of hardware do you offer ?
 
@@ -38,7 +38,7 @@ Can you help me configure my server ?
 
 Is it possible to create and manage DNS records ?
 
-What happens to my data when i terminate an instance ?
+What happens to my data when I delete an instance ?
 
 Is it possible to import my own virtual machine ? 
 
@@ -46,9 +46,9 @@ Do you offer installation and maintenance of application ?
 
 Do you offer an object storage service ?
 
-Do you offer encryption on the object storage?
+Do you offer encryption on the object storage ?
 
-Is it possible to use the instance as a proxy?
+Is it possible to use the instance as a proxy ?
 
 Is it possible to use the instance to make illegal downloading ?
 

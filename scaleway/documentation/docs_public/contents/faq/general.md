@@ -6,8 +6,6 @@ position: 1
 
 Is the cloud is secure for my applications and data ?
 
-How adapts Scaleway with my on-site infrastructure (hybrid cloud) ?
-
 What types of use are recommended ?
 
 Who are your customers ?

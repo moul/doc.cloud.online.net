@@ -1,5 +1,5 @@
 ---
-title: Who is cloud.online.net for ?
+title: Who is labs.online.net for ?
 template: article.jade
 ---
 
@@ -9,29 +9,27 @@ Proin vestibulum dignissim neque non cursus. Pellentesque in ultricies ante. Ves
 
 Vestibulum mollis dui eu arcu gravida, vel pharetra ligula laoreet. Proin arcu erat, adipiscing non lacus non, lacinia sodales lorem. Vestibulum eget luctus tellus.
 
-### What are cloud.online.net advantages ?
+### What are labs.online.net advantages ?
 
-cloud.online.net provides resizable computing capacity in the cloud.
+[labs.online.net](http://labs.online.net) provides resizable computing capacity in the cloud.
 
-Using cloud.online.net eliminates your need to invest in hardware up front, so you can develop and deploy applications faster.
-You can use our service to launch as many or as few physical servers as you need, configure security and networking, and manage storage.
-
-cloud.online.net enables you to scale up or down to handle changes in requirements or spikes in popularity, reducing your need to forecast traffic.
+Using [labs.online.net](http://labs.online.net) eliminates your need to invest in hardware up front, so you can develop and deploy applications faster.
+You can use our service to launch as many or as few physical servers as you need in seconds, configure security, networking and manage storage.
 
 #### Features of our service
 
 We provides the following features:
 
-- Physical computing environments, known as instances
+- Physical computing servers, known as instances
 
-- Pre-configured templates for your instances, known as Images, that package the bits you need for your server (including the operating system and additional software)
+- Images, that package the bits you need for your server (including the operating system and additional software)
 
 - Secure login information for your instances using key pairs
 
-- Storage volumes for temporary data that's deleted when you stop or terminate your instance, known as instance store volumes
+- Storage volumes for your data
 
-- A firewall that enables you to specify the protocols, ports, and source IP ranges that can reach your instances using security groups
+- Security groups, a firewall that enables you to specify the protocols, ports, and source IP ranges that can reach your instances
 
-- Static IP addresses for dynamic cloud computing
+- IP addresses, static or dynamic to attach on your instances
 
-- Metadata, known as tags, that you can create and assign to your resources
+- Tags, that you can assign to your instances
