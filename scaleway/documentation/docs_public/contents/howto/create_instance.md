@@ -1,5 +1,5 @@
 ---
-title: Create your first instance
+title: Create your first instance in seconds
 template: article.jade
 position: 1
 ---

@@ -1,31 +1,31 @@
 FORMAT: 1A
 
-# Welcome to the HyperScale API documentation.
+# Welcome to the API documentation.
 
-We have created an easy to use and simple API that allows you to have a full control over the HyperScale service. All feature you will find in the web control panel are also available through the API.
+We have created an easy to use and restfi; API that allows you to have a full control over the service. All feature you will find in the web control panel are also available through the API.
 
 ## Request and response
 
-The HyperScale api works over https and is accessed from the `api.hyperscale.com` domain. All data is sent and received as json.
+Our api works over https and is accessed from the `api.labs.online.net` domain. All data is sent and received as json.
 
 ## Constructing Requests
 
 Requests are made of three components:
 
-- Base URL: `https://api.hyperscale.com`
+- Base URL: `https://api.labs.online.net`
 - API version: `v1`
 - Resource path: `users`
 
 To construct a proper request, you will need to format the URL as follows:
 
-`https://api.hyperscale.com/{version}/{ressource}`
+`https://api.labs.online.net/{version}/{ressource}`
 
-Example: `https://api.hyperscale.com/v1/users/22222222-1111-4111-8111-111111111111`
+Example: `https://api.labs.online.net/v1/users/22222222-1111-4111-8111-111111111111`
 
 An example request, to retrieves detailed informations about a user might be:
 
 ```
-curl -i 'https://api.hyperscale.com/v1/users/22222222-1111-4111-8111-111111111111' --header "X-Auth-Token: 59517bee-4ccb-43fa-95d0-f52292aad10a"
+curl -i 'https://api.labs.online.net/v1/users/22222222-1111-4111-8111-111111111111' --header "X-Auth-Token: 59517bee-4ccb-43fa-95d0-f52292aad10a"
 
 HTTP/1.0 200 OK
 Content-Type: application/json
@@ -85,14 +85,14 @@ Basic Authentication process:
 - Supply an "X-Auth-Token" header followed by the token you get previously, e.g. "4e0b46e4-7c1d-44d4-8ba6-dc5f80694397"
 
 ```
-curl -X GET -H "X-Auth-Token: 4e0b46e4-7c1d-44d4-8ba6-dc5f80694397" -H "Content-Type: application/json" https://api.hyperscale.fr/v1/{ressources}
+curl -X GET -H "X-Auth-Token: 4e0b46e4-7c1d-44d4-8ba6-dc5f80694397" -H "Content-Type: application/json" https://api.labs.online.net/v1/{ressources}
 ```
 
 ## Errors
 
-HyperScale uses conventional HTTP response codes to indicate success or failure of an API request.
+We use conventional HTTP response codes to indicate success or failure of an API request.
 
-In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error that resulted from the provided information (e.g. a required parameters were missing, etc.), and codes in the 5xx range indicate an error with HyperScale's servers.
+In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error that resulted from the provided information (e.g. a required parameters were missing, etc.), and codes in the 5xx range indicate an error with our servers.
 
 ### HTTP Status Code Summary
 
@@ -164,7 +164,7 @@ Input and output data must be valid JSON with appropriate Content-Type header se
             "type": "unknown_resource"
         }
 
-### Pagination
+### Pagination (OUTDATED)
 
 Methods returning multiple items are paginated to 25 items by default.
 You can specify further pages with the ?page parameter. You can also set a custom page size up to 500 with the ?page_size parameter.

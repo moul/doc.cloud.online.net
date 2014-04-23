@@ -84,7 +84,7 @@ Retrieve a list of Tokens with all their details
             ]
         }
 
-#### Token [/tokens/<token_id>]
+#### Token [/tokens/{token_id}]
 A single token with all its details
 
 + Parameters

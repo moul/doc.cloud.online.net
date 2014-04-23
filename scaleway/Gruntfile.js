@@ -22,6 +22,11 @@ module.exports = function(grunt) {
 						'documentation/api/content/api_general.md',
 		/*'documentation/api/content/dns.md',*/
 						'documentation/api/content/account.md',
+						'documentation/api/content/server.md',
+						'documentation/api/content/volume.md',
+						'documentation/api/content/snapshot.md',
+						'documentation/api/content/image.md',
+						'documentation/api/content/container.md',
 						'documentation/api/content/ticket.md',
 						'documentation/api/content/metadata.md',
 		/*'documentation/api/_build/containers.md',*/
@@ -31,7 +36,7 @@ module.exports = function(grunt) {
 		/*'documentation/api/_build/volumes.md'*/
 					]
 				},
-				theme: 'default',
+				theme: 'flatly',
 				seperator: "\n"
 			}
 		},
