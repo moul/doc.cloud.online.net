@@ -1,13 +1,14 @@
-### group Containers
-Resources related to Containers
+### group Object storage resources
 
-#### Containers Collection [/containers]
-A collection of Containers with all their details
+This resources of API methods allows you to manage object storage.
+
+#### Operation on a collection of containers [/containers]
 
 ##### Create a new container [POST]
 Create a new container
 
 + Parameters
+    + TODO (required, string, `TODO`)... TODO
 
 + Request (application/json)
 
@@ -23,38 +24,61 @@ Create a new container
 
 + Response 401
 
-##### List all containers [GET]
-Retrieve a list of Containers with all their details
+##### Retrieves the list all existing containers [GET]
 
 + Response 200 (application/json)
 
         {
-            
+            TODO   
         }
 
-#### Container [/containers/{container_id}]
-A single container with all its details
++ Response 401
+
++ Response 403
+
+#### Operation on a single container [/containers/{container_id}]
 
 + Parameters
-
     + container_id (required, string, `cid`)... Container unique identifier
 
-##### Retrieve an Container [GET]
-Retrieve details about a Container
+##### Retrieves informations about an container [GET]
 
 + Response 200 (application/json)
 
         {
+            TODO
         }
+
++ Response 401
+
++ Response 403
 
 + Response 404
 
 ##### Update details about a Container [PUT]
 
++ Parameters
+    + container_id (required, string, `cid`)... Container unique identifier
+    + TODO (required, string, `TODO`)... TODO
+
++ Request (application/json)
+
+    + Body
+
+            {
+                TODO
+            }
+
+
 + Response 200 (application/json)
 
         {
+            TODO
         }
+
++ Response 401
+
++ Response 403
 
 + Response 404
 
@@ -62,19 +86,36 @@ Retrieve details about a Container
 
 + Response 204
 
++ Response 403
+
 + Response 404
 
-
-#### Path [/containers/{container_id}/{path}]
-A single path with all its details
+#### Operation on a file in a container [/containers/{container_id}/{path}]
 
 + Parameters
-
     + path (required, string, `toto.txt`)... File path
     + container_id (required, string, `cid`)... File path
 
-##### Retrieve a file [GET]
-Retrieve details about a file
+##### Retrieves informations about a file [GET]
+
++ Response 200 (application/json)
+
+        {
+            TODO
+        }
+
++ Response 401
+
++ Response 403
+
++ Response 404
+
+##### Update details about a file [PUT]
+
++ Parameters
+    + path (required, string, `toto.txt`)... File path
+    + container_id (required, string, `cid`)... File path
+    + TODO (required, string, `TODO`)... TODO    
 
 + Response 200 (application/json)
 
@@ -87,58 +128,59 @@ Retrieve details about a file
 
 + Response 204
 
-+ Response 404
-
-##### Update details about a file [PUT]
-
-+ Response 200 (application/json)
-
-        {
-        }
++ Response 403
 
 + Response 404
 
-#### Download file [/containers/{container_id}/dowload/{path}]
+#### Download a file [/containers/{container_id}/dowload/{path}]
 
 + Parameters
 
     + path (required, string, `toto.txt`)... File path
     + container_id (required, string, `cid`)... File path
 
-##### Download a file [GET]
+##### Download the file present in the specified container [GET]
 
 + Response 200 (application/json)
 
         {
+            TODO
         }
+
++ Response 403
 
 + Response 404
 
-#### Upload file [/containers/{container_id}/upload/{path}]
+#### Upload a file in the specified container [/containers/{container_id}/upload/{path}]
 
 + Parameters
 
     + path (required, string, `toto.txt`)... File path
     + container_id (required, string, `cid`)... File path
+    + TODO (required, string, `TODO`)... TODO    
 
-##### Upload a file [POST]
-
-+ Parameters
+##### Upload the file in the specified container [POST]
 
 + Request (application/json)
 
     + Body
 
             {
-                
+                TODO
             }
 
-+ Response 201 (application/json)
 
-+ Response 400
++ Response 200 (application/json)
+
+        {
+            TODO
+        }
 
 + Response 401
 
++ Response 403
+
++ Response 404
 
 
 

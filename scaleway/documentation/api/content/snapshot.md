@@ -1,61 +1,89 @@
-### group Snapshots
-Resources related to snapshots
+### group Snapshots resources
 
-#### Snapshots Collection [/snapshots]
-A collection of snapshots with all their details
+This resources of API methods allows you to create, manage or delete your snapshots.
+
+#### Operation on a collection of snapshots [/snapshots]
 
 ##### Create a snapshot [POST]
-Create a new snapshot
 
 + Parameters
+    + TODO (required, string, `TODO`)... TODO
 
 + Request (application/json)
 
     + Body
 
             {
-                
+                TODO
             }
 
 + Response 201 (application/json)
+
+        {
+            TODO
+        }
 
 + Response 400
 
 + Response 401
 
-##### List all snapshots [GET]
-Retrieve a list of volumes with all their details
++ Response 403
+
+##### Retrieves the list all existing snapshots [GET]
 
 + Response 200 (application/json)
 
         {
-            
+            TODO
         }
 
++ Response 401
 
-#### Snapshot [/snapshots/{snapshot_id}]
-A single snapshot with all its details
++ Response 403
+
+#### Operation on a single snapshot [/snapshots/{snapshot_id}]
 
 + Parameters
-
     + snapshot_id (required, string, `4e0b46e4-7c1d-44d4-8ba6-dc5f80694397`)... Snapshot unique identifier
 
-##### Retrieve a snapshot [GET]
-Retrieve details about a snapshot
+#####Retrieves informations about an snapshot [GET]
 
 + Response 200 (application/json)
 
         {
+            TODO
         }
+
++ Response 401
+
++ Response 403
 
 + Response 404
 
-##### Update details about a snapshot [PUT]
+##### Update informations about an snapshot [PUT]
+
++ Parameters
+    + snapshot_id (required, string, `4e0b46e4-7c1d-44d4-8ba6-dc5f80694397`)... Snapshot unique identifier
+    + TODO (required, string, `TODO`)... TODO
+
++ Request (application/json)
+
+    + Body
+
+            {
+                TODO
+            }
+
 
 + Response 200 (application/json)
 
         {
+            TODO
         }
+
++ Response 401
+
++ Response 403
 
 + Response 404
 
@@ -63,5 +91,6 @@ Retrieve details about a snapshot
 
 + Response 204
 
-+ Response 404
++ Response 403
 
++ Response 404

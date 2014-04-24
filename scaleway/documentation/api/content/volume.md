@@ -1,112 +1,173 @@
-### group Volumes
-Resources related to volumes
+### group Volumes resources
 
-#### Volumes Collection [/volumes]
-A collection of volumes with all their details
+This resources of API methods allows you to create, manage or delete your volumes.
 
-##### Create a volume [POST]
-Create a new volume
+#### Operation on a collection of volumes [/volumes]
+
+##### Create a new volume [POST]
 
 + Parameters
+    + TODO (required, string, `TODO`)... TODO
 
 + Request (application/json)
 
     + Body
 
             {
-                
+                TODO
             }
 
 + Response 201 (application/json)
+
+        {
+            TODO
+        }
 
 + Response 400
 
 + Response 401
 
-##### List all volumes [GET]
-Retrieve a list of volumes with all their details
++ Response 403
+
+##### Retrieves the list all existing volumes [GET]
 
 + Response 200 (application/json)
 
         {
-            
+            TODO   
         }
 
++ Response 401
 
-#### Volume [/volumes/{volume_id}]
-A single volume with all its details
++ Response 403
+
+#### Operation on a single volume [/volumes/{volume_id}]
 
 + Parameters
+    + volume_id (required, string, `4e0b46e4-7c1d-44d4-8ba6-dc5f80694397`)... Volume unique identifier
 
-    + volume_id (required, string, `4e0b46e4-7c1d-44d4-8ba6-dc5f80694397`)... Server unique identifier
-
-##### Retrieve a volume [GET]
-Retrieve details about a volume
+##### Retrieves informations about a volume [GET]
 
 + Response 200 (application/json)
 
         {
+            TODO
         }
+
++ Response 401
+
++ Response 403
 
 + Response 404
 
-##### Remove a volume [DELETE]
+##### Delete a volume [DELETE]
 
 + Response 204
 
++ Response 403
+
 + Response 404
 
-#### Snapshots [/volumes/{volume_id}/snapshots]
-A collection of snapshots associate to a volume
+#### Operation on a collection of snapshots associate to a volume [/volumes/{volume_id}/snapshots]
+
 
 + Parameters
-
     + volume_id (required, string, `4e0b46e4-7c1d-44d4-8ba6-dc5f80694397`)... Volume unique identifier
 
-##### Retrieve list of snapshots [GET]
+
+##### Create a new snapshot for the volume [POST]
+
++ Parameters
+    + volume_id (required, string, `4e0b46e4-7c1d-44d4-8ba6-dc5f80694397`)... Volume unique identifier
+    + TODO
+
++ Request (application/json)
+
+    + Body
+
+            {
+                TODO
+            }
+
++ Response 201 (application/json)
+
+        {
+            TODO
+        }
+
++ Response 400
+
++ Response 401
+
++ Response 403
+
+##### Retrieves the list all existing snapshots for the volume [GET]
 
 + Response 200 (application/json)
      
         {
-           
+           TODO
         }
 
-##### Create a new snapshot [POST]
++ Response 401
 
-+ Response 20x (application/json)
-     
-        {
-           
-        }
++ Response 403
 
-#### Snapshot [/volumes/{volume_id}/snapshots/{snapshot_id}]
-A single snapshot with all its details
++ Response 404
+
+#### Operation on a single snapshot associate to a volume [/volumes/{volume_id}/snapshots/{snapshot_id}]
 
 + Parameters
-
     + volume_id (required, string, `4e0b46e4-7c1d-44d4-8ba6-dc5f80694397`)... Volume unique identifier
     + snapshot_id (required, string, `4e0b46e4-7c1d-44d4-8ba6-dc5f80694397`)... Snapshot unique identifier
 
-##### Retrieve details about a snapshot [GET]
+##### Retrieves informations about a snapshot [GET]
 
 + Response 200 (application/json)
      
         {
-           
+           TODO
         }
 
-##### Update details about a snapshot [PUT]
++ Response 401
+
++ Response 403
+
++ Response 404
+
+##### Update informations about a snapshot [PUT]
+
++ Parameters
+    + volume_id (required, string, `4e0b46e4-7c1d-44d4-8ba6-dc5f80694397`)... Volume unique identifier
+    + snapshot_id (required, string, `4e0b46e4-7c1d-44d4-8ba6-dc5f80694397`)... Snapshot unique identifier
+    + TODO (required, string, `TODO`)... TODO
+
++ Request (application/json)
+
+    + Body
+
+            {
+                TODO
+            }
+
 
 + Response 200 (application/json)
 
         {
+            TODO
         }
+
++ Response 401
+
++ Response 403
 
 + Response 404
 
-##### Remove a snapshot [DELETE]
+##### Delete a snapshot [DELETE]
 
 + Response 204
+
++ Response 403
 
 + Response 404        
 

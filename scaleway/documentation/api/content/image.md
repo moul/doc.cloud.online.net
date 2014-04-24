@@ -1,67 +1,97 @@
-### group Images
-Resources related to images
+### group Images resources
 
-#### Images Collection [/images]
-A collection of images with all their details
+This resources of API methods allows you to create, manage or delete your images.
 
-##### Create an image [POST]
-Create a new image
+#### Operation on a collection of images [/images]
+
+##### Create a new image [POST]
 
 + Parameters
+    + TODO (required, string, `TODO`)... TODO
 
 + Request (application/json)
 
     + Body
 
             {
-                
+                TODO
             }
 
 + Response 201 (application/json)
+
+        {
+            TODO
+        }
 
 + Response 400
 
 + Response 401
 
-##### List all images [GET]
-Retrieve a list of images with all their details
++ Response 403
+
+##### Retrieves the list all existing images [GET]
 
 + Response 200 (application/json)
 
         {
-            
+            TODO   
         }
 
++ Response 401
 
-#### Image [/images/{image_id}]
-A single image with all its details
++ Response 403
+
+#### Operation on a single image [/images/{image_id}]
 
 + Parameters
-
     + image_id (required, string, `4e0b46e4-7c1d-44d4-8ba6-dc5f80694397`)... Image unique identifier
 
-##### Retrieve an image [GET]
-Retrieve details about a image
+##### Retrieves informations about an image [GET]
 
 + Response 200 (application/json)
 
         {
+            TODO
         }
+
++ Response 401
+
++ Response 403
 
 + Response 404
 
-##### Update details about an image [PUT]
+##### Update informations about an image [PUT]
+
++ Parameters
+    + image_id (required, string, `4e0b46e4-7c1d-44d4-8ba6-dc5f80694397`)... Image unique identifier
+    + TODO (required, string, `TODO`)... TODO
+
++ Request (application/json)
+
+    + Body
+
+            {
+                TODO
+            }
+
 
 + Response 200 (application/json)
 
         {
+            TODO
         }
+
++ Response 401
+
++ Response 403
 
 + Response 404
 
-##### Remove an image [DELETE]
+##### Delete an image [DELETE]
 
 + Response 204
+
++ Response 403
 
 + Response 404
 
