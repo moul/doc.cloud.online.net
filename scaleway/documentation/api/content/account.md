@@ -8,8 +8,7 @@ A collection of tokens with all their details
 Create a new token for the specified user
 
 + Parameters
-
-    + email (required, string, `js@mail.ext`)... User email
+    + email (required, string, `general@ocs.online.net`)... User email
     + password (required, string, `password`)... User password
     + expires (optional, boolean, `false`)... Set if you want a token wich doesn't expire (default: true)
 
@@ -18,29 +17,29 @@ Create a new token for the specified user
     + Body
 
             {
-                "email": "js@mail.ext",
+                "email": "general@ocs.online.net",
                 "password": "password",
                 "expires": false
             }
 
-+ Response 201 (application/json)
++ Response 201
 
-    + Headers
-
-            Location: http://api.scaleway.com/v1/tokens/7db33cf3-b43b-4457-aaf7-ac7c7fae378e
+    + Headers (application/json)
+           
+            location: http://127.0.0.1:5004/tokens/d16492ea-9d3b-449d-a2ff-dc907c33a1d0
 
     + Body
 
             {
-                "token": {
-                    "creation_date": "2014-03-03T14:44:47.763145+00:00",
-                    "expires": null,
-                    "id": "4c518778-3831-4ed6-9d19-bcba66329b08",
-                    "inherits_user_perms": true,
-                    "permissions": [],
-                    "roles": [],
-                    "user_id": "22222222-1111-4111-8111-111111111111"
-                }
+              "token": {
+                "creation_date": "2014-04-25T08:59:44.515484+00:00",
+                "expires": "2014-04-25T11:29:44.803837+00:00",
+                "id": "d16492ea-9d3b-449d-a2ff-dc907c33a1d0",
+                "inherits_user_perms": true,
+                "permissions": [],
+                "roles": [],
+                "user_id": "22222222-1111-4111-8111-111111111111"
+              }
             }
 
 + Response 400
@@ -88,8 +87,7 @@ Retrieve a list of Tokens with all their details
 A single token with all its details
 
 + Parameters
-
-    + token_id (required, string, `4e0b46e4-7c1d-44d4-8ba6-dc5f80694397`)... Token unique identifier
+    + token_id (required, string, `67b231c5-69ca-442e-bee6-5ba2d9c98336`)... Token unique identifier
 
 ##### Retrieve a token [GET]
 Retrieve details about a token
@@ -139,8 +137,7 @@ Increase token expiration time of 30 minutes
 A collection of permissions for a specified token
 
 + Parameters
-
-    + token_id (required, string, `4e0b46e4-7c1d-44d4-8ba6-dc5f80694397`)... Token unique identifier
+    + token_id (required, string, `67b231c5-69ca-442e-bee6-5ba2d9c98336`)... Token unique identifier
 
 ##### Retrieve token permissions [GET]
 
@@ -246,8 +243,7 @@ Retrieve a list of Organizations with all their details
 A single Organization with all its details
 
 + Parameters
-
-    + organization_id (required, string, `11111111-1111-4111-8111-111111111111`)... Organization unique identifier
+    + organization_id (required, string, `22222222-1111-4111-8111-222222222222`)... Organization unique identifier
 
 #### Retrieve an Organization [GET]
 Retrieve details about an organization
@@ -276,15 +272,13 @@ A collection of invitations in a specified Organization
 
 
 + Parameters
-
-    + organization_id (required, string, `11111111-1111-4111-8111-111111111111`)... Organization unique identifier
+    + organization_id (required, string, `22222222-1111-4111-8111-222222222222`)... Organization unique identifier
 
 ##### Create an invitation [POST]
 Create an invitation for a new user in the specified organization
 
 + Parameters
-
-    + organization_id (required, string, `11111111-1111-4111-8111-111111111111`)... Organization unique identifier
+    + organization_id (required, string, `22222222-1111-4111-8111-222222222222`)... Organization unique identifier
     + email (required, string, `mail@provider.ext`)... The email to send the invitation
     + firstname (required, string, `John`)... Invited user firstname
     + lastname (required, string, `Smith`)... Invited user lastname
@@ -298,7 +292,7 @@ Create an invitation for a new user in the specified organization
     + Body
 
             {
-                "email": "rh@mail.ext",
+                "email": "rh1@mail.ext",
                 "firstname": "Rob",
                 "lastname": "Hill"
             }
@@ -357,7 +351,6 @@ Resources related to scaleway Users
 Retrieve informations for the specified user
 
 + Parameter
-
     + user_id (required, string, `22222222-1111-4111-8111-111111111111`)... User unique identifier
 
 ##### Retrieve a user [GET]
@@ -420,7 +413,6 @@ Retrieve details about a user
 
 + Response 404
 
-#####
 
 
 

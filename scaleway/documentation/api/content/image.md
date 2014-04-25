@@ -7,20 +7,26 @@ This resources of API methods allows you to create, manage or delete your images
 ##### Create a new image [POST]
 
 + Parameters
-    + TODO (required, string, `TODO`)... TODO
+    + organization (required, string, `f030e920-9743-4f28-8164-964ba8555fa5`)... Organization unique identifier
+    + name (required, string, `my_image`)... The image name
+    + arch (required, string, `arm`)... The architecture type
+    + root_volume (required, string, `8a8095d7-7db0-40c6-b867-0c0708f5e918`)... The root volume unique identifier
 
 + Request (application/json)
 
     + Body
 
             {
-                TODO
+                "organization": "f030e920-9743-4f28-8164-964ba8555fa5",
+                "arch": "arm",
+                "name": "my_image",
+                "root_volume": "8a8095d7-7db0-40c6-b867-0c0708f5e918"
             }
 
 + Response 201 (application/json)
 
         {
-            TODO
+            
         }
 
 + Response 400
@@ -34,7 +40,7 @@ This resources of API methods allows you to create, manage or delete your images
 + Response 200 (application/json)
 
         {
-            TODO   
+            "images": []   
         }
 
 + Response 401
@@ -51,7 +57,9 @@ This resources of API methods allows you to create, manage or delete your images
 + Response 200 (application/json)
 
         {
-            TODO
+            "images": {
+
+            }
         }
 
 + Response 401
@@ -78,7 +86,9 @@ This resources of API methods allows you to create, manage or delete your images
 + Response 200 (application/json)
 
         {
-            TODO
+            "images": {
+            
+            }
         }
 
 + Response 401

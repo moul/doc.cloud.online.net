@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 		/*'documentation/api/_build/volumes.md'*/
 					]
 				},
-				theme: 'flatly',
+				theme: 'flatly-multi',
 				seperator: "\n"
 			}
 		},

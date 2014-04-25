@@ -8,14 +8,14 @@ This resources of API methods allows you to create, manage or delete your reserv
 Create a new IP
 
 + Parameters
-    + TODO (required, string, `TODO`)... TODO
+    + organization (required, string, `f030e920-9743-4f28-8164-964ba8555fa5`)... Organization unique identifier
 
 + Request (application/json)
 
     + Body
 
             {
-                TODO   
+                "organization": "f030e920-9743-4f28-8164-964ba8555fa5"
             }
 
 + Response 201 (application/json)

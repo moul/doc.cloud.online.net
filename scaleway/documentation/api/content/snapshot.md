@@ -7,20 +7,31 @@ This resources of API methods allows you to create, manage or delete your snapsh
 ##### Create a snapshot [POST]
 
 + Parameters
-    + TODO (required, string, `TODO`)... TODO
+    + name (required, string, ``)... Human readable snapshot name
+    + organization (required, string, `f1350c5d-f1d8-4f9d-b114-6053905578e1`)... Unique organization identifier
+    + volume_id (required, string, `de4fc1ac-5f3a-4b78-b384-6303a2c66be8`)... Unique volume identifier
 
 + Request (application/json)
 
     + Body
 
             {
-                TODO
+                "name": "snapshot-0-1",
+                "organization": "f1350c5d-f1d8-4f9d-b114-6053905578e1",
+                "volume_id": "de4fc1ac-5f3a-4b78-b384-6303a2c66be8"
             }
 
 + Response 201 (application/json)
 
         {
-            TODO
+          "snapshot": {
+            "id": null,
+            "name": "snapshot-0-1",
+            "organization": "f1350c5d-f1d8-4f9d-b114-6053905578e1",
+            "size": 50000000000,
+            "state": "snapshotting",
+            "volume_type": "l_hdd"
+          }
         }
 
 + Response 400
@@ -34,7 +45,7 @@ This resources of API methods allows you to create, manage or delete your snapsh
 + Response 200 (application/json)
 
         {
-            TODO
+            "snapshots": []
         }
 
 + Response 401
@@ -51,7 +62,10 @@ This resources of API methods allows you to create, manage or delete your snapsh
 + Response 200 (application/json)
 
         {
-            TODO
+            "snapshots": {
+
+
+            }
         }
 
 + Response 401
@@ -64,21 +78,28 @@ This resources of API methods allows you to create, manage or delete your snapsh
 
 + Parameters
     + snapshot_id (required, string, `4e0b46e4-7c1d-44d4-8ba6-dc5f80694397`)... Snapshot unique identifier
-    + TODO (required, string, `TODO`)... TODO
+    + organization (required, string, `f1350c5d-f1d8-4f9d-b114-6053905578e1`)... Organization unique identifier
 
 + Request (application/json)
 
     + Body
 
             {
-                TODO
+                "organization": "f1350c5d-f1d8-4f9d-b114-6053905578e1"
             }
 
 
 + Response 200 (application/json)
 
         {
-            TODO
+            "snapshot": {
+                "id": null,
+                "name": "snapshot-0-1",
+                "organization": "f1350c5d-f1d8-4f9d-b114-6053905578e1",
+                "size": 50000000000,
+                "state": "snapshotting",
+                "volume_type": "l_hdd"
+            }
         }
 
 + Response 401
