@@ -1,28 +1,22 @@
 body { padding-top: 60px; padding-bottom: 40px; }
-.navbar-color { background: #27333A; }
+.navbar-color { background: #27333A; height: 90px; }
 #img { width: 900px; }
 .sidebar-nav { padding: 9px 0; }
 .menu-header { background: #27333A; border-color: #27333A; text-align:center; color: #A9D0E0; font-size: 24px; font-weight: lighter; }
 .sub-menu-header { margin:0; margin-bottom: -1px; color: #2D353A; background: #EAEDF1; }
 a.active-url { background-color: #27C295!important; border-color: #27C295!important; }
 
-footer {
-padding: 50px;
-min-height:265px;
-text-align: center;
-background: #FFFFFF;
-}
 h1 {
-font-size: 50px;
-margin-top: 30px;
-margin-bottom: 15px;
-font-weight: lighter;
+    font-size: 50px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: lighter;
 }
 
 h3 {
-font-weight: normal;
-font-size: 24px;
-margin-bottom: 40px;
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 40px;
 }
 
 p {
@@ -30,12 +24,10 @@ p {
 }
 
 .documentation {
-margin-top:50px;
+    margin-top:50px;
 }
 
-/* footer */
 
-/* footer */
 
 footer {
     padding: 50px;
