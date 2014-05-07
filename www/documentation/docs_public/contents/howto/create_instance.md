@@ -13,13 +13,13 @@ The following procedure is intended to help you to launch an instance in seconds
 
 From, the dashboard, click the Create Server button.
 
-![Create server](../../imgs/dashboard.png "Dashboard")
+![Create server](../../images/dashboard.png "Dashboard")
 
 You land on the instance creation section and have to set basic informations for your server: The name of your instance, the tags you want to assign on it.
 
 Tags help you to manage your instances, and other resources, you can assign your own tags to each resource.
 
-![Create instance basic informations](../../imgs/instance_basic_informations.png "Instance-basic-informations")
+![Create instance basic informations](../../images/instance_basic_informations.png "Instance-basic-informations")
 
 ### Step 2 - Choose your image
 
@@ -31,7 +31,7 @@ Since you have set instance basic informations, you have to choose which image y
 
 - Snapshots: It's the list of your instance snapshots, it allow you to start a new instance form a previous one. 
 
-![Create instance image](../../imgs/instance_image.png "Instance-image")
+![Create instance image](../../images/instance_image.png "Instance-image")
 
 ### Step 3 - Add storage
 
@@ -46,7 +46,7 @@ Your volume can be of type :
 
 - Ultra low latency SSD disk to deliver faster disk I/O performance, it's perfect if you need heavy read/write
 
-![Create instance volumes](../../imgs/instance_volume.png "Instance-volume")
+![Create instance volumes](../../images/instance_volume.png "Instance-volume")
 
 ### Step 4 - Create your server
 

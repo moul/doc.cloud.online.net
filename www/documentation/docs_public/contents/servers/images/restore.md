@@ -12,7 +12,7 @@ This article will guide you through the process of restoring an instance from an
 
 From your list of images, select the image you want to use for your new instance and launch it by clicking the "Launch" button.
 
-![Create server basic information](../../imgs/img_tmp_srv_basic_informations.png "Temporaire")
+![Create server basic information](../../images/img_tmp_srv_basic_informations.png "Temporaire")
 
 ### Step 2 - Set up instance
 
@@ -22,7 +22,7 @@ On the instance settings page, you are asked to:
 
 - Tags your instance
 
-![Create server basic information](../../imgs/img_tmp_srv_basic_informations.png "Temporaire")
+![Create server basic information](../../images/img_tmp_srv_basic_informations.png "Temporaire")
 
 ### Step 3 - Launch instance
 

@@ -20,7 +20,7 @@ From the list of servers, select the instance that you want to create an image f
 
 Once on the instance details page, on the sub menu, click create an instance image.
 
-![Create server basic information](../../imgs/img_tmp_srv_basic_informations.png "Temporaire")
+![Create server basic information](../../images/img_tmp_srv_basic_informations.png "Temporaire")
 
 ### Step 2 - Image creation
 
@@ -32,7 +32,7 @@ A pop-up appear before the operation start and you are asked for:
 
 - Volumes you want to snapshot
 
-![Create server basic information](../../imgs/img_tmp_srv_basic_informations.png "Temporaire")
+![Create server basic information](../../images/img_tmp_srv_basic_informations.png "Temporaire")
 
 #### Optionnals
 

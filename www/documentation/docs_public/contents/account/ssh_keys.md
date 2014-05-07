@@ -61,11 +61,11 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3TsFepMvwNBIjsr3Zr85mj/Aho/tk3220ryzVxgxR
 ```
 - From the dashboard, select my account
 
-![My account](../imgs/my_account.png "My account")
+![My account](../images/my_account.png "My account")
 
 - On the SSH Keys section paste your public key in the text area
 
-![My account](../imgs/ssh_keys.png "SSH Keys")
+![My account](../images/ssh_keys.png "SSH Keys")
 
 - Save it by clicking New SSH Key button
 

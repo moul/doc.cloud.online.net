@@ -17,13 +17,13 @@ You can do it from the console or form the command line using this command: `sud
 
 Then, click on "Volumes" from the left-hand menu in the console, the list of volumes will appear.
 
-![Console](../../imgs/img_tmp_dashboard.png "Temporaire")
+![Console](../../images/img_tmp_dashboard.png "Temporaire")
 
 Select the volumes you want to snapshot on the list and click the "Snapshot" button.
 
 A pop-up will appear asking you for the snapshot name, description, tags and if you want to start the server once the snapshot is achieve.
 
-![Console](../../imgs/img_tmp_dashboard.png "Temporaire")
+![Console](../../images/img_tmp_dashboard.png "Temporaire")
 
 In few minutes your snapshot will be ready and will appear in the snapshots section.
 
@@ -35,7 +35,7 @@ Then, select the snapshot to restore and simply click the "Restore" button.
 
 Give it a name, description and tags.
 
-![Console](../../imgs/img_tmp_dashboard.png "Temporaire")
+![Console](../../images/img_tmp_dashboard.png "Temporaire")
 
 The new volume will appear in the volumes list, then you just have to attach it to the instance you need.
 
@@ -44,6 +44,6 @@ The new volume will appear in the volumes list, then you just have to attach it 
 To delete a snapshot, from the snapshots list select the snapshot to delete.
 Once selected, click the "Remove" button.
 
-![Console](../../imgs/img_tmp_dashboard.png "Temporaire")
+![Console](../../images/img_tmp_dashboard.png "Temporaire")
 
 Your snapshot is delete instantly.

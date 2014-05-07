@@ -3,11 +3,8 @@ title: Who is labs.online.net for ?
 template: article.jade
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis venenatis diam, et mattis eros feugiat et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet erat eros. 
-
-Proin vestibulum dignissim neque non cursus. Pellentesque in ultricies ante. Vestibulum at placerat felis. Duis vulputate ligula ac ipsum elementum consectetur.
-
-Vestibulum mollis dui eu arcu gravida, vel pharetra ligula laoreet. Proin arcu erat, adipiscing non lacus non, lacinia sodales lorem. Vestibulum eget luctus tellus.
+ Labs.online.net is for everyone looking for a platform providing on demands compute.<br/>
+ It'is the perfect environment to test, launch or scale application in seconds.
 
 # What are labs.online.net advantages ?
 

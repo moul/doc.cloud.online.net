@@ -99,7 +99,7 @@ footer h4 {
 }
 
 .share-twitter {
-    background-image: url('/imgs/twitter.png');
+    background-image: url('/images/twitter.png');
     background-repeat: no-repeat;
     background-position: 10% center;
 }
@@ -107,7 +107,7 @@ footer h4 {
 .share-facebook {
     margin-top:20px;
     clear:both;
-    background-image: url('/imgs/facebook.png');
+    background-image: url('/images/facebook.png');
     background-repeat: no-repeat;
     background-position: 10% center;
 }

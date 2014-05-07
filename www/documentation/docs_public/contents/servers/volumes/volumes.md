@@ -34,13 +34,13 @@ Volume creation occurred in 3 steps :
   - Ultra low latency SSD disk to deliver faster disk I/O performance, it's perfect if you need heavy read/write
 
 
-![Create new volume](../../imgs/create_new_volume.png "Create-new-volume")
+![Create new volume](../../images/create_new_volume.png "Create-new-volume")
 
 #### Step 3 - Create from existing volume
 
 The process is the same that explain in step 2, difference is that you don't have to set a size for the volume but must choose a  snapshot form previous one.
 
-![Create existing volume](../../imgs/create_existing_volume.png "Create-existing-volume")
+![Create existing volume](../../images/create_existing_volume.png "Create-existing-volume")
 
 ### Attach a volume
 
@@ -50,7 +50,7 @@ From the volumes list, select the volume to attach and click the button "Attach"
 
 Once selected, just submit your choice.
 
-![New volume](../../imgs/img_tmp_new_volume.png "Temporaire")
+![New volume](../../images/img_tmp_new_volume.png "Temporaire")
 
 ### Detach a volume
 
@@ -60,7 +60,7 @@ On the list, select the volume you want to detach, attached volumes have a serve
 
 Then select the volume to detach and click the "Detach" button.
 
-![New volume](../../imgs/img_tmp_new_volume.png "Temporaire")
+![New volume](../../images/img_tmp_new_volume.png "Temporaire")
 
 ### Delete
 
@@ -68,7 +68,7 @@ A volume is unused and you don't still need it ?
 
 From the volumes list, select the volume to delete and click "Delete selected" button.
 
-![Delete existing volume](../../imgs/delete_volume.png "Delete-existing-volume")
+![Delete existing volume](../../images/delete_volume.png "Delete-existing-volume")
 
 
 

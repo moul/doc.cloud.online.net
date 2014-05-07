@@ -1,0 +1,11 @@
+{
+  "name": "documentation",
+  "version": "0.0.0",
+  "authors": [
+    "Edouard Bonlieu <ebonlieu@ocs.online.net>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "~3.1.1"
+  }
+}
