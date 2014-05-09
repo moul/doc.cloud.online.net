@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 		/*'documentation/api/_build/volumes.md'*/
 					]
 				},
-				theme: './aglio/themes/flatly-multi.jade',
+				theme: 'aglio/themes/flatly-multi.jade',
 				seperator: "\n"
 			}
 		},

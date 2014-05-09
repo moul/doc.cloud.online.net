@@ -183,5 +183,4 @@ Link: <https://api.hyperscale.com/v1/servers/Server-198779b8-e4b5-4876-9e2f-aa09
 ...
 ```
 
-## Resources
 

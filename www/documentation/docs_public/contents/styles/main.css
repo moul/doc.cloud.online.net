@@ -103,3 +103,7 @@ footer h4 {
     background-repeat: no-repeat;
     background-position: 10% center;
 }
+
+.share-facebook:hover, .share-twitter:hover {
+    opacity: 0.5;
+}

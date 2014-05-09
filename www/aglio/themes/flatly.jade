@@ -12,10 +12,10 @@ block styles
     style
         :stylus
             body, h4, h5
-                font-family 'Roboto' sans-serif !important
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important
 
             h1, h2, h3, .aglio
-                font-family 'Raleway' sans-serif !important
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important
 
             h1, h2, h3, h4, h5
                 & a
@@ -73,7 +73,12 @@ block styles
                 overflow hidden
 
                 &.heading
-                    background-color #ecf0f1
+                    background: #27333A
+                    border-color: #27333A
+                    text-align:center
+                    color: #A9D0E0
+                    font-size: 24px
+                    font-weight: lighter
 
             .list-group-item.collapse
                 display none
@@ -93,6 +98,10 @@ block styles
             @media(max-width: 1199px)
                 #nav
                     min-width 212px
+
+
+
+                    
 
 block content
     +Content('info', false)
