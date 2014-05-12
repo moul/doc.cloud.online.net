@@ -4,25 +4,27 @@ template: article.jade
 position: 2
 ---
 
-Images are really use full if you want to clone an instance to another or to publish an instance image to the market place.
+Images are really useful if you want to clone an instance to another or to publish an instance image to the market place.
 
 This article will guide you through the process of restoring an instance from an image.
 
-### Step 1 - Select your image
+### Step 1 - Create a new server
 
-From your list of images, select the image you want to use for your new instance and launch it by clicking the "Launch" button.
+From, the dashboard, click the Create Server button.
 
-![Create server basic information](../../images/img_tmp_srv_basic_informations.png "Temporaire")
+![Create server](../../images/dashboard.png "Dashboard")
 
-### Step 2 - Set up instance
+You land on the instance creation section and have to set basic informations for your server: 
 
-On the instance settings page, you are asked to:
+- The name of your instance
+- The tags you want to assign on it.
 
-- Name your instance
+### Step 2 - Select an image
 
-- Tags your instance
+On the instance settings page, you are asked to select an image, from the choose an image section
 
-![Create server basic information](../../images/img_tmp_srv_basic_informations.png "Temporaire")
+![Choose an image](../../images/choose_image.png "Choose an image")
+
 
 ### Step 3 - Launch instance
 

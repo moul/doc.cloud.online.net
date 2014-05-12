@@ -14,32 +14,28 @@ This article will guide you through the process of creating an image from the co
 - Automate Server Builds
 - Create a Software Testing Environment
 
-###Step 1 - Select your instance
 
-From the list of servers, select the instance that you want to create an image for.
+###Step 1 - Create image from a volume snapshot
 
-Once on the instance details page, on the sub menu, click create an instance image.
+Click on the "Images button on left-side menu, you will arrive on your images list.<br/>Here are displayed the list of images available, to create a new one click the "Create image" button
 
-![Create server basic information](../../images/img_tmp_srv_basic_informations.png "Temporaire")
+![Images list](../../images/images_list.png "Images list")
 
 ### Step 2 - Image creation
 
-A pop-up appear before the operation start and you are asked for:
+You are now asked for:
 
-- Image name
+- Giving an image name
 
-- Image description
+- Choose the volume snapshot you want to use for your image
 
-- Volumes you want to snapshot
+![Create new image](../../images/create_new_image.png "Create-new-image")
 
-![Create server basic information](../../images/img_tmp_srv_basic_informations.png "Temporaire")
+Once achieve, click on "Create Image." In the minutes that follows, your image will be set up and ready to use.
 
-#### Optionnals
+
+### Coming soon
 
 - No reboot - Instance image is create without rebooting your server
 - Market place image - Image will be available publicly on the Image Market Place, by default, image are not published to the market place.
-
-### Step 3 - Save
-
-Once you have selected all of your options, click on "Create Image." In the minutes that follows, your image will be set up and ready to use.
-
+- Create an image directly from an instance

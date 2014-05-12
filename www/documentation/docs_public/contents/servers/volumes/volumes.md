@@ -44,7 +44,7 @@ The process is the same that explain in step 2, difference is that you don't hav
 
 ### Attach a volume
 
-Since your volume is created, you will need to attach it to a specific instance.
+Now that your volume is created, you will need to attach it to a specific instance.
 
 From the volumes list, select the volume to attach and click the button "Attach", a pop-up appear asking on which instance you want to attach.
 
