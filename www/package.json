@@ -7,7 +7,6 @@
   },
   "dependencies": {
     "aglio": "*",
-    "bootswatch": "^3.0.0",
     "coffee-script": "~1.7.1",
     "express": "3.4.8",
     "grunt-contrib-clean": "~0.5.0",
