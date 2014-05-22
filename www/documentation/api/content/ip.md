@@ -8,91 +8,91 @@ This resources of API methods allows you to create, manage or delete your reserv
 Create a new IP
 
 + Parameters
-    + organization (required, string, `f030e920-9743-4f28-8164-964ba8555fa5`)... Organization unique identifier
+    + organization (required, string, `000a115d-2852-4b0a-9ce8-47f1134ba95a`)... Organization unique identifier
 
 + Request (application/json)
 
     + Body
 
             {
-                "organization": "f030e920-9743-4f28-8164-964ba8555fa5"
+                "organization": "000a115d-2852-4b0a-9ce8-47f1134ba95a"
             }
 
 + Response 201 (application/json)
 
-        {
-            TODO
-        }
-
-+ Response 400
-
-+ Response 401
-
-+ Response 403
+            {
+              "ip": {
+                "address": "212.47.226.88",
+                "id": "b50cd740-892d-47d3-8cbf-88510ef626e7",
+                "organization": "000a115d-2852-4b0a-9ce8-47f1134ba95a",
+                "server": null
+              }
+            }
 
 ##### Retrieves the list all existing IPs [GET]
 
 + Response 200 (application/json)
 
         {
-            TODO   
+          "ips": [
+            {
+              "address": "212.47.226.88",
+              "id": "b50cd740-892d-47d3-8cbf-88510ef626e7",
+              "organization": "000a115d-2852-4b0a-9ce8-47f1134ba95a",
+              "server": null
+            }
+          ]
         }
 
-+ Response 401
-
-+ Response 403
-
-#### Operation on a single IP [/ips/{ip_address}]
+#### Operation on a single IP [/ips/{ip_id}]
 
 + Parameters
-    + ip_address (required, string, `w.x.y.z`)... Ip address
+    + ip_id (required, string, `b50cd740-892d-47d3-8cbf-88510ef626e7`)... Ip unique identifier
 
 ##### Retrieves informations about an IP [GET]
 
 + Response 200 (application/json)
 
         {
-            TODO
+          "ip": {
+            "address": "212.47.226.88",
+            "id": "b50cd740-892d-47d3-8cbf-88510ef626e7",
+            "organization": "000a115d-2852-4b0a-9ce8-47f1134ba95a",
+            "server": null
+          }
         }
 
-+ Response 401
-
-+ Response 403
-
-+ Response 404
-
-##### Update informations about an IP [PUT]
-
-+ Parameters
-    + ip_address (required, string, `w.x.y.z`)... Ip address
-    + TODO (required, string, `TODO`)... TODO
+##### Attach an IP [PUT]
 
 + Request (application/json)
 
     + Body
 
             {
-                TODO
+                "address": "212.47.226.88",
+                "id": "b50cd740-892d-47d3-8cbf-88510ef626e7",
+                "organization": "000a115d-2852-4b0a-9ce8-47f1134ba95a",
+                "server": "c2d8994f-1582-413e-8d48-c53076db06cc"
             }
 
 
 + Response 200 (application/json)
 
         {
-            TODO
+          "ip": {
+            "address": "212.47.226.88",
+            "id": "b50cd740-892d-47d3-8cbf-88510ef626e7",
+            "organization": "000a115d-2852-4b0a-9ce8-47f1134ba95a",
+            "server": {
+              "id": "c2d8994f-1582-413e-8d48-c53076db06cc",
+              "name": "default_server_name - acfb51"
+            }
+          }
         }
 
-+ Response 401
-
-+ Response 403
-
-+ Response 404
 
 ##### Remove an IP address [DELETE]
 
 + Response 204
 
-+ Response 403
-
-+ Response 404
 

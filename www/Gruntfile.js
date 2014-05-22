@@ -26,8 +26,8 @@ module.exports = function(grunt) {
 						'documentation/api/content/volume.md',
 						'documentation/api/content/snapshot.md',
 						'documentation/api/content/image.md',
-						'documentation/api/content/container.md',
-						'documentation/api/content/ticket.md',
+						// 'documentation/api/content/container.md',
+						// 'documentation/api/content/ticket.md',
 						'documentation/api/content/metadata.md',
 		/*'documentation/api/_build/containers.md',*/
 		/*'documentation/api/_build/organizations.md',*/

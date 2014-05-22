@@ -7,101 +7,165 @@ This resources of API methods allows you to create, manage or delete your images
 ##### Create a new image [POST]
 
 + Parameters
-    + organization (required, string, `f030e920-9743-4f28-8164-964ba8555fa5`)... Organization unique identifier
+    + organization (required, string, `000a115d-2852-4b0a-9ce8-47f1134ba95a`)... Organization unique identifier
     + name (required, string, `my_image`)... The image name
     + arch (required, string, `arm`)... The architecture type
-    + root_volume (required, string, `8a8095d7-7db0-40c6-b867-0c0708f5e918`)... The root volume unique identifier
+    + root_volume (required, string, `f0361e7b-cbe4-4882-a999-945192b7171b`)... The root volume unique identifier
 
 + Request (application/json)
 
     + Body
 
             {
-                "organization": "f030e920-9743-4f28-8164-964ba8555fa5",
+                "organization": "000a115d-2852-4b0a-9ce8-47f1134ba95a",
                 "arch": "arm",
                 "name": "my_image",
-                "root_volume": "8a8095d7-7db0-40c6-b867-0c0708f5e918"
+                "root_volume": "f0361e7b-cbe4-4882-a999-945192b7171b"
             }
 
 + Response 201 (application/json)
 
         {
-            
+          "image": {
+            "arch": "arm",
+            "creation_date": "2014-05-22T12:56:56.984011+00:00",
+            "extra_volumes": "[]",
+            "from_image": null,
+            "from_server": null,
+            "id": "98bf3ac2-a1f5-471d-8c8f-1b706ab57ef0",
+            "marketplace_key": null,
+            "modification_date": "2014-05-22T12:56:56.984011+00:00",
+            "name": "my_image",
+            "organization": "000a115d-2852-4b0a-9ce8-47f1134ba95a",
+            "public": false,
+            "root_volume": {
+              "id": "f0361e7b-cbe4-4882-a999-945192b7171b",
+              "name": "vol-0-1"
+            }
+          }
         }
-
-+ Response 400
-
-+ Response 401
-
-+ Response 403
 
 ##### Retrieves the list all existing images [GET]
 
 + Response 200 (application/json)
 
         {
-            "images": []   
+          "images": [
+            {
+              "arch": "arm",
+              "creation_date": "2014-05-22T12:56:56.984011+00:00",
+              "extra_volumes": "[]",
+              "from_image": null,
+              "from_server": null,
+              "id": "98bf3ac2-a1f5-471d-8c8f-1b706ab57ef0",
+              "marketplace_key": null,
+              "modification_date": "2014-05-22T12:56:56.984011+00:00",
+              "name": "my_image",
+              "organization": "000a115d-2852-4b0a-9ce8-47f1134ba95a",
+              "public": false,
+              "root_volume": {
+                "id": "f0361e7b-cbe4-4882-a999-945192b7171b",
+                "name": "vol-0-1"
+              }
+            },
+            {
+              "arch": "arm",
+              "creation_date": "2014-05-22T12:57:22.514299+00:00",
+              "extra_volumes": "[]",
+              "from_image": null,
+              "from_server": null,
+              "id": "1f73d975-35fc-4365-9ead-8dab7e54152f",
+              "marketplace_key": null,
+              "modification_date": "2014-05-22T12:57:22.514299+00:00",
+              "name": "my_image_1",
+              "organization": "000a115d-2852-4b0a-9ce8-47f1134ba95a",
+              "public": false,
+              "root_volume": {
+                "id": "f0361e7b-cbe4-4882-a999-945192b7171b",
+                "name": "vol-0-2"
+              }
+            }
+          ]
         }
-
-+ Response 401
-
-+ Response 403
 
 #### Operation on a single image [/images/{image_id}]
 
 + Parameters
-    + image_id (required, string, `4e0b46e4-7c1d-44d4-8ba6-dc5f80694397`)... Image unique identifier
+    + image_id (required, string, `98bf3ac2-a1f5-471d-8c8f-1b706ab57ef0`)... Image unique identifier
 
 ##### Retrieves informations about an image [GET]
 
 + Response 200 (application/json)
 
         {
-            "images": {
-
+          "image": {
+            "arch": "arm",
+            "creation_date": "2014-05-22T12:56:56.984011+00:00",
+            "extra_volumes": "[]",
+            "from_image": null,
+            "from_server": null,
+            "id": "98bf3ac2-a1f5-471d-8c8f-1b706ab57ef0",
+            "marketplace_key": null,
+            "modification_date": "2014-05-22T12:56:56.984011+00:00",
+            "name": "my_image",
+            "organization": "000a115d-2852-4b0a-9ce8-47f1134ba95a",
+            "public": false,
+            "root_volume": {
+              "id": "f0361e7b-cbe4-4882-a999-945192b7171b",
+              "name": "vol-0-1"
             }
+          }
         }
 
-+ Response 401
-
-+ Response 403
-
-+ Response 404
-
 ##### Update informations about an image [PUT]
-
-+ Parameters
-    + image_id (required, string, `4e0b46e4-7c1d-44d4-8ba6-dc5f80694397`)... Image unique identifier
-    + TODO (required, string, `TODO`)... TODO
 
 + Request (application/json)
 
     + Body
 
             {
-                TODO
+                "arch": "arm", 
+                "creation_date": "2014-05-22T12:57:22.514299+00:00", 
+                "extra_volumes": "[]", 
+                "from_image": null, 
+                "from_server": null, 
+                "id": "1f73d975-35fc-4365-9ead-8dab7e54152f", 
+                "marketplace_key": null, 
+                "modification_date": "2014-05-22T12:58:42.511040+00:00", 
+                "name": "my_image_old", 
+                "organization": "000a115d-2852-4b0a-9ce8-47f1134ba95a", 
+                "public": false, 
+                "root_volume": {
+                  "id": "f0361e7b-cbe4-4882-a999-945192b7171b", 
+                  "name": "vol-0-1"
+                }
             }
 
 
 + Response 200 (application/json)
 
         {
-            "images": {
-            
+          "image": {
+            "arch": "arm",
+            "creation_date": "2014-05-22T12:56:56.984011+00:00",
+            "extra_volumes": "[]",
+            "from_image": null,
+            "from_server": null,
+            "id": "98bf3ac2-a1f5-471d-8c8f-1b706ab57ef0",
+            "marketplace_key": null,
+            "modification_date": "2014-05-22T13:00:15.462764+00:00",
+            "name": "my_image_old",
+            "organization": "000a115d-2852-4b0a-9ce8-47f1134ba95a",
+            "public": false,
+            "root_volume": {
+              "id": "f0361e7b-cbe4-4882-a999-945192b7171b",
+              "name": "TOTO"
             }
+          }
         }
 
-+ Response 401
-
-+ Response 403
-
-+ Response 404
 
 ##### Delete an image [DELETE]
 
 + Response 204
-
-+ Response 403
-
-+ Response 404
 

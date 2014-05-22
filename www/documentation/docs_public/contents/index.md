@@ -31,3 +31,5 @@ We provides the following features:
 - IP addresses, static or dynamic to attach on your instances
 
 - Tags, that you can assign to your instances to manage them
+
+# Join us for a chat on irc.online.net channel #online-labs

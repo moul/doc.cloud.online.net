@@ -1,5 +1,5 @@
 ### group Metadata
-Resources related to scaleway Metadata
+Resources related to server Metadata
 
 #### Pimouss metadata [/metadata{?format}]
 
@@ -7,7 +7,7 @@ Resources related to scaleway Metadata
     + format (optional, string, `json`)... Rendering format
 
 ##### Serves pimouss metadata [GET]
-Serves pimouss metadata using its own IP address as authentication token.
+Serves instance metadata using its own IP address as authentication token.
 
 + Response 200 (application/json)
 
@@ -37,5 +37,3 @@ Serves pimouss metadata using its own IP address as authentication token.
         VOLUMES=0
         ORGANIZATION=11111111-1111-4111-8111-111111111111
         ID=9fc9a037-5eaa-4073-9919-63adbe400ab9
-
-+ Response 404
