@@ -6,6 +6,9 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "~3.1.1"
+    "bootstrap": "~3.1.1",
+    "font-awesome": "~4.1.0",
+    "bootswatch": "~3.1.1+1",
+    "knockout": "~3.1.0"
   }
 }

@@ -1,10 +1,9 @@
 extends _bootstrap-layout
 
 block bootstrap-theme
-    link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/flatly/bootstrap.min.css")
-
+    // link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/flatly/bootstrap.min.css")
+   link(rel="stylesheet", href="../bower_components/bootswatch/flatly/bootstrap.min.css")
 block styles
-    link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Roboto:400,700|Inconsolata|Raleway:200")
     style.
         pre code{display:block;padding:.5em;color:#333}
         /* Highlight.js Theme Tomorrow */
@@ -99,9 +98,6 @@ block styles
                 #nav
                     min-width 212px
 
-
-
-                    
 
 block content
     +Content('info', false)

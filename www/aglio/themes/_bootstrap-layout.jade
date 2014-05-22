@@ -7,8 +7,8 @@ html
         meta(charset="utf-8")
         title= api.name || 'API Documentation'
         block bootstrap-theme
-            link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
-        link(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css")
+        link(rel="stylesheet", href="../bower_components/bootstrap/dist/css/bootstrap.min.css")
+        link(rel="stylesheet", href="../bower_components/font-awesome/css/font-awesome.min.css")
         block styles
             style.
                 /* Highlight.js Theme Tomorrow */
@@ -112,8 +112,8 @@ html
                         +Content('primary', false)
 
 
-    script(src="//code.jquery.com/jquery-1.11.0.min.js")
-    script(src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js")
+    script(src="../bower_components/jquery/dist/jquery.min.js")
+    script(src="../bower_components/bootstrap/dist/js/bootstrap.min.js")
     script
         :coffee
             # Show a warning when viewed as a local file, which will break the
