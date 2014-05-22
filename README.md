@@ -2,21 +2,22 @@
 
 ## Install
 ```
-cd scaleway
+cd www
 npm install
 npm install -g grunt-cli aglio
+bower install
 ```
 
-## Edit internal documentation (liverealod)
+## Edit internal documentation (livereload)
 ```
-cd scaleway/utils/bin
+cd www/utils/bin
 node wintersmit_docs_internal.js
 browser : http://localhost:8080
 ```
 
 ## Edit public documentation (livereload)
 ```
-cd scaleway/utils/bin
+cd www/utils/bin
 node wintersmit_docs_public.js
 browser : http://localhost:8080
 ```
