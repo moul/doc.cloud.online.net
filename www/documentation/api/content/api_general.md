@@ -2,7 +2,7 @@ FORMAT: 1A
 
 # Welcome to cloud.online.net API documentation.
 
-We have created an easy to use and RESTful API that allows you to have a full control over the service. All feature you will find in the web control panel are also available through the API.
+We have created an easy to use and RESTful API that allows you to have a full control over the service. All features you will find in the web control panel are also available through the API.
 
 ## Request and response
 
@@ -24,12 +24,12 @@ To construct a proper request, you will need to format the URL as follows:
 
 `https://api.cloud.online.net/{ressource}`
 
-Example: `https://api.cloud.online.net/servers/49016330-e07b-4d54-ba0d-6f0b67ab3d6d`
+Example: `https://api.cloud.online.net/volumes/f929fe39-63f8-4be8-a80e-1e9c8ae22a76`
 
-An example request, to retrieves detailed informations about a server might be:
+The following code is an example request to rretrieve detailed informations about a volume
 
 ```
-% curl -H 'X-Auth-Token: 017ce0ce-20ec-4d4ez-b44c-e561a4421d2c' -H 'Content-Type: application/json' https://api.cloud.online.net/servers -i
+% curl -H 'X-Auth-Token: 017ce0ce-20ec-4d4ez-b44c-e561a23481d2c' -H 'Content-Type: application/json' https://api.cloud.online.net/volumes/f929fe39-63f8-4be8-a80e-1e9c8ae22a76 -i
 
 HTTP/1.1 200 OK
 Server: nginx
@@ -41,49 +41,24 @@ X-Sentry-ID: None
 Strict-Transport-Security: max-age=86400
 
 {
-  "servers": [
+  "volumes": [
     {
-      "dynamic_public_ip": false,
-      "id": "5a84cfd1-ba2a-4576-b55c-f11dcdd7059f",
-      "image": {
-        "id": "85917034-46b0-4cc5-8b48-f0a2245e357e",
-        "name": "ubuntu working"
-      },
-      "name": "My first server",
-      "organization": "ecc1c86a-eabb-43a7-9c0a-77e371753c0a",
-      "private_ip": null,
-      "public_ip": null,
-      "running": false,
-      "tags": [
-        "firstserver",
-        "new"
-      ],
-      "volumes": {
-        "0": {
-          "export_uri": null,
-          "id": "0731e0c0-6931-4b99-a8f9-c593b4f3d8c1",
-          "name": "vol simple snapshot",
-          "organization": "ecc1c86a-eabb-43a7-9c0a-77e371753c0a",
-          "server": {
-            "id": "5a84cfd1-ba2a-4576-b55c-f11dcdd7059f",
-            "name": "My first server"
-          },
-          "size": 10000000000,
-          "volume_type": "l_hdd"
-        },
-        "1": {
-          "export_uri": null,
-          "id": "cc0bbb40-7a08-4bf3-a6d9-68b0ffb1ef0e",
-          "name": "default_volume_name",
-          "organization": "ecc1c86a-eabb-43a7-9c0a-77e371753c0a",
-          "server": {
-            "id": "5a84cfd1-ba2a-4576-b55c-f11dcdd7059f",
-            "name": "My first server"
-          },
-          "size": 10000000000,
-          "volume_type": "l_ssd"
-        }
-      }
+      "export_uri": null,
+      "id": "f929fe39-63f8-4be8-a80e-1e9c8ae22a76",
+      "name": "volume-0-1",
+      "organization": "000a115d-2852-4b0a-9ce8-47f1134ba95a",
+      "server": null,
+      "size": 10000000000,
+      "volume_type": "l_hdd"
+    },
+    {
+      "export_uri": null,
+      "id": "0facb6b5-b117-441a-81c1-f28b1d723779",
+      "name": "volume-0-2",
+      "organization": "000a115d-2852-4b0a-9ce8-47f1134ba95a",
+      "server": null,
+      "size": 20000000000,
+      "volume_type": "l_ssd"
     }
   ]
 }
@@ -91,7 +66,7 @@ Strict-Transport-Security: max-age=86400
 
 ## Basic Authentication
 
-You authenticate to the API by requesting a token. A token is produce by requesting /tokens ressource via POST request.
+You authenticate to the API by requesting a token. You can create a token with a POST request on the /tokens HTTP resource.
 
 Basic Authentication process:
 
@@ -107,7 +82,7 @@ curl -X GET -H "X-Auth-Token: 4e0b46e4-7c1d-44d4-8ba6-dc5f80694397" -H "Content-
 
 We use conventional HTTP response codes to indicate success or failure of an API request.
 
-In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error that resulted from the provided information (e.g. a required parameters were missing, etc.), and codes in the 5xx range indicate an error with our servers.
+In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error that resulted from the provided information (e.g., a required parameter is missing), and codes in the 5xx range indicate an error with our servers.
 
 ### HTTP Status Code Summary
 
@@ -125,11 +100,11 @@ Input and output data must be valid JSON with appropriate Content-Type header se
 
 - type:
  
- - invalid_request_error: Occured when your request has an invalid parameters.
+ - invalid_request_error: Occur when your request has invalid parameters.
  - invitalid_auth: Arise when there is a problem of authentication.
- - uknown_resource: Occured when the resource doesn't exist.
+ - uknown_resource: Occur when the resource doesn't exist.
  - authorization_required: You don't have sufficient right to access the resource.
- - api_error: API errors is used in case of problem with api.cloud.online's servers
+ - api_error: API errors use in case of problem with api.cloud.online's servers
 
 - message:
  

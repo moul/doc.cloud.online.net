@@ -18,14 +18,13 @@ h3 {
     margin-bottom: 40px;
 }
 
-p {
+p, ul li, ol li {
    font-size: 16px;
 }
 
 .documentation {
     margin-top:50px;
 }
-
 
 
 footer {

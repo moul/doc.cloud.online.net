@@ -7,8 +7,8 @@ html
         meta(charset="utf-8")
         title= api.name || 'API Documentation'
         block bootstrap-theme
-        link(rel="stylesheet", href="../bower_components/bootstrap/dist/css/bootstrap.min.css")
-        link(rel="stylesheet", href="../bower_components/font-awesome/css/font-awesome.min.css")
+        //link(rel="stylesheet", href="/bower_components/bootstrap/dist/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/bower_components/font-awesome/css/font-awesome.min.css")
         block styles
             style.
                 /* Highlight.js Theme Tomorrow */
@@ -102,6 +102,17 @@ html
         a.text-muted.back-to-top(href='#top')
             i.fa.fa-toggle-up
             | &nbsp;Back to top
+
+        header(id="top" role="banner").navbar.navbar-static-top.navbar-color
+            div.container
+                div.navbar-header
+                    button(type="button", data-toggle="collapse").navbar-toggle
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a(href='/').navbar-brand
+                        image(src="/images/logo.png")
+
         .container
             .row
                 block nav
@@ -111,9 +122,49 @@ html
                     block content
                         +Content('primary', false)
 
+        footer
+          div.container
+            div.row
+              div.span3.first
+                image(src="/images/logo_footer.png")
+              div.span6
+                ul.list-inline
+                  li
+                    dl.links
+                      dt ONLINE
+                      dd
+                        a(href="//labs.online.net" target="_blank") ONLINE LABS
+                      dd
+                        a(href="//lab.online.net/blog" target="_blank") BLOG
+                      dd
+                        a(href="//doc.cloud.online.net" target="_blank") DOCUMENTATION
+                      dd
+                        a(href="//doc.cloud.online.net/api/" target="_blank") API
 
-    script(src="../bower_components/jquery/dist/jquery.min.js")
-    script(src="../bower_components/bootstrap/dist/js/bootstrap.min.js")
+                  li
+                    dl.links
+                      dt GROUPE ILIAD
+                      dd
+                        a(href="//www.online.net/" target="_blank") ONLINE
+                      dd
+                        a(href="//www.iliad-datacenter.fr/" target="_blank") ILIAD DATACENTER
+                      dd 
+                        a(href="//www.free.fr/" target="_blank") FREE
+                      dd
+                        a(href="//mobile.free.fr/" target="_blank") FREEMOBILE
+
+
+              div.span3.pull-right
+                a(href="//twitter.com/labs_online" target="_blank")
+                  div.col-md-4.share.share-twitter.clearfix
+                    h4 Twitter
+                a(href="https://www.facebook.com/pages/Online/147829252092178" target="_blank")
+                  div.col-md-4.share.share-facebook
+                    h4 Facebook
+
+
+    script(src="/bower_components/jquery/dist/jquery.min.js")
+    script(src="/bower_components/bootstrap/dist/js/bootstrap.min.js")
     script
         :coffee
             # Show a warning when viewed as a local file, which will break the

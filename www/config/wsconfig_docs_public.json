@@ -15,10 +15,10 @@
 		"menu" : {
 			"howto": "Getting started",
 			"account": "Account managment",
-			"servers": {
-				"name": "Servers",
+			"compute": {
+				"name": "Compute",
 				"items": {
-					"instances": "Instances",
+					"servers": "Servers",
 					"images": "Images",
 					"volumes": "Volumes"
 				}

@@ -4,7 +4,7 @@ template: article.jade
 position: 3
 ---
 
-Before you can start using our APIs, you will need to get your token.
+Before you can start using our [APIs](//doc.cloud.online.net/api/), you will need to get your token.
 
 A token is a unique alphanumeric identifier associated with your account and is used to authenticate commands for all of your services.
 

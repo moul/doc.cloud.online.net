@@ -51,11 +51,18 @@ module.exports = function(grunt) {
 					config: 'config/wsconfig_docs_public.json'
 				}
 			}
+		},
+		copy: {
+			target: {
+				files: [
+					{expand: true, src: ['bower_components/**'], dest: 'dist/api/'},
+					{expand: true, src: ['bower_components/**'], dest: 'dist/docs_public/'},
+					{expand: true, cwd: 'documentation/docs_public/contents/', src: ['images/**'], dest: 'dist/api/'}
+				]
+			}
 		}
 	});
-	/*grunt.loadNpmTasks('grunt-clean');*/
-	/*grunt.loadNpmTasks('grunt-aglio');*/
-	/*grunt.loadNpmTasks('grunt-wintersmith');*/
+
 	require('load-grunt-tasks')(grunt);
-	grunt.registerTask('default', ['clean', 'aglio', 'wintersmith']);
+	grunt.registerTask('default', ['clean', 'aglio', 'wintersmith', 'copy']);
 };

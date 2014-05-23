@@ -198,7 +198,7 @@ mixin Content(getButtonClass, multipage)
                 | Next&nbsp;
                 i.fa.fa-arrow-circle-right
             .clearfix
-            hr
+
 
     each resourceGroup, index in api.resourceGroups
         div(data-bind=multipage ? "visible: page() == '#{slug(resourceGroup.name)}', style: {marginTop: page() == '#{slug(resourceGroup.name)}' ? '38px' : ''}" : undefined)
@@ -208,9 +208,7 @@ mixin Content(getButtonClass, multipage)
                 +Paginate(api.resourceGroups, index)
 
 mixin Multipage()
-    //- Multi-page support through Knockout.js
-    // script(src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js")
-    script(src="../bower_components/knockout/dist/knockout.js")
+    script(src="/bower_components/knockout/dist/knockout.js")
     script
         :coffee
             class App
