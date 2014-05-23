@@ -32,4 +32,4 @@ We provides the following features:
 
 - Tags, that you can assign to your instances to manage them
 
-# Join us for a chat on irc.online.net channel #online-labs
+# Join us for a chat on irc.online.net channel #onlinelabs
