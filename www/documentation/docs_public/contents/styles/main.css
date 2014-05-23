@@ -5,6 +5,18 @@
 .sub-menu-header { margin:0; margin-bottom: -1px; color: #2D353A; background: #EAEDF1; }
 a.active-url { background-color: #27C295!important; border-color: #27C295!important; }
 
+.irc {
+    color: #ffffff;
+    font-weight: lighter;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.irc a {color: #ffffff;}
+.irc a:hover {text-decoration: none;}
+
+.navbar-header {float: none;}
+
 h1 {
     font-size: 50px;
     margin-top: 30px;
