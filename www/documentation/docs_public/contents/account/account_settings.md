@@ -4,6 +4,8 @@ template: article.jade
 position: 1
 ---
 
+This page shows you how to manage your account settings and invitations.
+
 ### Account settings
 
 Has it can happen, you may want to update some of your personnal information.
@@ -25,8 +27,8 @@ To invite a new person to the service, go to the account section of your account
 
 ![Invitations](../images/invitations.png "Invitations")
 
-Then in the Invitations section, just add email, firstname and lastname of the personn to invite and click "Invite" button.
-The invitation get the pending status while our teams validate it.
+In the invitations section, just add email, firstname and lastname of the personn to invite and click "Invite" button.
+The invitation get the pending status while our team validate it.
 
 ### Quotas
 

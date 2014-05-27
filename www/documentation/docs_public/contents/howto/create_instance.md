@@ -1,69 +1,83 @@
 ---
-title: Create your first instance
+title: Provisioning your first server
 template: article.jade
 position: 1
 ---
 
-Each instance that you create is a physical server dedicated for your personal use.<br/>
-After you've launched your instance, you can connect and use it.
+This page shows you how to launch and connect to your servers.
 
-The following procedure is intended to help you to launch an instance in seconds.
+Each server that you create is a physical server dedicated for your personal use.<br/>
+After you've launched your server, you can connect and use it.
 
-### Step 1 - Name & Tags your instance
+There are 4 steps to provision your first server
 
-From, the dashboard, click the Create Server button.
+- Name & Tags your server
+- Choose your image
+- Add storage
+- Create & Start server
 
-![Create server](../../images/dashboard.png "Dashboard")
+## Server creation
 
-You land on the instance creation section and have to set basic informations for your server: The name of your instance, the tags you want to assign on it.
+From the dashboard, click the Create Server button.
 
-Tags help you to manage your instances, and other resources, you can assign your own tags to each resource.
+![Dashboard](../../images/dashboard.png "Dashboard")
 
-![Create instance basic informations](../../images/instance_basic_informations.png "Instance-basic-informations")
+### Step 1 - Name & Tags your server
+
+You'll be prompted to the server creation section and have to set basic informations for your server
+
+- The name of your server
+- The tags (Optional) you want to assign on it
+
+Tags help you to organize your servers, you can assign your own tags to each server.
+
+![Create server basic informations](../../images/server_basic_information.png "Create server basic informations")
 
 ### Step 2 - Choose your image
 
-Since you have set instance basic informations, you have to choose which image your instance will use. You can choose from
+An image is a kind of "Box" that includes an operating system (e.g., Linux) and any additional software required to deliver a service or a portion of it.<br/>
 
-- Images: They are standard OS Images, we propose today some Linux operating systems, such as Ubuntu, Fedora or Debian... What else ? (list is update permanently).
+Since you have set server basic informations, you have to choose which image your server will use.
+You can choose from three sources
 
-- Market place: This section provide you custom images build by the community, they often run with pre-installed or configured services that will allow save you time.
+- Marketplace: They are standard OS Images, we propose today some Linux operating systems, such as Ubuntu, Fedora or Debian... What else ? (list is update permanently).
 
-- Snapshots: It's the list of your instance snapshots, it allow you to start a new instance form a previous one. 
+- My images: It's the list of images that you create from snapshot previously, it allow you to start a new server from a previous one.
 
-![Create instance image](../../images/instance_image.png "Instance-image")
+- Snapshots: Like images, it allows you to start a new server form a volume previously snapshoted. 
+
+![Create server image](../../images/server_image.png "Create server image")
 
 ### Step 3 - Add storage
 
-You have to add at least one volume to your instance, it can be an existing volume or new one.<br/>
-An existing volume is a [snapshot](/servers/volumes/snapshot.html) that you take previously.
+Additionnaly to the image you selected, you can add extra storage to your server, it can be an existing volume or new one.<br/>
 
-Volume size is limit to 1Tb and there is no limit on the amount of volumes you can attach to your server.
+Volume size is limited to 1Tb and there is no limit on the amount of volumes you can attach to your server.
 
 Your volume can be of type :
 
-- Low latency Local storage on spinning disk, use for moderate read/write access
+- LHDD, spinning disk, use for moderate read/write access
 
-- Ultra low latency SSD disk to deliver faster disk I/O performance, it's perfect if you need heavy read/write
+- LSSD disk to deliver faster disk I/O performance, it's perfect if you need heavy read/write
 
-![Create instance volumes](../../images/instance_volume.png "Instance-volume")
+![Create server volumes](../../images/server_volume.png "Create server volumes")
 
-### Step 4 - Create your server
+### Step 4 - Create & Start your server
 
-Well, it's now time to start your instance, just click the "Create server" button. In few seconds your instance will be ready to use.
+The "Create server" button will create and start your server. In few seconds your server will be ready to use.
 
 If you have not configured your ssh key, you will receive an email with the root password.
 
-### Step 6 - Connect your instance
+## Log into your server
 
-#### Login from OSX and Linux
+### For OSX and Linux
 
 - 1 - Launch a terminal
 
 On a Mac or Linux computer, open your terminal program and in the shell just type the following command :
 
-```sh
-ssh root@your_instance_ip
+```
+ssh root@your_server_ip
 ```
 
 - 2 - Allow the connection to the host
@@ -80,12 +94,12 @@ RSA key fingerprint is 4f:ba:65:cf:14:64:a7:1e:b6:07:7c:00:71:95:21:fa.
 Are you sure you want to continue connecting (yes/no)?
 ```
 
-Well done, you are now connected to your instance!
+Well done, you are now connected to your server!
 
-#### Login from Windows
+### For Windows
 
 On windows, you will need a small apllication named PuTTy, and ssh client. You can download putty [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
 Once PuTTY is downloaded and installed, just start the program.
 
-Fill in the "Hostname" with your instance IP address and click connect. You are now connected to your instance from windows!
+Fill in the "Hostname" with your server IP address and click connect. You are now connected to your server from windows!
 

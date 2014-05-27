@@ -4,10 +4,17 @@ template: article.jade
 position: 2
 ---
 
-When you create a new instance, you receive an email as soon as your instance is up, giving you the instance password and IP address. 
+This page shows you how to create and use SSH keys.
+
+When you create a new server, you receive an email as soon as your sever is up, giving you the server password and IP address. 
 This pratice is heavy and convenient, but there's more a secure and lightest method available `key pair authentication`
 
-This article is intended to guide you to use SSH key pair authentication to connect a new instance.
+There are 4 steps to create an ssh key
+
+- Create the RSA Key Pair
+- Copy the public Key on the console
+- Create a new server
+- Connect to your server
 
 ### Step 1 - Create the RSA Key Pair
 
@@ -70,12 +77,14 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3TsFepMvwNBIjsr3Zr85mj/Aho/tk3220ryzVxgxR
 - Save it by clicking New SSH Key button
 
 
-### Step 3 - Create a new instance
+### Step 3 - Create a new server
 
-Create a new server from the "Create Server" in the console. At the moment the keys you add will be set on the instance
+See how [here](/howto/create_instance.html)
 
 ### Step 4 - Connect to your server
 
-Once you server is reasy, you can connect to it like you did previously
+Once you server is reasy, you can connect to it like this
 
 `ssh root@w.x.y.z`
+
+[For more informations about server connection](/howto/create_instance.html)

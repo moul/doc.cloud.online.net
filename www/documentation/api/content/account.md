@@ -1,6 +1,6 @@
 ### group Tokens
 
-This resources of API methods allows you to create, manage or delete your tokens
+This resources of API methods allows you to create, manage and delete your tokens
 
 #### Tokens Collection [/tokens]
 
@@ -8,7 +8,7 @@ A collection of tokens with all their details
 
 ##### Create a token [POST]
 
-Create a new token for the specified user
+Authenticates a user against their username, password, and then returns a new Token, which can be used until it expires.
 
 + Parameters
     + email (required, string, `jsnow@got.com`)... User email
@@ -88,7 +88,7 @@ Retrieve a list of Tokens with all their details
 
 #### Token [/tokens/{token_id}]
 
-A single token with all its details
+Retrieves the token with the given ID
 
 + Parameters
     + token_id (required, string, `654c95b0-2cf5-41a3-b3cc-733ffba4b4b7`)... Token unique identifier
@@ -145,18 +145,16 @@ Increase token expiration time of 30 minutes
 
 ### group Users
 
-Resources related to Users
+This resources of API methods allows you to get information on a specified user
 
 #### User [/users/{user_id}]
-
-Retrieve informations for the specified user
 
 + Parameter
     + user_id (required, string, `5bea0358-db40-429e-bd82-953016a7e2s7`)... User unique identifier
 
 ##### Retrieve a user [GET]
 
-Retrieve details about a user
+Retrieve informations for the specified user
 
 
 + Request
@@ -171,15 +169,10 @@ Retrieve details about a user
             "user": {
                 "email": "jsnow@got.com",
                 "firstname": "John",
-                "fullname": "Jhon Snow",
+                "fullname": "John Snow",
                 "id": "5bea0358-db40-429e-bd82-953016a7e2s7",
                 "lastname": "Snow",
                 "organizations": null,
                 "roles": null,
                 "ssh_public_keys": null
             }
-
-
-
-
-

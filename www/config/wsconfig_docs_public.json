@@ -13,19 +13,11 @@
 		"title": "labs.online.net documentation",
 		"author": "labs.online.net",
 		"menu" : {
+			"faq": "FAQ",
 			"howto": "Getting started",
 			"account": "Account managment",
-			"compute": {
-				"name": "Compute",
-				"items": {
-					"servers": "Servers",
-					"images": "Images",
-					"volumes": "Volumes"
-				}
-			},
 			"network": "Network",
-			"s3": "S3",
-			"faq": "FAQ"
+			"s3": "S3"
 		}
 	},
 
