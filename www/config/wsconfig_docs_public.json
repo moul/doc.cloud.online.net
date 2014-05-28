@@ -14,8 +14,8 @@
 		"author": "labs.online.net",
 		"menu" : {
 			"faq": "FAQ",
-			"howto": "Getting started",
 			"account": "Account managment",
+			"howto": "Getting started",
 			"network": "Network",
 			"s3": "S3"
 		}

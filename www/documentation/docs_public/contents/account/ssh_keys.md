@@ -1,32 +1,23 @@
 ---
-title: SSH keys
+title: Configuring SSH Keys
 template: article.jade
 position: 2
 ---
 
-This page shows you how to create and use SSH keys.
+This page shows you how to create and enable SSH Keys.
 
-When you create a new server, you receive an email as soon as your sever is up, giving you the server password and IP address. 
-This pratice is heavy and convenient, but there's more a secure and lightest method available `key pair authentication`
-
-There are 4 steps to create an ssh key
-
-- Create the RSA Key Pair
-- Copy the public Key on the console
-- Create a new server
-- Connect to your server
+Before connecting to your servers, you must set an existing public Key to your account. If you already have an SSH Key skip Step 1.
 
 ### Step 1 - Create the RSA Key Pair
 
 - Open a terminal
-- Generate a new key typing the following command `ssh-keygen -t rsa`
-- Give a name to your key `Enter file in which to save the key (/Users/me/.ssh/id_rsa):` if you don't default name will be id_rsa
-- Set a passphrase `Enter passphrase (empty for no passphrase):` this step is not mandatory but highly recommanded
-- Your key has been generate, in my case it has default name id_rsa and is located in `/Users/me/.ssh/` directory
-
-The public key is named id_rsa.pub 
-The privated key is named id_rsa
-
+- Generate a new Key typing the following command `ssh-keygen -t rsa`
+- Give a name to your Key `Enter file in which to save the key (/Users/me/.ssh/id_rsa):` otherwise, the default name will be id_rsa
+- Set a passphrase `Enter passphrase (empty for no passphrase):` this step is not mandatory but highly recommended
+- You should now have two files for your Key (a public key that we will copy on your servers, and a private key that you must keep secret), in our example the two files are located in the `/Users/me/.ssh/` directory
+ 
+The public Key is named id_rsa.pub 
+The private Key is named id_rsa
 
 The entire key generation looks like this
 
@@ -55,36 +46,22 @@ The key's randomart image is:
 +-----------------+
 ```
 
-### Step 2 - Copy the public Key on the console
+### Step 2 - Save the content of the public Key on the SSH Keys section
 
-Once you have create your ssh KEY, you have to add it into the console.
+Once your SSH Key is ready, you now must save the content of the public Key in the Control Panel.
 
 - Copy your public key
 
 ```
 cat /Users/me/.ssh/id_rsa.pub
 
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3TsFepMvwNBIjsr3Zr85mj/Aho/tk3220ryzVxgxR44EWz9xe8YhUt0Tg08e4pHns8DV6UnGwDeGLtxNwSFZlh1Zox3jACHL2dId04NAjLno1MsddByudPB7UpRu+nUjN7b8/rIAjXNu4k7H+E1QEz8P7giPiql2YMxURO9TV0tbl4M9hNG0/S6ka/naF8pIUnz7Um1nHGiBsMh9IyJAMhdWJ1nN3p1dnG3ixvyf1Mb8+7sbHjRgdUA3L8/HTBOCp+twB9uG+GfFEdheyHcnbxdtkByLzx2GbEnLNZZ99pF9i/cdpcaWCpnnqf/6TNVpFyCWhSfBq8+4OKUHt5vDB me@localhost
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3TsFepMvwNBIjsr3Zr85mj/Aho/tk3220ryzVxgxR44EWz9xe8YhUt0Tg08e4pHns8DV6UnGwDeGLtxNwSFZlh1Zox3jACHL2dId04NAjLno1MsddByudPB7UpRu+nUjN7b8/rIAjXNu4k7H+E1QEz8P7giPiql2YMxURO9TV0tbl4M9hNG0/S6ka/naF8pIUnz7Um1nHGiBsMh9IyJAMhdWJ1nN3p1dnG3ixvyf1Mb8+7sbHjRgdUA3L8/HTBOCp+twB9uG+GfFEdheyHcnbxdtkByLzx2GbEnLNZZ99pF9i/cdpcaWCpnnqf/6TNVpFyCWhSfBq8+4OKUHt5vDB
 ```
-- From the dashboard, select my account
+- From the Control Panel, open the pull-down menu on your account name and click on "My account" link.
 
 ![My account](../images/my_account.png "My account")
 
-- On the SSH Keys section paste your public key in the text area
+- In the SSH Keys section paste the content of your public key in the text area and click on "New SSH Key" button.
 
 ![My account](../images/ssh_keys.png "SSH Keys")
 
-- Save it by clicking New SSH Key button
-
-
-### Step 3 - Create a new server
-
-See how [here](/howto/create_instance.html)
-
-### Step 4 - Connect to your server
-
-Once you server is reasy, you can connect to it like this
-
-`ssh root@w.x.y.z`
-
-[For more informations about server connection](/howto/create_instance.html)

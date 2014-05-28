@@ -6,6 +6,11 @@ position: 1
 
 This page shows you how to launch and connect to your servers.
 
+Requirements
+
+- You have an account on [cloud.online.net](//cloud.online.net)
+- You have configure your [SSH Key](/account/ssh_keys.html)
+
 Each server that you create is a physical server dedicated for your personal use.<br/>
 After you've launched your server, you can connect and use it.
 
@@ -15,34 +20,35 @@ There are 4 steps to provision your first server
 - Choose your image
 - Add storage
 - Create & Start server
+- Mount extra volume
 
 ## Server creation
 
-From the dashboard, click the Create Server button.
+In the Control Panel, click on "Create Server" button.
 
-![Dashboard](../../images/dashboard.png "Dashboard")
+![Control Panel](../../images/dashboard.png "Control Panel")
 
 ### Step 1 - Name & Tags your server
 
 You'll be prompted to the server creation section and have to set basic informations for your server
 
 - The name of your server
-- The tags (Optional) you want to assign on it
-
-Tags help you to organize your servers, you can assign your own tags to each server.
+- The tags (Optional) you want to assign on it. Tags help you to organize your servers, you can assign your own tags to each server
 
 ![Create server basic informations](../../images/server_basic_information.png "Create server basic informations")
 
 ### Step 2 - Choose your image
 
-An image is a kind of "Box" that includes an operating system (e.g., Linux) and any additional software required to deliver a service or a portion of it.<br/>
+Images allow you to create series of servers with predefined configuration.
+For instance, you can prepare to scale your serving capacity with a frontend image for an Apache server.
 
 Since you have set server basic informations, you have to choose which image your server will use.
+
 You can choose from three sources
 
-- Marketplace: They are standard OS Images, we propose today some Linux operating systems, such as Ubuntu, Fedora or Debian... What else ? (list is update permanently).
+- Marketplace: They are standard OS Images, list is update permanently.
 
-- My images: It's the list of images that you create from snapshot previously, it allow you to start a new server from a previous one.
+- My images: It allows you to create a server from your images.
 
 - Snapshots: Like images, it allows you to start a new server form a volume previously snapshoted. 
 
@@ -89,7 +95,7 @@ Answer "yes" when the prompt asks if you want to connect to the host.
 You are now ask to type your root password (root password was emailed previously) and press enter.
 
 ```sh
-The authenticity of host 'myhost.ext (54.195.242.119)' can't be established.
+The authenticity of host 'myhost.ext (212.47.226.35)' can't be established.
 RSA key fingerprint is 4f:ba:65:cf:14:64:a7:1e:b6:07:7c:00:71:95:21:fa.
 Are you sure you want to continue connecting (yes/no)?
 ```

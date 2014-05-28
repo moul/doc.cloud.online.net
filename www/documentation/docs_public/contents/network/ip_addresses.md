@@ -4,41 +4,44 @@ template: article.jade
 position: 1
 ---
 
-When you create an instance, we assign it a public IP address at launch.
-By default, the public IP address associated with your instance is dynamic, that mean if you delete your instance you cannot reuse this IP address.
+This page shows you how to create and attach, reassociate and delete a reserved IP to a server.
 
-We also provide static IP address, like dynamic IP they are public but they act like a resource. They can be assigned to an instance, they are persistent and they can be remapped to any instance associated with your account.
+Requirements
 
-This documentation will guide you through the process of managing reserved IP adresses.
+- You have a labs.online.net account
+- You have Setting up your ssh key
+- You need to have at least a running server
 
-### Step 1 - Allocate a reserved IP
+An image is a kind of "Box" that includes one or more volumes containing the operating system (e.g., Linux) and any additional software required to deliver a service or a portion of it.<br/>
 
-Here is the process to allocate a new reserved IP and to attach it to an existing instance.
+When you create a server, we assign it a dynamic IP address at launch, if you power off or reboot the server IP can change.<br/>
+To avoid this thing to happen, you can use reserved IP. Reserved IP are persistent and are mapped to of your servers.
 
-  1. Go to labs.online.net dashboard
-  2. Click to the network menu on the right panel
-  3. Click on Create new ip 
-  4. Select the instance you want to attach the IP address
+There are 3 step to allocate a reserved ip to server 
+
+- Create and attach a reserved IP
+- Reassociate a reserved IP to another server
+- Delete a reserved IP
+
+From the dashboard click "Network" section of your console. The list of Ips mapped appear if there are.
+
+### Step 1 - Create and attach a reserved IP
+
+  1. Click on Create new ip 
+  2. Select the instance you want to attach the IP address
 
   ![Create new IP](../../images/create_new_ip.png "Create new IP")
 
-### Step 2 - Reassociate a reserved IP to another instance
+### Step 2 - Reassociate a reserved IP to another server
 
-  1. Go to labs.online.net dashboard
-  2. Click to the network menu on the right panel
-  3. The list of allocated IP addresses appear
-  4. Select the ip you want to reassociate
-  5. In the association dialog box, select the new instance to associate the IP
+  1. Focus on the ip you want to reassociate
+  2. In the association dialog box, select the new instance to associate the IP
 
   ![Reassociate ip](../../images/reassociate_ip.png "Reassociate ip")
 
-
 ### Step 3 - Delete a reserved IP
 
-  1. Go to labs.online.net dashboard
-  2. Click to the network menu on the right panel
-  3. The list of allocated IP addresses appear
-  4. Select the ip wou want to delete
-  5. Click on delete button
+  1. Select the ip wou want to delete
+  2. Click on delete button
 
   ![Delete ip](../../images/delete_ip.png "Delete ip")

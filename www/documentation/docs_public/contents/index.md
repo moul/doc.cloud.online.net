@@ -1,27 +1,33 @@
 ---
-title: Who is labs.online.net ?
+title: What is Online labs ?
 template: article.jade
 ---
 
- Labs.online.net is the cloud for you.<br/>
+[Online labs](http://labs.online.net) provides a highly customizable physical server management platform.
 
-# What is labs.online.net ?
+Using [Online labs](http://labs.online.net) eliminates the complexity of traditionnal architecture, so you can develop and deploy applications faster. We let you configure your own physical servers have the following advantages
 
-[labs.online.net](http://labs.online.net) provides resizable computing capacity in the cloud.
+- The lightness of the cloud
+- The guarantee of a dedicated server
 
-Using [labs.online.net](http://labs.online.net) eliminates the complexity of traditionnal architecture, so you can develop and deploy applications faster.
+You can launch as many physical servers as you need in second, configure networking and manage storage.
 
-You can use our service to launch as many or as few physical servers as you need in seconds, networking and manage storage.
+# What made Online labs different ?
 
-This site offers documentation about the following features
+We've built the Online labs platform manager, the Control Panel that let's you perform every action you would with a physical machine on our physical server.
 
-- Physical computing servers, known as servers
+It's like your PC except it's hosted in our secure datacenters.
 
-- Images, that package the bits you need for your instance (including the operating system and additional software)
+Our Powerful platform provides:
 
-- Secure login information for your servers using key pairs
+- On-demand physical computing servers. [Read more](/howto/create_instance.html)
 
-- Storage volumes for your data, SSD and HDD
+- Images to create series of servers with predefined configuration. For instance, you can prepare to scale your serving capacity with a frontend image for an Apache server. [Read more](/howto/create_image.html)
 
-- IP addresses, static or dynamic to attach on your servers (link)
+- Extra storage volumes for your data, SSD, HDD or both
 
+- Snapshot to backup your servers and their data.
+
+- IP addresses, dynamic or reserved to attach on your servers [Read more](/network/ip_addresses.html)
+
+- Secure login information for your servers using key pairs. [Read more](/account/ssh_keys.html)

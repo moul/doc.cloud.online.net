@@ -4,38 +4,43 @@ template: article.jade
 position: 1
 ---
 
-This page shows you how to manage your account settings and invitations.
+This page shows you how to edit your account settings and send invitations.
 
 ### Account settings
 
-Has it can happen, you may want to update some of your personnal information.
-In your account section, you can edit the following informations
-
-![Account settings](../images/account_settings.png "Account settings")
+In your account section you can edit the following informations.
 
 - Avatar
-- Email
 - Firstname
 - Lastname
 - Password
 - Language
 
+In the Control Panel, open the pull-down menu on your account name and click on "My account" link.
+
+![My account](../images/my_account.png "My account").
+
+You will land on a page like this.
+
+![Account settings](../images/account_settings.png "Account settings")
+
 ### Invitations
 
-Since we are in BETA, each active account owns 5 invitations that you can send to people of your choice.
-To invite a new person to the service, go to the account section of your account.
+We offer you five invitations to invite your friend to the Online Labs preview.<br/>
+To invite a new person to the service, open the pull-down menu on your account name and click on "My account" link.
 
 ![Invitations](../images/invitations.png "Invitations")
 
-In the invitations section, just add email, firstname and lastname of the personn to invite and click "Invite" button.
-The invitation get the pending status while our team validate it.
+In the invitations section add email, firstname and lastname of the personn to invite and click on "Invite" button.
+
+The invitation will the status "pending" (last column in the previous screenshot) while our team validate your invite.
 
 ### Quotas
 
-Each user account have limitation on resource creation, at this time you have the avaibality to create:
+Each user account is limited to:
 
 - 2 servers
 - 6 volumes
 - 10 snapshots
 - 10 images
-- 1 reserved ip
+- 1 reserved IP address
