@@ -106,7 +106,7 @@ We use NBD to connect your block device. [Read more about NBD here]()
 
 ![Server details](../../images/server_details.png "Server details")
 
-In the server details are displayed the IP address and the port number required to export your volume.
+The above picture shows the IP address and the port number required to export the volume in our example.
 
 ### Step 1 - Connect to a block device
 
@@ -119,12 +119,21 @@ This block device must be unused.
 
 For instance: 
 ```
-[root]$nbd-client 10.1.2.242 4320 /dev/nbd1
+[root]$nbd-client 10.1.2.242 4129 /dev/nbd1
+Negotiation: ..size = 9536MB
+bs=1024, sz=9999998976 bytes
 
-[root]$fdisk -l -u /dev/nbdXYZ
+[root]$fdisk -l -u /dev/nbd1
+Disk /dev/nbd1: 9999 MB, 9999998976 bytes
+255 heads, 63 sectors/track, 1215 cylinders, total 19531248 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00000000
+
 ```
 
-In the above example, `nbd-client 10.1.2.242 4320 /dev/nbd1` connects to the NBD server.<br/>
+In the above example, `nbd-client 10.1.2.21 4129 /dev/nbd1` connects to the NBD server.<br/>
 The output of `fdisk -l -u /dev/nbd1` command shows that the block device `/dev/nbd1` is attached to the server with success.
 
 ### Step 2 - Mount and format the volume
@@ -137,6 +146,26 @@ For instance, the following command creates an `ext4` file system on the volume.
 
  ```
 [root]$mkfs -t ext4 /dev/nbd1
+mke2fs 1.42.9 (4-Feb-2014)
+Filesystem label=
+OS type: Linux
+Block size=4096 (log=2)
+Fragment size=4096 (log=2)
+Stride=0 blocks, Stripe width=0 blocks
+610800 inodes, 2441406 blocks
+122070 blocks (5.00%) reserved for the super user
+First data block=0
+Maximum filesystem blocks=2503999488
+75 block groups
+32768 blocks per group, 32768 fragments per group
+8144 inodes per group
+Superblock backups stored on blocks:
+  32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632
+
+Allocating group tables: done
+Writing inode tables: done
+Creating journal (32768 blocks): done
+Writing superblocks and filesystem accounting information: done
 ```
 
 Then, to mount the device as /mnt/data, run the following commands.
@@ -144,12 +173,25 @@ Then, to mount the device as /mnt/data, run the following commands.
 ```
 [root]$mkdir -p /mnt/data
 [root]$mount /dev/nbd1 /mnt/data
+[root]$ls -la /mnt/data/
+total 24
+drwxr-xr-x 3 root root  4096 Jan  1 00:07 .
+drwxr-xr-x 3 root root  4096 Jan  1 00:07 ..
+drwx------ 2 root root 16384 Jan  1 00:07 lost+found
 ```
 
 Now run the `df -h` command, this command will list all your devices and where they are mounted
 
 ```
 [root]$df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nbd0        23G  420M   22G   2% /
+none           1010M   36K 1010M   1% /dev
+none            203M   80K  203M   1% /run
+none            5.0M     0  5.0M   0% /run/lock
+none           1012M     0 1012M   0% /run/shm
+none            100M     0  100M   0% /run/user
+/dev/nbd1       9.2G  149M  8.6G   2% /mnt/data
 
 ```
 
@@ -163,8 +205,9 @@ Second, disconnect the device from the NBD server.
 
 
 ```
-[root]$umount
+[root]$umount /mnt/data
 [root]$nbd-client -d /dev/nbd1
+disconnect, sock, done
 ```
 
 

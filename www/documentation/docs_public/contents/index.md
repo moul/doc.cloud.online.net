@@ -5,7 +5,10 @@ template: article.jade
 
 [Online labs](http://labs.online.net) provides a highly customizable physical server management platform.
 
-Using [Online labs](http://labs.online.net) eliminates the complexity of traditionnal architecture, so you can develop and deploy applications faster. We let you configure your own physical servers have the following advantages
+Using [Online labs](http://labs.online.net) eliminates the complexity of traditional architecture, so that you can develop, deploy, and scale applications faster than ever before.<br/> 
+We let you configure your own physical servers.
+
+You will be able to leverage at least the two following advantages:
 
 - The flexibility of the cloud
 - The guarantee of a dedicated server
