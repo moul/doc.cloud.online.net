@@ -6,8 +6,7 @@ position: 1
 
 This page shows you how to create, attach, re-associate and delete a reserved IP address to a server.
 
-Requirements
-
+> <strong>Requirements</strong>
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
 - You have configured your [SSH Key](/account/ssh_keys.html)
 - You have a running [server](/howto/create_instance.html)

@@ -27,6 +27,7 @@ h1 {
 h3 {
     font-weight: normal;
     font-size: 24px;
+    margin-top:20px;
     margin-bottom: 10px;
 }
 
@@ -116,4 +117,9 @@ footer h4 {
 
 .share-facebook:hover, .share-twitter:hover {
     opacity: 0.5;
+}
+
+blockquote {
+    background-color: #fcf8f2;
+    border-color: #f0ad4e;
 }

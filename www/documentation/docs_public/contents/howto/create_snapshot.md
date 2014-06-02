@@ -6,8 +6,7 @@ position: 2
 
 This page shows you how to backup your servers and their data.
 
-Requirements
-
+> <strong>Requirements</strong>
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
 - You have configured your [SSH Key](/account/ssh_keys.html)
 - You have a running [server](/howto/create_instance.html)
@@ -63,7 +62,7 @@ In the Control Panel, click the "Create Server" button.
 
 ###  Step 1 - Name you server
 
-You will land to the server-creation page and have to set basic information for your server
+You will land on the server-creation page where you must input basic information for your server.
 
 ### Step 2 - Choose your snapshot as image
 

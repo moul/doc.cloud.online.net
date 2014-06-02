@@ -6,10 +6,10 @@ position: 1
 
 This page shows you how to launch and connect to your servers.
 
-Requirements
-
+> <strong>Requirements</strong>
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
 - You have configured your [SSH Key](/account/ssh_keys.html)
+
 
 Each server that you create is a physical server dedicated for your personal use.<br/>
 After you've launched your server, you can connect and use it.
