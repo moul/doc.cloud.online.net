@@ -1,5 +1,5 @@
 ---
-title: Provisioning your first server
+title: Provisioning your server
 template: article.jade
 position: 1
 ---
@@ -8,104 +8,163 @@ This page shows you how to launch and connect to your servers.
 
 Requirements
 
-- You have an account on [cloud.online.net](//cloud.online.net)
-- You have configure your [SSH Key](/account/ssh_keys.html)
+- You have an account and are logged into [cloud.online.net](//cloud.online.net)
+- You have configured your [SSH Key](/account/ssh_keys.html)
 
 Each server that you create is a physical server dedicated for your personal use.<br/>
 After you've launched your server, you can connect and use it.
 
-There are 4 steps to provision your first server
+There are five steps to provision a new server
 
-- Name & Tags your server
+- Name & tag your server
 - Choose your image
 - Add storage
-- Create & Start server
-- Mount extra volume
+- Start the server
+- Mount additional volumes (Optional)
 
 ## Server creation
 
-In the Control Panel, click on "Create Server" button.
+Before starting, click the "Create Server" button in the control panel.
 
 ![Control Panel](../../images/dashboard.png "Control Panel")
 
-### Step 1 - Name & Tags your server
+### Step 1 - Name & tag your server
 
-You'll be prompted to the server creation section and have to set basic informations for your server
+You will land on the server-creation page where you must input basic information for your server:
 
 - The name of your server
-- The tags (Optional) you want to assign on it. Tags help you to organize your servers, you can assign your own tags to each server
+- The tag you want to assign on it (Optional). Tags let you organize your servers, you can assign any tag to each server
 
-![Create server basic informations](../../images/server_basic_information.png "Create server basic informations")
+![Create server basic information](../../images/server_basic_information.png "Create server basic information")
 
 ### Step 2 - Choose your image
 
-Images allow you to create series of servers with predefined configuration.
-For instance, you can prepare to scale your serving capacity with a frontend image for an Apache server.
+After inputing your server basic information, you have to choose a starting image for your server.
 
-Since you have set server basic informations, you have to choose which image your server will use.
+You can choose this image from three sources:
 
-You can choose from three sources
+- <strong>Marketplace</strong>: We provide an up-to-date list of linux distributions.
 
-- Marketplace: They are standard OS Images, list is update permanently.
+- <strong>My images</strong>: You can populate your own list of server templates. [See also Create your own image](/howto/create_image.html)
 
-- My images: It allows you to create a server from your images.
-
-- Snapshots: Like images, it allows you to start a new server form a volume previously snapshoted. 
+- <strong>Snapshots</strong>: You can recover a server from a saved previous state. [See also Backup your data with snapshots](/howto/create_snapshot.html)
 
 ![Create server image](../../images/server_image.png "Create server image")
 
 ### Step 3 - Add storage
 
-Additionnaly to the image you selected, you can add extra storage to your server, it can be an existing volume or new one.<br/>
+You can add extra storage to your server. Added storage can be an existing volume or new volume.
 
-Volume size is limited to 1Tb and there is no limit on the amount of volumes you can attach to your server.
+You can select the type of disk to host your volumes from two technologies:
 
-Your volume can be of type :
-
-- LHDD, spinning disk, use for moderate read/write access
-
-- LSSD disk to deliver faster disk I/O performance, it's perfect if you need heavy read/write
+- LSSD (Local solid state drive) to deliver fast disk I/O (Local solid state drive) 
+- LHDD (Local spinning disk), use for moderate read/write access.
 
 ![Create server volumes](../../images/server_volume.png "Create server volumes")
 
-### Step 4 - Create & Start your server
+Currently, we limit LSSD to XXGiB and LHDD to XXGiB.
 
-The "Create server" button will create and start your server. In few seconds your server will be ready to use.
+### Step 4 - Start your server
 
-If you have not configured your ssh key, you will receive an email with the root password.
+Click the "Create Server" button. This action starts your server. In a few seconds, your server will be ready to use.
 
 ## Log into your server
 
+When your server is running, you can see the server's IP adress in the server list on the control panel
+
 ### For OSX and Linux
 
-- 1 - Launch a terminal
-
-On a Mac or Linux computer, open your terminal program and in the shell just type the following command :
+On a Mac or Linux computer, open your terminal program and in the shell just type the following command:
 
 ```
-ssh root@your_server_ip
+[john]$ssh root@<your_server_ip>
 ```
 
-- 2 - Allow the connection to the host
-
-Answer "yes" when the prompt asks if you want to connect to the host.
-
-- 3 - Done
-
-You are now ask to type your root password (root password was emailed previously) and press enter.
-
+Allow the connection to the host<br/>
 ```sh
 The authenticity of host 'myhost.ext (212.47.226.35)' can't be established.
 RSA key fingerprint is 4f:ba:65:cf:14:64:a7:1e:b6:07:7c:00:71:95:21:fa.
 Are you sure you want to continue connecting (yes/no)?
 ```
 
-Well done, you are now connected to your server!
+Well done, you are now logged into your server!
 
 ### For Windows
 
-On windows, you will need a small apllication named PuTTy, and ssh client. You can download putty [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
-Once PuTTY is downloaded and installed, just start the program.
+On Windows, you will need a small apllication named PuTTy, an SSH client. You can download putty [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+Once you have installed PuTTY, just start the program.
 
-Fill in the "Hostname" with your server IP address and click connect. You are now connected to your server from windows!
+Fill the "Hostname" field with your server's IP address and click "Connect". You are now logged into your server from Windows!
+
+## Mount additional volumes
+
+A simple solution to increase the storage for your servers is to add extra volumes.
+
+You need to export and mount these extra volumes manually.
+We use NBD to connect your block device. [Read more about NBD here]()
+
+
+![Server details](../../images/server_details.png "Server details")
+
+In the server details are displayed the IP address and the port number required to export your volume.
+
+### Step 1 - Connect to a block device
+
+An instance of the NBD client must be started for each block device to import.
+
+The NBD client requires the IP address and the port number of our NBD server exporting your volume.<br/>
+In addition, you must specify the block device to export your volume on your server.
+
+This block device must be unused.
+
+For instance: 
+```
+[root]$nbd-client 10.1.2.242 4320 /dev/nbd1
+
+[root]$fdisk -l -u /dev/nbdXYZ
+```
+
+In the above example, `nbd-client 10.1.2.242 4320 /dev/nbd1` connects to the NBD server.<br/>
+The output of `fdisk -l -u /dev/nbd1` command shows that the block device `/dev/nbd1` is attached to the server with success.
+
+### Step 2 - Mount and format the volume
+
+In the previous step, the new volume was attached to `/dev/nbd1`.
+
+If the new volume has never been formated, you need to format the volume using `mkfs` before you can mount it.
+
+For instance, the following command creates an `ext4` file system on the volume.
+
+ ```
+[root]$mkfs -t ext4 /dev/nbd1
+```
+
+Then, to mount the device as /mnt/data, run the following commands.
+
+```
+[root]$mkdir -p /mnt/data
+[root]$mount /dev/nbd1 /mnt/data
+```
+
+Now run the `df -h` command, this command will list all your devices and where they are mounted
+
+```
+[root]$df -h
+
+```
+
+### Step 3 - Disconnect a volume
+
+To disconnect a block device you have to follow two steps
+
+First, unmount the filesystem.
+
+Second, disconnect the device from the NBD server.
+
+
+```
+[root]$umount
+[root]$nbd-client -d /dev/nbd1
+```
+
 

@@ -8,46 +8,80 @@ This page shows you how to create an image from a server.
 
 Requirements
 
-- You have an labs.online.net account
-- You have Setting up your ssh key
-- You need to have at least a running server
+- You have an account and are logged into [cloud.online.net](//cloud.online.net)
+- You have configured your [SSH Key](/account/ssh_keys.html)
+- You have a running [server](/howto/create_instance.html)
+- You have installed packages and made the configuration you need on your server
+- You have created a [snapshot](/howto/create_instance.html) of the volume you want to be an image
 
-An image is a kind of "Box" that includes one or more volumes containing the operating system (e.g., Linux) and any additional software required to deliver a service or a portion of it.<br/>
+Images allow you to create series of servers with predefined configuration.<br/>
+For instance, you can prepare to scale your serving capacity with a frontend image for an Apache server.
 
-There are 4 steps to create an an image and spawn a server from it
+Potential uses
 
-- Power off your server
-- Create an image
-- Verify image creation
-
-### Potential Uses
-
-- Duplicate Server
 - Automate Server Builds
 - Create a Software Testing Environment
 
+There are 3 steps to create an image:
 
-###Step 1 - Create image from a volume snapshot
+- Powered off your server
+- Create an image
+- Verify image creation
 
-Click on the "Images button on left-side menu, you will arrive on your images list.<br/>Are displayed the list of images available if they are. To create a new one click the "Create image" button
+There are 3 steps to create a server from an image
 
-![Images list](../../images/images_list.png "Images list")
+- Name your server
+- Choose your image
+- Create your server
+
+## Create an image
+
+In the Control Panel, click "Volumes" in the compute section.
+
+### Step 1 - Create an image from a volume snapshot
+
+On the page you land, are displayed the list of your volumes and snapshots.
+
+![Snapshots list](../../images/create_image_from_snapshot.png "Snapshots list")
+
+Select the snapshot to use for create an image and click "Image from snapshot" button
 
 ### Step 2 - Image creation
 
 You are now asked for:
 
-- Giving an image name
-
+- Give a name to your image
 - Choose the volume snapshot you want to use for your image
 
-![Create new image](../../images/create_new_image.png "Create-new-image")
+![Create new image](../../images/create_image.png "Create new image")
 
-Once achieve, click on "Create Image." In the minutes that follows, your image will be set up and ready to use.
+Click the "Create Image" buttons, your image is now ready to use.
 
+### Step 3 - Verify image creation
 
-### Coming soon
+In the Compute section of the console click "Images". Your new image should be present on images list.
 
-- No reboot - Instance image is create without rebooting your server
-- Market place image - Image will be available publicly on the Image Market Place, by default, image are not published to the market place.
-- Create an image directly from an instance
+![Images list](../../images/images_list.png "Images list")
+
+## Create a server from your own image
+
+In the previous steps, we create a new image.
+We will create a new server based on the image we take previously.
+
+In the Control Panel, click the "Create Server" button.
+
+###  Step 1 - Name you server
+
+You will land on the server-creation page where you must input basic information for your server.
+
+### Step 2 - Choose your snapshot as image
+
+In the image section click the images tab.
+Select the image you take previously from the list below.
+
+### Step 3 - Create your server
+
+Click the "Create Server" button. This action starts your server. In a few seconds, your server will be ready to use.
+
+The running server will be a template from your image.
+

@@ -1,4 +1,8 @@
 div(role="navigation").col-xs-12.col-sm-3.sidebar-offcanvas
+	- if (page.metadata.title == "Frequently Asked Questions")
+		a(href="/faq.html").list-group-item.active.active-url Frequently Asked Questions
+	- else
+		a(href="/faq.html").list-group-item Frequently Asked Questions
 	- each val, key in locals.menu
 		- if (contents[key] && _.isString(val))
 			div.list-group
