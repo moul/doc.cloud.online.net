@@ -7,7 +7,7 @@ position: 2
 ```sh
 ## Creation of the template
 DEBOOTSTRAP_DIR=/tmp/ubuntu-tpl/
-PKGS_INCLUDE='ssh,rsyslog,vim-tiny,nano,less,man-db,net-tools,iputils-ping,whiptail,wget'
+PKGS_INCLUDE='ssh,rsyslog,vim-tiny,nano,less,man-db,net-tools,iputils-ping,whiptail,wget,nbd-client,xnbd-client,isc-dhcp-client,curl,sudo,iptables'
 
 mkdir $DEBOOTSTRAP_DIR
 
