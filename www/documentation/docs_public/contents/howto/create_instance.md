@@ -22,6 +22,9 @@ There are five steps to provision a new server
 - Start the server
 - Mount additional volumes (Optional)
 
+<strong>Important</strong>: SSH regenerates keys using the key in your Control Panel at each reboot.<br/>
+To avoir this behavior, execute the following command on your server `echo manual > /etc/init/ssh-keys.override`
+
 ## Server creation
 
 Before starting, click the "Create Server" button in the control panel.

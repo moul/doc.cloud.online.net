@@ -8,8 +8,8 @@ We have created an easy to use and RESTful API that allows you to have a full co
 
 Our api works over https and is accessed from two endpoint:
 
-- `account.cloud.online.net` domain for account actions
-- `api.cloud.online.net` domain for compute actions
+- `account.cloud.online.net` domain related to account actions
+- `api.cloud.online.net` domain related to compute actions
 
 All data is sent and received as json.
 

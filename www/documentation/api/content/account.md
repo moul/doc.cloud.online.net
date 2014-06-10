@@ -142,6 +142,54 @@ Increase token expiration time of 30 minutes
 
 + Response 204
 
+### group Organizations
+
+This resources of API methods allows you to get your organizations
+
+#### Organizations Collection [/tokens]
+
+A collection of Organizations with all their details
+
+##### List all Organizations [GET]
+
+Retrieve a list of Organizations with all their detail
+
++ Response 200 (application/json)
+
+        {
+          "organizations": [
+            {
+              "id": "000a115d-2852-4b0a-9ce8-47f1134ba95a",
+              "name": "jsnow@got.com",
+              "users": [
+                {
+                  "email": "jsnow@got.com",
+                  "firstname": "John",
+                  "fullname": "John Snow",
+                  "id": "59a98700-8622-4495-a11a-e1efbfac5972",
+                  "lastname": "Snow",
+                  "organizations": [
+                    {
+                      "id": "000a115d-2852-4b0a-9ce8-47f1134ba95a",
+                      "name": "jsnow@got.com"
+                    }
+                  ],
+                  "roles": [
+                    {
+                      "organization": {
+                        "id": "000a115d-2852-4b0a-9ce8-47f1134ba95a",
+                        "name": "jsnow@got.com"
+                      },
+                      "role": "manager"
+                    }
+                  ],
+                  "ssh_public_keys": []
+                }
+              ]
+            }
+          ]
+        }
+
 
 ### group Users
 
