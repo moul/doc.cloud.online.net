@@ -21,15 +21,15 @@ Potential uses:
 
 There are three steps to create a snapshot:
 
-- Powered off your server
-- Select the volume to snapshot
-- Verify the snapshot creation
+- [Powered off your server](/howto/create_snapshot.html#step-1-power-off-your-server)
+- [Select the volume to snapshot](/howto/create_snapshot.html#step-2-select-the-volume-to-save)
+- [Verify the snapshot creation](/howto/create_snapshot.html#step-3-verify-the-snapshot-creation)
 
 There are three steps to create a new server from a snapshot:
 
-- Name your server
-- Choose your snapshot as image
-- Create your server
+- [Name your server](/howto/create_snapshot.html#step-1-name-you-server)
+- [Choose your snapshot as image](/howto/create_snapshot.html#step-2-choose-your-snapshot-as-image)
+- [Create your server](/howto/create_snapshot.html#step-3-create-your-server)
 
 ## Create a snapshot
 

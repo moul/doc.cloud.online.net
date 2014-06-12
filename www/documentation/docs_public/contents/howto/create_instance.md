@@ -16,11 +16,11 @@ After you've launched your server, you can connect and use it.
 
 There are five steps to provision a new server
 
-- Name & tag your server
-- Choose your image
-- Add storage
-- Start the server
-- Mount additional volumes (Optional)
+- [Name & tag your server](/howto/create_instance.html#step-1-name-tag-your-server)
+- [Choose your image](/howto/create_instance.html#step-2-choose-your-image)
+- [Add storage](/howto/create_instance.html#step-3-add-storage)
+- [Start the server](/howto/create_instance.html#step-4-start-your-server)
+- [Mount additional volumes (Optional)](/howto/create_instance.html#mount-additional-volumes)
 
 <strong>Important</strong>: SSH regenerates keys using the key in your Control Panel at each reboot.<br/>
 To avoir this behavior, execute the following command on your server `echo manual > /etc/init/ssh-keys.override`

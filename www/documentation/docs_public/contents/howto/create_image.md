@@ -29,9 +29,16 @@ There are 3 steps to create an image:
 
 There are 3 steps to create a server from an image
 
-- Name your server
-- Choose your image
-- Create your server
+- [Create an image from a volume snapshot](/howto/create_image.html#step-1-create-an-image-from-a-volume-snapshot)
+- [Image creation](/howto/create_image.html#step-2-image-creation)
+- [Verify image creation](/howto/create_image.html#step-3-verify-image-creation)
+
+There are three steps to create a new server from an image:
+
+- [Name your server](/howto/create_image.html#step-1-name-you-server)
+- [Choose your image](/howto/create_image.html#step-2-choose-your-snapshot-as-image)
+- [Create your server](/howto/create_image.html#step-3-create-your-server)
+
 
 ## Create an image
 
@@ -73,7 +80,7 @@ In the Control Panel, click the "Create Server" button.
 
 You will land on the server-creation page where you must input basic information for your server.
 
-### Step 2 - Choose your snapshot as image
+### Step 2 - Choose your image
 
 In the image section click the images tab.
 Select the image you take previously from the list below.
