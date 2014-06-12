@@ -20,13 +20,13 @@ Requests are made of two components:
 - Base URL: `https://api.cloud.online.net`
 - Resource path: `servers`
 
-To construct a proper request, you will need to format the URL as follows:
+To construct a proper request, you need to format the URL as follows:
 
 `https://api.cloud.online.net/{ressource}`
 
 Example: `https://api.cloud.online.net/volumes/f929fe39-63f8-4be8-a80e-1e9c8ae22a76`
 
-The following code is an example request to rretrieve detailed informations about a volume
+The following code is an example request to retrieve detailed informations about a volume
 
 ```
 % curl -H 'X-Auth-Token: 017ce0ce-20ec-4d4ez-b44c-e561a23481d2c' -H 'Content-Type: application/json' https://api.cloud.online.net/volumes/f929fe39-63f8-4be8-a80e-1e9c8ae22a76 -i
@@ -70,7 +70,7 @@ You authenticate to the API by requesting a token. You can create a token with a
 
 Basic Authentication process:
 
-- Query via POST request the /tokens ressource [see here how to](/#page:tokens,header:tokens-tokens-collection-post)
+- Query via POST request the /tokens ressource [see here how to](/api/#page:tokens,header:tokens-tokens-collection-post)
 
 - Supply an "X-Auth-Token" header followed by the token you get previously, e.g. "4e0b46e4-7c1d-44d4-8ba6-dc5f80694397"
 

@@ -1,19 +1,19 @@
 ### group Tokens
 
-This resources of API methods allows you to create, manage and delete your tokens
+This resources of API methods allows you to create, manage and delete your Tokens
 
 #### Tokens Collection [/tokens]
 
 A collection of tokens with all their details
 
-##### Create a token [POST]
+##### Create a Token [POST]
 
 Authenticates a user against their username, password, and then returns a new Token, which can be used until it expires.
 
 + Parameters
     + email (required, string, `jsnow@got.com`)... User email
     + password (required, string, `winteriscoming`)... User password
-    + expires (optional, boolean, `false`)... Set if you want a token wich doesn't expire (default: true)
+    + expires (optional, boolean, `false`)... Set if you want a Token wich doesn't expire (default: true)
 
 + Request (application/json)
 
@@ -88,14 +88,14 @@ Retrieve a list of Tokens with all their details
 
 #### Token [/tokens/{token_id}]
 
-Retrieves the token with the given ID
+Retrieves details about a oken with a given ID
 
 + Parameters
     + token_id (required, string, `654c95b0-2cf5-41a3-b3cc-733ffba4b4b7`)... Token unique identifier
 
-##### Retrieve a token [GET]
+##### Retrieve a Token [GET]
 
-Retrieve details about a token
+Retrieve details for the specified Token
 
 + Response 200 (application/json)
 
@@ -115,9 +115,9 @@ Retrieve details about a token
         }
 
 
-##### Update token [PATCH]
+##### Update Token [PATCH]
 
-Increase token expiration time of 30 minutes
+Increase Token expiration time of 30 minutes
 
 + Response 200 (application/json)
 
@@ -138,13 +138,13 @@ Increase token expiration time of 30 minutes
 
 
 
-##### Remove a token [DELETE]
+##### Remove a Token [DELETE]
 
 + Response 204
 
 ### group Organizations
 
-This resources of API methods allows you to get your organizations
+This resources of API methods allows you to get your Organizations informations
 
 #### Organizations Collection [/tokens]
 
@@ -152,7 +152,7 @@ A collection of Organizations with all their details
 
 ##### List all Organizations [GET]
 
-Retrieve a list of Organizations with all their detail
+Retrieve a list of Organizations with all their details
 
 + Response 200 (application/json)
 
@@ -193,7 +193,7 @@ Retrieve a list of Organizations with all their detail
 
 ### group Users
 
-This resources of API methods allows you to get information on a specified user
+This resources of API methods allows you to get your Users informations
 
 #### User [/users/{user_id}]
 
@@ -202,7 +202,7 @@ This resources of API methods allows you to get information on a specified user
 
 ##### Retrieve a user [GET]
 
-Retrieve informations for the specified user
+Retrieve details for the specified User
 
 
 + Request
