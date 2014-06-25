@@ -1,11 +1,15 @@
-### group IPs resources
+### group IPs
 
-This resources of API methods allows you to create, manage or delete your reserved IPs.
+A reserved IP address is a static IP address designed for cloud computing.
+Reserved IP allow you to mask the failure of a server rapidly realllocating the address to another server in your account. Yo
 
-#### Operation on a collection of IPs [/ips]
+#### IPs [/ips]
 
 ##### Create a new IP [POST]
-Create a new IP
+
+Create a new reserved IP address
+
+The response is an object that has a key called `ip`. This key contain a standard `ip` object.
 
 + Parameters
     + organization (required, string, `000a115d-2852-4b0a-9ce8-47f1134ba95a`)... Organization unique identifier
@@ -29,7 +33,11 @@ Create a new IP
               }
             }
 
-##### Retrieves the list all existing IPs [GET]
+##### Retrieves all IPs addresses [GET]
+
+List all IPs associate with your account
+
+The response is an object that has a key called `ips`. This key contain an array of ip objects each of which contain the standard `ip` attributes.
 
 + Response 200 (application/json)
 
@@ -44,12 +52,16 @@ Create a new IP
           ]
         }
 
-#### Operation on a single IP [/ips/{ip_id}]
+#### IP [/ips/{ip_id}]
 
 + Parameters
     + ip_id (required, string, `b50cd740-892d-47d3-8cbf-88510ef626e7`)... Ip unique identifier
 
-##### Retrieves informations about an IP [GET]
+##### Retrieve an IP address [GET]
+
+List an individual IP address
+
+The response is an object that has a key called `ip`. This key contain a standard `ip` object.
 
 + Response 200 (application/json)
 
@@ -62,7 +74,11 @@ Create a new IP
           }
         }
 
-##### Attach an IP [PUT]
+##### Attach an IP address [PUT]
+
+Allow you to remap an IP address to another server
+
+The response is an object that has a key called `ip`. This key contain a standard `ip` object.
 
 + Request (application/json)
 
@@ -92,6 +108,10 @@ Create a new IP
 
 
 ##### Remove an IP address [DELETE]
+
+Delete a server
+
+The response code is a 204, which means that the action was successful with no returned body data.
 
 + Response 204
 

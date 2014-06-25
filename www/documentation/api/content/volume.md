@@ -1,10 +1,14 @@
-### group Volumes resources
+### group Volumes
 
-This resources of API methods allows you to create, manage or delete your volumes.
+A Volume abstracts data storage operations for your servers in a flexible manner. `volumes` endpoint allow you to create, list or delete your volumes.
 
-#### Operation on a collection of volumes [/volumes]
+#### Volumes [/volumes]
 
 ##### Create a new volume [POST]
+
+Create a new volume
+
+The response is an object that has a key called `volume`. This key contain a standard `volume` object.
 
 + Parameters
     + name (required, string, `volume-0-3`)... The volume name
@@ -43,7 +47,11 @@ This resources of API methods allows you to create, manage or delete your volume
             }
 
 
-##### Retrieves the list all existing volumes [GET]
+##### Retrieves all volumes [GET]
+
+List all volumes associate with your account
+
+The response is an object that has a key called `volumes`. This key contain an array of volume objects each of which contain the standard `volume` attributes.
 
 + Response 200 (application/json)
 
@@ -71,12 +79,16 @@ This resources of API methods allows you to create, manage or delete your volume
     }
 
 
-#### Operation on a single volume [/volumes/{volume_id}]
+#### Volume [/volumes/{volume_id}]
 
 + Parameters
     + volume_id (required, string, `f929fe39-63f8-4be8-a80e-1e9c8ae22a76`)... Volume unique identifier
 
 ##### Retrieves informations about a volume [GET]
+
+List an individual volume
+
+The response is an object that has a key called `volume`. This key contain a standard `volume` object.
 
 + Response 200 (application/json)
 
@@ -94,6 +106,10 @@ This resources of API methods allows you to create, manage or delete your volume
 
 
 ##### Delete a volume [DELETE]
+
+Delete a volume
+
+The response code is a 204, which means that the action was successful with no returned body data.
 
 + Response 204
 

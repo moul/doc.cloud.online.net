@@ -1,6 +1,6 @@
 FORMAT: 1A
 
-# Welcome to cloud.online.net API documentation.
+# cloud.online.net API documentation.
 
 We have created an easy to use and RESTful API that allows you to have a full control over the service. All features you will find in the web control panel are also available through the API.
 

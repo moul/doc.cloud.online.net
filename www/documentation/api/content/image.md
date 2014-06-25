@@ -1,10 +1,15 @@
-### group Images resources
+### group Images
 
-This resources of API methods allows you to create, manage or delete your images.
+Images allow you to create series of servers with predefined configuration.
+For instance, you can prepare to scale your serving capacity with a frontend image for an Apache server.
 
-#### Operation on a collection of images [/images]
+#### Images [/images]
 
 ##### Create a new image [POST]
+
+Create a new image
+
+The response is an object that has a key called `image`. This key contain a standard `image` object.
 
 + Parameters
     + organization (required, string, `000a115d-2852-4b0a-9ce8-47f1134ba95a`)... Organization unique identifier
@@ -45,7 +50,11 @@ This resources of API methods allows you to create, manage or delete your images
           }
         }
 
-##### Retrieves the list all existing images [GET]
+##### List all images [GET]
+
+List all images associate with your account
+
+The response is an object that has a key called `images`. This key contain an array of image objects each of which contain the standard `images` attributes.
 
 + Response 200 (application/json)
 
@@ -93,7 +102,11 @@ This resources of API methods allows you to create, manage or delete your images
 + Parameters
     + image_id (required, string, `98bf3ac2-a1f5-471d-8c8f-1b706ab57ef0`)... Image unique identifier
 
-##### Retrieves informations about an image [GET]
+##### Retrieves an image [GET]
+
+List an individual image
+
+The response is an object that has a key called `image`. This key contain a standard `image` object.
 
 + Response 200 (application/json)
 
@@ -117,7 +130,11 @@ This resources of API methods allows you to create, manage or delete your images
           }
         }
 
-##### Update informations about an image [PUT]
+##### Update an image [PUT]
+
+Update details about a image
+
+The response is an object that has a key called `image`. This key contain a standard `image` object.
 
 + Request (application/json)
 
@@ -166,6 +183,10 @@ This resources of API methods allows you to create, manage or delete your images
 
 
 ##### Delete an image [DELETE]
+
+Delete an image
+
+The response code is a 204, which means that the action was successful with no returned body data.
 
 + Response 204
 

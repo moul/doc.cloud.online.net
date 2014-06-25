@@ -1,14 +1,14 @@
 ### group Tokens
 
-This resources of API methods allows you to create, manage and delete your Tokens
+A Token is an identifier associated with your account. We use this token to authenticate commands in our APIs.
+ 
+#### Tokens [/tokens]
 
-#### Tokens Collection [/tokens]
-
-A collection of tokens with all their details
-
-##### Create a Token [POST]
+##### Create a token [POST]
 
 Authenticates a user against their username, password, and then returns a new Token, which can be used until it expires.
+
+The response is an object that has a key called `token`. This key contain a standard `token` object.
 
 + Parameters
     + email (required, string, `jsnow@got.com`)... User email
@@ -48,9 +48,11 @@ Authenticates a user against their username, password, and then returns a new To
                 }
             }
 
-##### List all Tokens [GET]
+##### List all tokens [GET]
 
-Retrieve a list of Tokens with all their details
+List all Tokens associate with your account
+
+The response is an object that has a key called `tokens`. This key contain an array of token objects each of which contain the standard `token` attributes.
 
 + Response 200 (application/json)
 
@@ -88,14 +90,14 @@ Retrieve a list of Tokens with all their details
 
 #### Token [/tokens/{token_id}]
 
-Retrieves details about a oken with a given ID
-
 + Parameters
     + token_id (required, string, `654c95b0-2cf5-41a3-b3cc-733ffba4b4b7`)... Token unique identifier
 
-##### Retrieve a Token [GET]
+##### Retrieve a token [GET]
 
-Retrieve details for the specified Token
+List an individual Token
+
+The response is an object that has a key called `token`. This key contain a standard `token` object.
 
 + Response 200 (application/json)
 
@@ -115,9 +117,11 @@ Retrieve details for the specified Token
         }
 
 
-##### Update Token [PATCH]
+##### Update a token [PATCH]
 
 Increase Token expiration time of 30 minutes
+
+The response is an object that has a key called `token`. This key contain a standard `token` object.
 
 + Response 200 (application/json)
 
@@ -138,7 +142,11 @@ Increase Token expiration time of 30 minutes
 
 
 
-##### Remove a Token [DELETE]
+##### Remove a token [DELETE]
+
+Delete an individual token
+
+The response code is a 204, which means that the action was successful with no returned body data.
 
 + Response 204
 
@@ -146,13 +154,13 @@ Increase Token expiration time of 30 minutes
 
 This resources of API methods allows you to get your Organizations informations
 
-#### Organizations Collection [/tokens]
+#### Organizations [/organizations]
 
-A collection of Organizations with all their details
+##### List all organizations [GET]
 
-##### List all Organizations [GET]
+List all Organizations associate with your account
 
-Retrieve a list of Organizations with all their details
+The response is an object that has a key called `organizations`. This key contain an array of organization objects each of which contain the standard `organization` attributes.
 
 + Response 200 (application/json)
 
@@ -193,8 +201,6 @@ Retrieve a list of Organizations with all their details
 
 ### group Users
 
-This resources of API methods allows you to get your Users informations
-
 #### User [/users/{user_id}]
 
 + Parameter
@@ -202,14 +208,9 @@ This resources of API methods allows you to get your Users informations
 
 ##### Retrieve a user [GET]
 
-Retrieve details for the specified User
+List informations about your user account
 
-
-+ Request
-
-    + Headers
-
-            X-Auth-Token: 59517bee-4ccb-43fa-95d0-f52292aad10a
+The response is an object that has a key called `user`. This key contain a standard `user` object.
 
 + Response 200 (application/json)
 

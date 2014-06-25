@@ -1,10 +1,14 @@
-### group Snapshots resources
+### group Snapshots
 
-This resources of API methods allows you to create, manage or delete your snapshots.
+A snapshot is a full-volume copy stored in our secure data centers.
 
-#### Operation on a collection of snapshots [/snapshots]
+#### Snapshots [/snapshots]
 
 ##### Create a snapshot [POST]
+
+Create a new server
+
+The response is an object that has a key called `snapshot`. This key contain a standard `snapshot` object.
 
 + Parameters
     + name (required, string, ``)... Human readable snapshot name
@@ -40,7 +44,11 @@ This resources of API methods allows you to create, manage or delete your snapsh
         }
 
 
-##### Retrieves the list all existing snapshots [GET]
+##### List all snapshots [GET]
+
+List all snapshots associate with your account
+
+The response is an object that has a key called `snapshots`. This key contain an array of snapshot objects each of which contain the standard `snapshot` attributes.
 
 + Response 200 (application/json)
 
@@ -75,12 +83,16 @@ This resources of API methods allows you to create, manage or delete your snapsh
           ]
         }
 
-#### Operation on a single snapshot [/snapshots/{snapshot_id}]
+#### Snapshot [/snapshots/{snapshot_id}]
 
 + Parameters
     + snapshot_id (required, string, `6f418e5f-b42d-4423-a0b5-349c74c454a4`)... Snapshot unique identifier
 
-#####Retrieves informations about an snapshot [GET]
+##### Retrieve a snapshot [GET]
+
+List an individual snapshot
+
+The response is an object that has a key called `snapshot`. This key contain a standard `snapshot` object.
 
 + Response 200 (application/json)
 
@@ -100,7 +112,11 @@ This resources of API methods allows you to create, manage or delete your snapsh
           }
         }
 
-##### Update informations about an snapshot [PUT]
+##### Update a snapshot [PUT]
+
+Update details about a snapshot
+
+The response is an object that has a key called `snapshot`. This key contain a standard `snapshot` object.
 
 + Parameters
     + snapshot_id (required, string, `6f418e5f-b42d-4423-a0b5-349c74c454a4`)... Snapshot unique identifier
@@ -134,6 +150,10 @@ This resources of API methods allows you to create, manage or delete your snapsh
         }
 
 ##### Remove a snapshot [DELETE]
+
+Delete a snapshot
+
+The response code is a 204, which means that the action was successful with no returned body data.
 
 + Response 204
 

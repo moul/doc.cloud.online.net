@@ -1,10 +1,14 @@
-### group Servers resources
+### group Servers
 
-This resources of API methods allows you to create, manage or delete your servers
+A Server is a dedicated machine for your own use. `servers` endpoint allow you to create, list or delete your servers.
 
 #### Servers [/servers]
 
 ##### Creates a new server [POST]
+
+Create a new server
+
+The response is an object that has a key called `server`. This key contain a standard `server` object.
 
 + Parameters
     
@@ -16,19 +20,19 @@ This resources of API methods allows you to create, manage or delete your server
 
 + Request
 
-    + Body
+      + Body
 
-        {
-          "organization": "000a115d-2852-4b0a-9ce8-47f1134ba95a",
-          "name": "my_server",
-          "image": "85917034-46b0-4cc5-8b48-f0a2245e357e",
-          "tags": ["test", "www"]
-        }
+            {
+              "organization": "000a115d-2852-4b0a-9ce8-47f1134ba95a",
+              "name": "my_server",
+              "image": "85917034-46b0-4cc5-8b48-f0a2245e357e",
+              "tags": ["test", "www"]
+            }
 
 + Response 201 (application/json)
 
     + Header
-
+    
         location: https://api.cloud.online.net/servers/3cb18e2d-f4f7-48f7-b452-59b88ae8fc8c
 
     + Body
@@ -68,7 +72,10 @@ This resources of API methods allows you to create, manage or delete your server
         }
 
 ##### List all servers [GET]
-Retrieve a list of servers with all their details
+
+List all servers associate with your account
+
+The response is an object that has a key called `servers`. This key contain an array of server objects each of which contain the standard `server` attributes.
 
 + Response 200 (application/json)
 
@@ -141,14 +148,16 @@ Retrieve a list of servers with all their details
 
 
 #### Server [/servers/{server_id}]
-A single server with all its details
 
 + Parameters
 
     + server_id (required, string, `741db378-6b87-46d4-a8c5-4e46a09ab1f8`)... Server unique identifier
 
 ##### Retrieve a server [GET]
-Retrieve details about a server
+
+List an individual server
+
+The response is an object that has a key called `server`. This key contain a standard `server` object.
 
 + Response 200 (application/json)
 
@@ -186,8 +195,11 @@ Retrieve details about a server
           }
         }
 
-##### Update server [PUT]
+##### Update a server [PUT]
+
 Update details about a server
+
+The response is an object that has a key called `server`. This key contain a standard `server` object.
 
 + Request
 
@@ -266,17 +278,26 @@ Update details about a server
 
 ##### Remove a server [DELETE]
 
+Delete a server
+
+The response code is a 204, which means that the action was successful with no returned body data.
+
 + Response 204
 
 
-#### Servers actions [/servers/{server_id}/action]
+#### Actions [/servers/{server_id}/action]
+
 A collection of actions to be applied on a server
 
 + Parameters
 
     + server_id (required, string, `741db378-6b87-46d4-a8c5-4e46a09ab1f8`)... Server unique identifier
 
-##### Retrieve available actions [GET]
+##### List all actions [GET]
+
+List all actions available for the secified server
+
+The response is an object that has a key called `actions`. This key contain an array of action
 
 + Response 200 (application/json)
      
@@ -288,7 +309,11 @@ A collection of actions to be applied on a server
           ]
         }
 
-##### Apply an action on a server [POST]
+##### Execute an action [POST]
+
+Execute an action on a server
+
+The response is an object that has a key called `task`. This key contain a standard `task` object.
 
 + Parameters 
 
