@@ -1,8 +1,9 @@
 FORMAT: 1A
 
-# cloud.online.net API documentation.
+# Online Labs API documentation.
 
-We have created an easy to use and RESTful API that allows you to have a full control over the service. All features you will find in the web control panel are also available through the API.
+The Online lab API allows you to manage servers and resources in a simple, programmatic way using conventional HTTP requests. 
+All features you will find in the web control panel are also available through the API.
 
 ## Request and response
 

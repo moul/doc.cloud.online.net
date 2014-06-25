@@ -1,7 +1,7 @@
 ### group IPs
 
 A reserved IP address is a static IP address designed for cloud computing.
-Reserved IP allow you to mask the failure of a server rapidly realllocating the address to another server in your account. Yo
+Reserved IPs address allow you to mask the failure of a server rapidly reallocating the IPs address to another server in your account.
 
 #### IPs [/ips]
 
