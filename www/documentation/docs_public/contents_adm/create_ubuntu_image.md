@@ -4,13 +4,28 @@ template: article.jade
 position: 2
 ---
 
-```sh
-## Creation of the template
+This page shows you how to create a new image from scratch.
+
+> <strong>Requirements</strong>
+- You have an account and are logged into [cloud.online.net](//cloud.online.net)
+- You have configured your [SSH Key](/account/ssh_keys.html)
+- You have a server starts with an additional volume [Provisioning your server](/howto/create_instance.html)
+
+There are two steps to create a new image from scratch
+
+### Step 1 - Install deboostrap
+
+```
+apt-get install deboostrap
+```
+
+### Step 2 - Creation of the template
+
+```
 DEBOOTSTRAP_DIR=/tmp/ubuntu-tpl/
-PKGS_INCLUDE='ssh,rsyslog,vim-tiny,nano,less,man-db,net-tools,iputils-ping,whiptail,wget,nbd-client,xnbd-client,isc-dhcp-client,curl,sudo,iptables'
+PKGS_INCLUDE='ssh,rsyslog,vim-tiny,nano,less,man-db,net-tools,iputils-ping,whiptail,wget,nbd-client,xnbd-client,isc-dhcp-client,curl,sudo,iptables,ntp'
 
 mkdir $DEBOOTSTRAP_DIR
-
 debootstrap --arch armhf --variant=minbase --components main,universe --include $PKGS_INCLUDE trusty $DEBOOTSTRAP_DIR
 
 for i in {1..6}
@@ -23,26 +38,29 @@ FILES_TO_COPY+=" /etc/init/nbd-root-preserve-client.conf"
 FILES_TO_COPY+=" /etc/init/nbd-root-disconnect.conf"
 FILES_TO_COPY+=" /sbin/nbd-disconnect-root"
 FILES_TO_COPY+=" /etc/default/rcS"
+FILES_TO_COPY+=" /etc/ntp.conf"
+FILES_TO_COPY+=" /etc/hosts"
+FILES_TO_COPY+=" /etc/sysctl.conf"
+FILES_TO_COPY+=" /etc/network/interfaces.d/network"
+FILES_TO_COPY+=" /usr/local/bin/metadata"
+FILES_TO_COPY+=" /usr/local/bin/metadata-json"
 
 for FILE in ${FILES_TO_COPY}
 do
   cp ${FILE} ${DEBOOTSTRAP_DIR}${FILE}
 done
 
-
-## Clone of the template
-IMG_MOUNTPOINT=/mnt/ubuntu-rootfs/
-
-nbd-client 10.1.4.153 4161 /dev/nbd1
+nbd-client `curl http://169.254.42.42/conf | grep VOLUMES_1_EXPORT_URI | sed 's#VOLUMES_1_EXPORT_URI=nbd://##g' | tr ':' ' '` /dev/nbd1
 mkfs.ext4 /dev/nbd1
 
-mkdir $IMG_MOUNTPOINT
-mount /dev/nbd1 $IMG_MOUNTPOINT
-rsync -aHKXxA --progress $TMP_DIR $IMG_MOUNTPOINT
+IMG_MOUNTPOINT=/mnt/ubuntu-rootfs/
 
+mount /dev/nbd1 $IMG_MOUNTPOINT
+
+rsync -aHKXxA --progress $DEBOOTSTRAP_DIR $IMG_MOUNTPOINT
 ```
 
-# Embedded scripts source
+### Embedded scripts source
 #### /etc/init/ttyS0.conf
 ```
 # ttyS0 - getty
@@ -83,8 +101,17 @@ script
     if [ ! -f /root/.ssh/authorized_keys ]
     then
         mkdir -p /root/.ssh/
-        wget -q http://169.254.42.42/conf -O - | grep SSH_PUBLIC_KEYS_'.*'_KEY | cut -d'=' -f 2 | tr -d \' > /root/.ssh/authorized_keys
     fi
+
+    for i in 1 1 1 2 2 2 3 4 5 6 7 8 9 10 20 30 40 50 60 100 100 100 100 100
+    do
+        wget -q http://169.254.42.42/conf -O - | grep SSH_PUBLIC_KEYS_'.*'_KEY | cut -d'=' -f 2- | tr -d \' > /root/.ssh/authorized_keys
+    if [[ -s /root/.ssh/authorized_keys ]]
+    then
+            break
+    fi
+    sleep $i
+    done
 end script
 ```
 
@@ -181,4 +208,112 @@ sync
 # If they finish before that time, process termination will start, and the trap
 # will be called.
 sleep 5
+```
+
+#### /etc/sysctl.conf
+```
+###################################################################
+# The min_free_kbytes setting
+vm.min_free_kbytes=65536
+```
+
+#### /etc/network/interfaces.d/network
+```
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+auto eth0
+iface eth0 inet dhcp
+```
+
+#### /etc/hosts
+```
+127.0.0.1   localhost
+::1     localhost ip6-localhost ip6-loopback
+ff02::1     ip6-allnodes
+ff02::2     ip6-allrouters
+```
+
+#### /etc/ntp.conf
+```
+# /etc/ntp.conf, configuration for ntpd; see ntp.conf(5) for help
+
+driftfile /var/lib/ntp/ntp.drift
+
+
+# Enable this if you want statistics to be logged.
+#statsdir /var/log/ntpstats/
+
+statistics loopstats peerstats clockstats
+filegen loopstats file loopstats type day enable
+filegen peerstats file peerstats type day enable
+filegen clockstats file clockstats type day enable
+
+# Specify one or more NTP servers.
+server 10.1.31.38
+
+# Use Ubuntu's ntp server as a fallback.
+server ntp.ubuntu.com
+
+# Access control configuration; see /usr/share/doc/ntp-doc/html/accopt.html for
+# details.  The web page <http://support.ntp.org/bin/view/Support/AccessRestrictions>
+# might also be helpful.
+#
+# Note that "restrict" applies to both servers and clients, so a configuration
+# that might be intended to block requests from certain clients could also end
+# up blocking replies from your own upstream servers.
+
+# By default, exchange time with everybody, but don't allow configuration.
+restrict -4 default kod notrap nomodify nopeer noquery
+restrict -6 default kod notrap nomodify nopeer noquery
+
+# Local users may interrogate the ntp server more closely.
+restrict 127.0.0.1
+restrict ::1
+
+# Clients from this (example!) subnet have unlimited access, but only if
+# cryptographically authenticated.
+#restrict 192.168.123.0 mask 255.255.255.0 notrust
+
+
+# If you want to provide time to your local subnet, change the next line.
+# (Again, the address is an example only.)
+#broadcast 192.168.123.255
+
+# If you want to listen to time broadcasts on your local subnet, de-comment the
+# next lines.  Please do this only if you trust everybody on the network!
+#disable auth
+#broadcastclient
+```
+
+#### /usr/local/bin/metadata-json
+```
+#!/bin/sh
+
+code=0
+while [ $code -ne 200 ]
+do
+    response=$(curl --silent --write-out "\n%{http_code}\n" http://169.254.42.42/conf?format=json)
+    code=$(echo "$response" | sed -n '$p')
+    body=$(echo "$response" | sed '$d')
+done
+
+echo "$body"
+```
+
+#### /usr/local/bin/metadata
+```
+#!/bin/sh
+
+code=0
+while [ $code -ne 200 ]
+do
+    response=$(curl --silent --write-out "\n%{http_code}\n" http://169.254.42.42/conf)
+    code=$(echo "$response" | sed -n '$p')
+    body=$(echo "$response" | sed '$d')
+done
+
+echo "$body"
 ```
