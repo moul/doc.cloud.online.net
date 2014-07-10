@@ -103,15 +103,17 @@ script
         mkdir -p /root/.ssh/
     fi
 
-    for i in 1 1 1 2 2 2 3 4 5 6 7 8 9 10 20 30 40 50 60 100 100 100 100 100
+    CODE=0
+    while [ $CODE -ne 200 ]
     do
-        wget -q http://169.254.42.42/conf -O - | grep SSH_PUBLIC_KEYS_'.*'_KEY | cut -d'=' -f 2- | tr -d \' > /root/.ssh/authorized_keys
-    if [[ -s /root/.ssh/authorized_keys ]]
-    then
-            break
-    fi
-    sleep $i
+        RESPONSE=$(curl --silent --write-out "\n%{http_code}\n" http://169.254.42.42/conf)
+        CODE=$(echo "$RESPONSE" | sed -n '$p')
+        BODY=$(echo "$RESPONSE" | sed '$d')
+        sleep 1
     done
+
+    echo "$BODY" | grep SSH_PUBLIC_KEYS_'.*'_KEY | cut -d'=' -f 2- | tr -d \' > /root/.ssh/authorized_keys
+
 end script
 ```
 
@@ -316,4 +318,98 @@ do
 done
 
 echo "$body"
+```
+
+#### /etc/init/nbd-add-extra-volumes.conf
+```
+# nbd-extra-volumes
+description "mount nbd extra volumes"
+
+start on net-device-up
+
+task
+
+script
+METADATA=http://169.254.42.42/conf
+METADATA_CACHE=/tmp/ocs-metadata
+
+get_metadata() {
+    if [ ! -f $METADATA_CACHE ]
+    then
+        CODE=0
+        while [ $CODE -ne 200 ]
+        do
+            RESPONSE=$(curl --silent --write-out "\n%{http_code}\n" http://169.254.42.42/conf)
+            CODE=$(echo "$RESPONSE" | sed -n '$p')
+            BODY=$(echo "$RESPONSE" | sed '$d')
+        done
+
+        echo "$BODY" > $METADATA_CACHE
+    fi
+}
+
+get_value() {
+  # Get value from metadata
+  key="$1"
+  sed -n "s/${key}=\(.*\)/\1/p" "$METADATA_CACHE"
+}
+
+get_nbd_client_conf() {
+  keys=$(get_value VOLUMES)
+
+cat <<EOF
+# If you don't want to reconfigure this package after installing, uncomment
+# the following line:
+#AUTO_GEN="n"
+# If you don't want the init script to kill nbd-client devices that aren't
+# specified in this configuration file, set the following to "false":
+KILLALL="false"
+# Note that any statical settings in this file will be preserved
+# regardless of the setting of AUTO_GEN, so its use is only recommended
+# if you set things in a dynamical way (e.g., through a database)
+EOF
+
+  for key in $keys; do
+    # Do not include the rootfs in nbd configuration file. It has been mounted
+    # from the initramfs, we won't want it to be disconnected when
+    # /etc/rc6.d/K34nbd-client is executed.
+    test $key -eq 0 && continue
+
+    # VOLUMES_x_URI is connected on /dev/nbdx, but the variable in
+    # /etc/nbd-client is NBD_DEVICE[x - 1]
+    conf_id=$(($key - 1))
+
+# NBD_TYPE[x]=r => raw (no other setup than to run the client)
+    cat <<EOF
+#
+NBD_TYPE[$conf_id]=r
+NBD_DEVICE[$conf_id]=/dev/nbd$key
+NBD_HOST[$conf_id]=$(get_value VOLUMES_${key}_EXPORT_URI | sed 's|nbd://\(.*\):.*|\1|')
+NBD_PORT[$conf_id]=$(get_value VOLUMES_${key}_EXPORT_URI | sed 's|nbd://.*:\(.*\)|\1|')
+EOF
+
+  done
+}
+
+check_nbd_client_connection() {
+  keys=$(get_value VOLUMES)
+  for key in $keys; do
+    test $key -eq 0 && continue
+    NBD_DEVICE=/dev/nbd$key
+    nbd-client -c $NBD_DEVICE
+    while [ $? -ne 0 ]
+    do
+      /etc/init.d/nbd-client start
+      nbd-client -c $NBD_DEVICE
+      sleep 5
+    done
+  done
+}
+
+get_metadata
+get_nbd_client_conf > /etc/nbd-client
+rm $METADATA_CACHE
+/etc/init.d/nbd-client start
+check_nbd_client_connection
+end script
 ```
