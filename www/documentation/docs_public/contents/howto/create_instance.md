@@ -23,7 +23,7 @@ There are five steps to provision a new server
 - [Mount additional volumes (Optional)](/howto/create_instance.html#mount-additional-volumes)
 
 <strong>Important</strong>: SSH regenerates keys using the key in your Control Panel at each reboot.<br/>
-To avoir this behavior, execute the following command on your server `echo manual > /etc/init/ssh-keys.override`
+To avoid this behavior, execute the following command on your server `echo manual > /etc/init/ssh-keys.override`
 
 ## Server creation
 
@@ -42,7 +42,7 @@ You will land on the server-creation page where you must input basic information
 
 ### Step 2 - Choose your image
 
-After inputing your server basic information, you have to choose a starting image for your server.
+After inputting your server basic information, you have to choose a starting image for your server.
 
 You can choose this image from three sources:
 
@@ -56,6 +56,7 @@ You can choose this image from three sources:
 
 ### Step 3 - Add storage
 
+A simple solution to increase the storage for your servers is to add extra volumes.<br/>
 You can add extra storage to your server. Added storage can be an existing volume or new volume.
 
 You can select the type of disk to host your volumes from two technologies:
@@ -65,15 +66,13 @@ You can select the type of disk to host your volumes from two technologies:
 
 ![Create server volumes](../../images/server_volume.png "Create server volumes")
 
-Currently, we limit LSSD to XXGiB and LHDD to XXGiB.
-
 ### Step 4 - Start your server
 
 Click the "Create Server" button. This action starts your server. In a few seconds, your server will be ready to use.
 
 ## Log into your server
 
-When your server is running, you can see the server's IP adress in the server list on the control panel
+When your server is running, you can see the server's IP address in the server list on the control panel
 
 ### For OSX and Linux
 
@@ -94,56 +93,14 @@ Well done, you are now logged into your server!
 
 ### For Windows
 
-On Windows, you will need a small apllication named PuTTy, an SSH client. You can download putty [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+On Windows, you will need a small application named PuTTy, an SSH client. You can download putty [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 Once you have installed PuTTY, just start the program.
 
 Fill the "Hostname" field with your server's IP address and click "Connect". You are now logged into your server from Windows!
 
 ## Mount additional volumes
 
-A simple solution to increase the storage for your servers is to add extra volumes.
-
-You need to export and mount these extra volumes manually.
-We use NBD to connect your block device. [Read more about NBD here]()
-
-
-![Server details](../../images/server_details.png "Server details")
-
-The above picture shows the IP address and the port number required to export the volume in our example.
-
-### Step 1 - Connect to a block device
-
-An instance of the NBD client must be started for each block device to import.
-
-The NBD client requires the IP address and the port number of our NBD server exporting your volume.<br/>
-In addition, you must specify the block device to export your volume on your server.
-
-This block device must be unused.
-
-For instance: 
-```
-[root]$nbd-client 10.1.2.242 4129 /dev/nbd1
-Negotiation: ..size = 9536MB
-bs=1024, sz=9999998976 bytes
-
-[root]$fdisk -l -u /dev/nbd1
-Disk /dev/nbd1: 9999 MB, 9999998976 bytes
-255 heads, 63 sectors/track, 1215 cylinders, total 19531248 sectors
-Units = sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 512 bytes
-I/O size (minimum/optimal): 512 bytes / 512 bytes
-Disk identifier: 0x00000000
-
-```
-
-In the above example, `nbd-client 10.1.2.21 4129 /dev/nbd1` connects to the NBD server.<br/>
-The output of `fdisk -l -u /dev/nbd1` command shows that the block device `/dev/nbd1` is attached to the server with success.
-
-### Step 2 - Mount and format the volume
-
-In the previous step, the new volume was attached to `/dev/nbd1`.
-
-If the new volume has never been formated, you need to format the volume using `mkfs` before you can mount it.
+If the new volume has never been formatted, you need to format the volume using `mkfs` before you can mount it.
 
 For instance, the following command creates an `ext4` file system on the volume.
 
@@ -197,20 +154,4 @@ none            100M     0  100M   0% /run/user
 /dev/nbd1       9.2G  149M  8.6G   2% /mnt/data
 
 ```
-
-### Step 3 - Disconnect a volume
-
-To disconnect a block device you have to follow two steps
-
-First, unmount the filesystem.
-
-Second, disconnect the device from the NBD server.
-
-
-```
-[root]$umount /mnt/data
-[root]$nbd-client -d /dev/nbd1
-disconnect, sock, done
-```
-
 

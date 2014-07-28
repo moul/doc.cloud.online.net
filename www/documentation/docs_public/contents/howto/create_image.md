@@ -1,7 +1,7 @@
 ---
 title: Create your own image
 template: article.jade
-position: 3
+position: 4
 ---
 
 This page shows you how to create an image from a server.

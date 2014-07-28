@@ -1,7 +1,7 @@
 ---
 title: Retrieve your organization ID
 template: article.jade
-position: 4
+position: 5
 ---
 
 This page shows you how to identify your organization ID through the API.
@@ -10,9 +10,8 @@ This page shows you how to identify your organization ID through the API.
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
 - You have generated a [token](/account/credentials.html)
 
-
-cloud.online.net attributes an organization ID to each user.<br/>
-Our API requires your organization ID for many actions, for instance:
+Our system attributes an organization ID to each user.<br/>
+The API requires your organization ID for many actions, for instance:
 
 - Server creation
 - Volume creation

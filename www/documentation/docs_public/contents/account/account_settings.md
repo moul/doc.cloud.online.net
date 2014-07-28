@@ -8,7 +8,7 @@ This page shows you how to edit your account settings and send invitations.
 
 ### Account settings
 
-In your account section you can edit the following informations.
+In your account section you can edit the following information.
 
 - Avatar
 - Firstname
@@ -31,7 +31,7 @@ To invite a new person to the service, open the pull-down menu on your account n
 
 ![Invitations](../images/invitations.png "Invitations")
 
-In the invitations section add email, firstname and lastname of the personn to invite and click on "Invite" button.
+In the invitations section add email, firstname and lastname of the person to invite and click on "Invite" button.
 
 The invitation will the status "pending" (last column in the previous screenshot) while our team validate your invite.
 

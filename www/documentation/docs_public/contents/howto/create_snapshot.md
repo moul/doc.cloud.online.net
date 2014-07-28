@@ -1,7 +1,7 @@
 ---
 title: Backup your data with snapshots
 template: article.jade
-position: 2
+position: 3
 ---
 
 This page shows you how to backup your servers and their data.

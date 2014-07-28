@@ -13,7 +13,7 @@ You will be able to leverage at least the two following advantages:
 - The flexibility of the cloud
 - The guarantee of a dedicated server
 
-You can launch as many physical servers as you need in second, configure networking and manage storage.
+You can launch as many physical servers as you need in seconds, configure networking and manage storage.
 
 # What makes Online labs different ?
 
