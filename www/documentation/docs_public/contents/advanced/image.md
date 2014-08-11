@@ -21,12 +21,12 @@ There are five steps to create a new image from scratch (example given is for De
 - [Create an image from snapshot](/advanced/image.html#step-4-create-an-image-from-snapshot)
 - [Create a new server with your image](/advanced/image.html#step-5-create-a-new-server-with-the-image)
 
-### Step 1 - Install deboostrap
+### Step 1 - Install debootstrap
 
 Connect your server and execute the following command
 
 ```
-apt-get install deboostrap
+apt-get install debootstrap
 ```
 
 Debootstrap is used to install Debian-like system without using an installation disk.
@@ -166,5 +166,4 @@ On this page, select the snapshot containing your rootfs and click "Create an im
 
 Create a new server and choose your image in "My images" section.
 
-Your server will start on your own from scratch image. 
-
+Your server will start on your own from scratch image.
