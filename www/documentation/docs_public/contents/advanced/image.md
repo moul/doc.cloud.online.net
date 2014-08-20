@@ -135,6 +135,7 @@ FILES_TO_COPY+=" /usr/local/bin/oc-metadata"
 FILES_TO_COPY+=" /usr/local/bin/oc-metadata-json"
 
 # Copy files above in the appropriate directory
+mkdir -p ${DEBOOTSTRAP_DIR}/usr/local/bin
 for FILE in ${FILES_TO_COPY}
 do
   cp ${FILE} ${DEBOOTSTRAP_DIR}${FILE}
