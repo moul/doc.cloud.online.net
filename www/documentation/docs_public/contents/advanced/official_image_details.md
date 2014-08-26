@@ -18,6 +18,36 @@ ssh, rsyslog, nano, less, man-db, net-tools, iputils-ping, whiptail, wget, nbd-c
 
 These packages are official packages without patches.
 
+### Included services
+
+All the following services are present by default on all servers
+
+#### NTP Server
+
+Network Time Protocol (NTP) is configured by default on every server.
+The system time is synchronized with our NTP servers and set to the UTC timezone.
+
+You can execute the ntpq -p command on your server to see the details list of peers known to the NTP server.
+
+```
+ntpq -p
+     remote           refid      st t when poll reach   delay   offset  jitter
+==============================================================================
+ 10.1.31.38      172.16.2.6       4 u   15   64    7    0.311    2.796   2.392
+ golem.canonical 192.93.2.20      2 u   13   64    7   15.250    6.745   2.095
+```
+
+For more information about NTP, go to [http://www.ntp.org/](http://www.ntp.org/).
+
+#### DNS Server
+
+Every server are configured to use our DNS servers to resolve domain name.
+
+#### Mirror
+
+Every Ubuntu server use the following mirror `http://mirror.cloud.online.net` for fast updates as is it close from your servers.
+
+
 ### Additional upstart jobs
 
 The following scripts and configurations ensure that your server works properly on our infrastructure.
@@ -42,3 +72,6 @@ For instance, if you use server tags to configure your monitoring, you can retri
 In addition, this script is required by `/nbd-root-disconnect.conf` to disconnect root volume gracefully.
 
 - `/usr/sbin/nbd-disconnect-root`
+
+
+
