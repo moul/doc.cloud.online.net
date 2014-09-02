@@ -10,13 +10,13 @@ This page shows you some basics to interact with our Compute API
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
 - You have configured your [SSH Key](/account/ssh_keys.html)
 - You have generate your [API Token](/account/credentials.html)
-- You know your [Organization ID](/howto/use_api.html)
+- You know your [Organization ID](/advanced/api_organization.html)
 
 There are five steps to provision and start a server with additional volume from the API. In this section, we will:
 
 - [Retrieve the list of images available](/advanced/api.html#step-1-retrieve-the-list-of-images-available)
 - [Create a new server](/advanced/api.html#step-2-create-a-new-server)
-- [Create a new volume](/advanced/api.html#step-3-add-storage)
+- [Create a new volume](/advanced/api.html#step-3-create-a-new-volume)
 - [Attach the volume to the server](/advanced/api.html#step-4-attach-the-volume-to-the-server)
 - [Start a server](/advanced/api.html#step-5-start-a-server)
 
@@ -58,7 +58,7 @@ Response
 To create a server, you have to fill out the following input:
 
 - A server name
-- An [Organization ID](/howto/use_api.html)
+- An [Organization ID](/advanced/api_organization.html)
 - An [Image ID](/advanced/api.html#step-1-retrieve-the-list-of-images-available)
 - Tags (Optional)
 
@@ -119,7 +119,7 @@ The response above returns an HTTP 201 code and return the server details.
 To create a volume, you have to filled out the following input:
 
 - A volume name
-- An [Organization ID](/howto/use_api.html)
+- An [Organization ID](/advanced/api_organization.html)
 - A size in GB
 - The volume type - LSSD (Local solid state drive) or LHDD (Local spinning disk)
 

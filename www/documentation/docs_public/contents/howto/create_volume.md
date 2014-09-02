@@ -19,8 +19,8 @@ You can select the type of disk to host your volumes from two technologies:
 
 There are two steps to attach a volume to an existing server
 
-- [Create a new volume](/howto/create_instance.html#step-1-name-tag-your-server)
-- [Attach an existing volume to your instance](/howto/create_instance.html#step-2-choose-your-image)
+- [Create a new volume](/howto/create_volume.html#step-1-create-a-new-volume)
+- [Attach an existing volume to your instance](/howto/create_volume.html#step-2-attach-an-existing-volume-to-your-instance)
 
 <strong>Important</strong>: Server must be powered off to attach or detach a volume.
 

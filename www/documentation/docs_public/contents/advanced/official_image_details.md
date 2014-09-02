@@ -1,5 +1,5 @@
 ---
-title: What is the official image composed of?
+title: Official image content
 template: article.jade
 position: 1
 ---

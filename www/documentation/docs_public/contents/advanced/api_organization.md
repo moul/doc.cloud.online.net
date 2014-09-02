@@ -33,7 +33,7 @@ N.B. Replace the `X-Auth-Token` value with your generated token
   "organizations": [
     {
 ->    "id": "000a115d-2852-4b0a-9ce8-47f1134ba95a",
-      "name": "john.snow@xxxx.x",
+      "name": "jsnow@got.wint",
       "users": [
         {
           ...
