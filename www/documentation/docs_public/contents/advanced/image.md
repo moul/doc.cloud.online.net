@@ -61,7 +61,7 @@ COMPONENTS=main,universe
 DEBOOTSTRAP_DIR=/mnt/ubuntu-tpl/
 
 # The list of packages included in the system
-PKGS_INCLUDE='ssh,rsyslog,nano,less,man-db,net-tools,iputils-ping,whiptail,wget,nbd-client,xnbd-client,isc-dhcp-client,curl,sudo,iptables,ntp,ntpdate,vim,ca-certificates'
+PKGS_INCLUDE='ssh,rsyslog,nano,less,man-db,net-tools,iputils-ping,whiptail,wget,nbd-client,xnbd-client,isc-dhcp-client,curl,sudo,iptables,ntp,ntpdate,vim,ca-certificates,cron'
 
 DEVICE=/dev/nbd1
 
@@ -125,6 +125,9 @@ FILES_TO_COPY+=" /etc/sysctl.conf"
 # Network interfaces configuration
 FILES_TO_COPY+=" /etc/network/interfaces"
 
+# APT source.list
+FILES_TO_COPY+=" /etc/apt/sources.list"
+
 # Executable which synchronizes kernel modules
 FILES_TO_COPY+=" /usr/sbin/oc-sync-kernel-modules"
 
@@ -145,7 +148,7 @@ umount $DEBOOTSTRAP_DIR
 
 <strong>Important</strong>: All scripts source are available on the official image
 
-Execute the script above on your server `chmod +x ./image_tpl.sh && ./image_tpl.sh`.<br/>
+Execute the script above on your server `chmod +x ./image_creation.sh && ./image_creation.sh`.<br/>
 Finally, poweroff your server from the control panel
 
 ### Step 3 - Create a snapshot
