@@ -1,0 +1,16 @@
+{
+	"contents": "../documentation/docs_public/contents",
+	"templates": "../documentation/templates_naked",
+	"output": "../dist/docs_public/naked",
+
+	"baseUrl": "/",
+
+	"ignore": ["**/.*.swo", "**/.*.swp", "**/.DS_Store"],
+
+	"port": 8080,
+
+	"require": {
+		"_": "underscore"
+	}
+}
+
