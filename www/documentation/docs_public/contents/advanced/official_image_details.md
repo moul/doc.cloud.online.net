@@ -13,7 +13,7 @@ This image has the following characteristics.
 
 The official image comes with extra packages:
 ```
-ssh, rsyslog, nano, less, man-db, net-tools, iputils-ping, whiptail, wget, nbd-client, xnbd-client, isc-dhcp-client, curl, sudo, iptables, ntp, ntpdate, vim, ca-certificates
+ssh, rsyslog, nano, less, man-db, net-tools, iputils-ping, whiptail, wget, nbd-client, xnbd-client, isc-dhcp-client, curl, sudo, iptables, ntp, ntpdate, vim, cron, ca-certificates
 ```
 
 These packages are official packages without patches.
