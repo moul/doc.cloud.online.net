@@ -36,7 +36,7 @@ There are 3 steps to create a server from an image
 There are three steps to create a new server from an image:
 
 - [Name your server](/howto/create_image.html#step-1-name-you-server)
-- [Choose your image](/howto/create_image.html#step-2-choose-your-snapshot-as-image)
+- [Choose your image](/howto/create_image.html#step-2-choose-your-image)
 - [Create your server](/howto/create_image.html#step-3-create-your-server)
 
 
@@ -67,7 +67,7 @@ Click the "Create Image" buttons, your image is now ready to use.
 
 In the Compute section of the console click "Images". Your new image should be present on images list.
 
-![Images list](../../images/images_list.png "Images list")
+![Image details](../../images/image_details.png "Image details")
 
 ## Create a server from your own image
 

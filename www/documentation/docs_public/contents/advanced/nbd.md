@@ -18,9 +18,9 @@ If you want to avoid this behavior and connect additional block device manually,
 
 There are three steps to connect a block device manually
 
-- [Identify NBD server and port](/advanced/volume.html#step-1-identify-nbd-server-and-port)
-- [Connect to a block device](/advanced/volume.html#step-2-connect-to-a-block-device)
-- [Format and mount the volume](/advanced/volume.html#step-3-mount-and-format-the-volume)
+- [Identify NBD server and port](/advanced/nbd.html#step-1-identify-nbd-server-and-port)
+- [Connect to a block device](/advanced/nbd.html#step-2-connect-to-a-block-device)
+- [Format and mount the volume](/advanced/nbd.html#step-3-format-and-mount-the-volume)
 
 <strong>Important</strong>: The maximum number of volumes attach to C1 server is limited at 15 devices.<br/>
 

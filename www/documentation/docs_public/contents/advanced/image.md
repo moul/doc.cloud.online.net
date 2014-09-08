@@ -15,11 +15,11 @@ When you create a server you have to select a base image. If you create your own
 
 There are five steps to create a new image from scratch (example given is for Debian-like system)
 
-- [Install deboostrap](/avanced/image.html#step-1-install-deboostrap)
-- [Create and execute image-creation script](/advanced/image.html#step-2-image-creation-script)
+- [Install deboostrap](/advanced/image.html#step-1-install-debootstrap)
+- [Create and execute image-creation script](/advanced/image.html#step-2-create-and-execute-image-creation-script)
 - [Create a snapshot](/advanced/image.html#step-3-create-a-snapshot)
 - [Create an image from snapshot](/advanced/image.html#step-4-create-an-image-from-snapshot)
-- [Create a new server with your image](/advanced/image.html#step-5-create-a-new-server-with-the-image)
+- [Create a new server with your image](/advanced/image.html#step-5-create-a-new-server-with-your-image)
 
 ### Step 1 - Install debootstrap
 
@@ -61,7 +61,7 @@ COMPONENTS=main,universe
 DEBOOTSTRAP_DIR=/mnt/ubuntu-tpl/
 
 # The list of packages included in the system
-PKGS_INCLUDE='ssh,rsyslog,nano,less,man-db,net-tools,iputils-ping,whiptail,wget,nbd-client,xnbd-client,isc-dhcp-client,curl,sudo,iptables,ntp,ntpdate,vim,ca-certificates'
+PKGS_INCLUDE='ssh,rsyslog,nano,less,man-db,net-tools,iputils-ping,whiptail,wget,nbd-client,xnbd-client,isc-dhcp-client,curl,sudo,iptables,ntp,ntpdate,vim,ca-certificates,cron'
 
 DEVICE=/dev/nbd1
 
@@ -125,6 +125,9 @@ FILES_TO_COPY+=" /etc/sysctl.conf"
 # Network interfaces configuration
 FILES_TO_COPY+=" /etc/network/interfaces"
 
+# APT source.list
+FILES_TO_COPY+=" /etc/apt/sources.list"
+
 # Executable which synchronizes kernel modules
 FILES_TO_COPY+=" /usr/sbin/oc-sync-kernel-modules"
 
@@ -146,7 +149,7 @@ umount $DEBOOTSTRAP_DIR
 
 <strong>Important</strong>: All scripts source are available on the official image
 
-Execute the script above on your server `chmod +x ./image_tpl.sh && ./image_tpl.sh`.<br/>
+Execute the script above on your server `chmod +x ./image_creation.sh && ./image_creation.sh`.<br/>
 Finally, poweroff your server from the control panel
 
 ### Step 3 - Create a snapshot

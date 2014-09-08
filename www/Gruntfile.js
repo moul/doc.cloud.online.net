@@ -50,7 +50,12 @@ module.exports = function(grunt) {
 				options: {
 					config: 'config/wsconfig_docs_public.json'
 				}
-			}
+			},
+			build_docs_faq: {
+				options: {
+					config: 'config/wsconfig_docs_naked.json'
+				}
+			},
 		},
 		copy: {
 			target: {
