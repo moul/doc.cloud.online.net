@@ -29,11 +29,19 @@ h1 {
     font-weight: lighter;
 }
 
+h2 {
+    font-weight: 200;
+}
+
 h3 {
     font-weight: 200;
     font-size: 24px;
     margin-top:20px;
     margin-bottom: 10px;
+}
+
+h4 {
+   font-weight: 400;
 }
 
 p, ul li, ol li {
