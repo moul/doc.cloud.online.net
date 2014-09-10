@@ -9,7 +9,7 @@ This page shows you some basics to interact with our Compute API
 > <strong>Requirements</strong>
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
 - You have configured your [SSH Key](/account/ssh_keys.html)
-- You have generate your [API Token](/account/credentials.html)
+- You have generated your [API Token](/account/credentials.html)
 - You know your [Organization ID](/advanced/api_organization.html)
 
 There are five steps to provision and start a server with additional volume from the API. In this section, we will:
