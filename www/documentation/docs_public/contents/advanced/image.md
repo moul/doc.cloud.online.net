@@ -125,9 +125,6 @@ FILES_TO_COPY+=" /etc/sysctl.conf"
 # Network interfaces configuration
 FILES_TO_COPY+=" /etc/network/interfaces"
 
-# APT source.list
-FILES_TO_COPY+=" /etc/apt/sources.list"
-
 # Executable which synchronizes kernel modules
 FILES_TO_COPY+=" /usr/sbin/oc-sync-kernel-modules"
 
