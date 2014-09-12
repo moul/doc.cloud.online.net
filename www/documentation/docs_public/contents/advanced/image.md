@@ -6,6 +6,8 @@ position: 4
 
 This page shows you how to create a new image from scratch. This process consists in building a rootfs in an extra volume of one of your servers.
 
+The following procedure will create an Ubuntu based image from scratch.
+
 > <strong>Requirements</strong>
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
 - You have configured your [SSH Key](/account/ssh_keys.html)
@@ -26,6 +28,7 @@ There are five steps to create a new image from scratch (example given is for De
 Connect your server and execute the following command
 
 ```
+apt-get update
 apt-get install debootstrap
 ```
 
