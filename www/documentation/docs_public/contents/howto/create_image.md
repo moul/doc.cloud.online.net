@@ -21,58 +21,55 @@ Potential uses
 - Automate Server Builds
 - Create a Software Testing Environment
 
-There are 3 steps to create an image:
+There are three steps to create an Image:
 
 - Powered off your server
-- Create an image
-- Verify image creation
+- Create an Image
+- Verify Image creation
 
-There are 3 steps to create a server from an image
+There are three steps to create a server from an Image
 
-- [Create an image from a volume snapshot](/howto/create_image.html#step-1-create-an-image-from-a-volume-snapshot)
+- [Create an Image from a volume snapshot](/howto/create_image.html#step-1-create-an-image-from-a-volume-snapshot)
 - [Image creation](/howto/create_image.html#step-2-image-creation)
-- [Verify image creation](/howto/create_image.html#step-3-verify-image-creation)
+- [Verify Image creation](/howto/create_image.html#step-3-verify-image-creation)
 
 There are three steps to create a new server from an image:
 
 - [Name your server](/howto/create_image.html#step-1-name-you-server)
-- [Choose your image](/howto/create_image.html#step-2-choose-your-image)
+- [Choose your Image](/howto/create_image.html#step-2-choose-your-image)
 - [Create your server](/howto/create_image.html#step-3-create-your-server)
 
 
-## Create an image
+## Create an Image
 
-In the Control Panel, click "Volumes" in the compute section.
+In the Control Panel, click "Snapshot" in the compute section.
 
-### Step 1 - Create an image from a volume snapshot
+### Step 1 - Create an Image from a volume snapshot
 
-On the page you land, are displayed the list of your volumes and snapshots.
+On the page you land, are displayed the list of your snapshots.
 
 ![Snapshots list](../../images/create_image_from_snapshot.png "Snapshots list")
 
-Select the snapshot to use for create an image and click "Image from snapshot" button
+Select the snapshot to use for create an Image and click "Image from snapshot" button
 
 ### Step 2 - Image creation
 
-You are now asked for:
+You are now asked to give a name to your Image
 
-- Give a name to your image
-- Choose the volume snapshot you want to use for your image
+![Create new Image](../../images/create_image.png "Create new Image")
 
-![Create new image](../../images/create_image.png "Create new image")
+Click the "Create Image" buttons, your Image is now ready to use.
 
-Click the "Create Image" buttons, your image is now ready to use.
+### Step 3 - Verify Image creation
 
-### Step 3 - Verify image creation
-
-In the Compute section of the console click "Images". Your new image should be present on images list.
+In the Compute section of the console click "Images". Your new Image should be present on Images list.
 
 ![Image details](../../images/image_details.png "Image details")
 
 ## Create a server from your own image
 
-In the previous steps, we create a new image.
-We will create a new server based on the image we take previously.
+In the previous steps, we create a new Image.
+We will create a new server based on the Image we take previously.
 
 In the Control Panel, click the "Create Server" button.
 
@@ -80,10 +77,10 @@ In the Control Panel, click the "Create Server" button.
 
 You will land on the server-creation page where you must input basic information for your server.
 
-### Step 2 - Choose your image
+### Step 2 - Choose your Image
 
-In the image section click the images tab.
-Select the image you take previously from the list below.
+In the Image section click the Images tab.
+Select the Image you take previously from the list below.
 
 ### Step 3 - Create your server
 
