@@ -64,7 +64,8 @@ COMPONENTS=main,universe
 DEBOOTSTRAP_DIR=/mnt/ubuntu-tpl/
 
 # The list of packages included in the system
-PKGS_INCLUDE='ssh,rsyslog,nano,less,man-db,net-tools,iputils-ping,whiptail,wget,nbd-client,xnbd-client,isc-dhcp-client,curl,sudo,iptables,ntp,ntpdate,vim,ca-certificates,cron'
+
+PKGS_INCLUDE='ca-certificates, cron, curl, iptables, iputils-ping, isc-dhcp-client, less, man-db, nano, nbd-client, net-tools, ntp, ntpdate, rsyslog, ssh, sudo, vim, wget, whiptail, xnbd-client'
 
 DEVICE=/dev/nbd1
 

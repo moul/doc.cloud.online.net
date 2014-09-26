@@ -17,6 +17,15 @@ You can select the type of disk to host your volumes from two technologies:
 - LSSD (Local solid state drive), to deliver fast disk I/O (Local solid state drive)
 - LHDD (Local spinning disk), use for moderate read/write access.
 
+LSSD and LHDD volumes are teleported close to your server.
+
+When you start a server for the first time, your volume files are downloaded from the volumes store to the local storage devices (LHDD or LSSD).
+
+Each time you start or stop a server, the volumes are downloaded or uploaded to the volumes store.
+The larger the amount of data to transfer, the longer the upload or download duration.
+
+We work constantly on optimizing the transfer time of local storage devices to the volumes store.
+
 There are two steps to attach a volume to an existing server
 
 - [Create a new volume](/howto/create_volume.html#step-1-create-a-new-volume)
