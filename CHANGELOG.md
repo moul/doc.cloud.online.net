@@ -1,9 +1,11 @@
 ChangeLog
 =========
 
-0.2.0 (Unreleased)
+0.1.2 (2014-09-26)
 ------------------
-- No entry.
+-  Add documentation for CS with cyberduck
+-  Explain local storage
+-  Fix image creation documentation
 
 0.1.1 (2014-09-10)
 ------------------
