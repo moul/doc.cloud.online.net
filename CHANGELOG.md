@@ -1,15 +1,16 @@
 ChangeLog
 =========
 
-0.2.0 (Unreleased)
+0.1.3 (2014-09-29)
 ------------------
-- No entry.
+- Remove old docs
+- Fix footer
 
 0.1.2 (2014-09-26)
 ------------------
- -  Add documentation for CS with cyberduck
- -  Explain local storage
- -  Fix image creation documentation
+- Add documentation for CS with cyberduck
+- Explain local storage
+- Fix image creation documentation
 
 0.1.1 (2014-09-10)
 ------------------
