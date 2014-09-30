@@ -3,6 +3,10 @@ ChangeLog
 
 0.1.3 (2014-09-29)
 ------------------
+- Fix Gruntfile
+
+0.1.3 (2014-09-29)
+------------------
 - Remove old docs
 - Fix footer
 
