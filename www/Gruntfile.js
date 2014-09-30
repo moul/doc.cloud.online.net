@@ -41,11 +41,6 @@ module.exports = function(grunt) {
 			}
 		},
 		wintersmith: {
-			build_docs_internal: {
-				options: {
-					config: 'config/wsconfig_docs_internal.json'
-				}
-			},
 			build_docs: {
 				options: {
 					config: 'config/wsconfig_docs_public.json'
