@@ -1,6 +1,10 @@
 ChangeLog
 =========
 
+0.1.6 (2014-10-01)
+------------------
+- Add important note about API usages
+
 0.1.5 (2014-09-30)
 ------------------
 - New release
