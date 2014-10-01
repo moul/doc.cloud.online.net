@@ -5,6 +5,9 @@ FORMAT: 1A
 The Online lab API allows you to manage servers and resources in a simple, programmatic way using conventional HTTP requests. 
 All features you will find in the web control panel are also available through the API.
 
+> <strong>Important</strong>
+> Please note that during this beta period, we may make some large changes which may break compatibility.
+
 ## Request and response
 
 Our api works over https and is accessed from two endpoint:
