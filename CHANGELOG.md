@@ -1,6 +1,10 @@
 ChangeLog
 =========
 
+0.1.7 (2014-10-01)
+------------------
+- Edit FAQ
+
 0.1.6 (2014-10-01)
 ------------------
 - Add important note about API usages
