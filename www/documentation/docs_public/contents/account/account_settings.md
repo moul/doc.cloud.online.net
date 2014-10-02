@@ -39,8 +39,10 @@ The invitation will the status "pending" (last column in the previous screenshot
 
 Each user account is limited to:
 
-- 2 servers
-- 6 volumes
-- 10 snapshots
-- 10 images
-- 1 reserved IP address
+- 20 servers
+- 40 volumes
+- 40 snapshots
+- 100 images
+- 5 reserved IP address
+
+If you need more resources, contact us and we will increase your limits!
