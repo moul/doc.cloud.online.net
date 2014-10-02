@@ -1,6 +1,9 @@
 ChangeLog
 =========
 
+2.0.0 (unreleased)
+------------------
+
 0.1.9 (2014-10-02)
 ------------------
 - Edit account section
