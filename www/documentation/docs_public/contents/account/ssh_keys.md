@@ -6,6 +6,10 @@ position: 2
 
 This page shows you how to create and enable SSH Keys.
 
+> <strong>Important</strong>
+- If you add a new SSH key into the console and can ssh your server, reload your ssh-keys with `service ssh-keys start` command
+- If you add a new SSH key into the console and can not access your server, reboot your server from the Control Panel to load ssh-keys
+
 Before connecting to your servers, you must set an existing public Key to your account. If you already have an SSH Key skip Step 1.
 
 ### Step 1 - Create the RSA Key Pair
