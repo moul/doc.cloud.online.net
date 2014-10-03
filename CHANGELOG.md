@@ -1,6 +1,9 @@
 ChangeLog
 =========
 
+2.0.0 (unreleased)
+------------------
+
 0.2.0 (2014-10-03)
 ------------------
 - Explain ssh keys reload
