@@ -163,7 +163,7 @@ To attach an additional volume to an existing server, you have to perform a PUT 
 
 Request
 ```
-curl https://api.cloud.online.net/volumes \
+curl https://api.cloud.online.net/servers/<YOUR_SERVER_ID> \
 -H "X-Auth-Token: <YOUR_API_TOKEN_HERE>" \
 -H "Content-Type: application/json" \
 -X PUT
@@ -185,8 +185,8 @@ curl https://api.cloud.online.net/volumes \
 "test"
 ],
 "volumes": {
--> "0": {"id": "1a96f139-95f8-4680-aeeb-0a58229d18d5"},
--> "1": {"id": "65e7d766-103b-4fb1-819a-fb95e3a15348"}
+---> "0": {"id": "1a96f139-95f8-4680-aeeb-0a58229d18d5", "name": "volume 1"},
+---> "1": {"id": "65e7d766-103b-4fb1-819a-fb95e3a15348", "name": "volume 2"}
 }
 }'
 ```
