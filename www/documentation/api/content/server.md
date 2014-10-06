@@ -4,7 +4,7 @@ A Server is a dedicated machine for your own use. `servers` endpoint allow you t
 
 #### Servers [/servers]
 
-##### Creates a new server [POST]
+##### Create a new server [POST]
 
 Create a new server
 
