@@ -8,11 +8,13 @@ This page shows you how to launch and connect to your servers.
 
 > <strong>Requirements</strong>
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
-- You have configured your [SSH Key](/account/ssh_keys.html)
+- You have configured your [SSH Key](/howto/ssh_keys.html)
 
 
-Each server that you create is a physical server dedicated for your personal use.<br/>
-After you've launched your server, you can connect and use it.
+Each server that you create is a physical server dedicated for you, there is no
+virtualization.<br/>
+After you've launched your server, you can connect as root and use it as you
+wish.
 
 There are five steps to provision a new server
 
@@ -22,8 +24,11 @@ There are five steps to provision a new server
 - [Start the server](/howto/create_instance.html#step-4-start-your-server)
 - [Mount additional volumes (Optional)](/howto/create_instance.html#mount-additional-volumes)
 
-<strong>Important</strong>: SSH regenerates keys using the key in your Control Panel at each reboot.<br/>
-To avoid this behavior, execute the following command on your server `echo manual > /etc/init/ssh-keys.override`
+<strong>Important</strong>: Youre SSH public keys are fetched during the boot
+process.<br/>
+If you add them after youre server is booted, they will *not* be added to youre
+`authorized_keys` file.<br/>
+If you do not want the keys to be downloaded during the next boot, execute the following command on your server `echo manual > /etc/init/ssh-keys.override`
 
 ## Server creation
 

@@ -8,10 +8,10 @@ This page shows you how to attach and detach additional volumes to an existing s
 
 > <strong>Requirements</strong>
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
-- You have configured your [SSH Key](/account/ssh_keys.html)
+- You have configured your [SSH Key](/howto/ssh_keys.html)
 - You have a [server](/howto/create_instance.html)
 
-Each server that you create can have at most fifteen additional volumes. <br/>
+Each server can have at most 16 volumes, including the root volume. <br/>
 You can select the type of disk to host your volumes from two technologies:
 
 - LSSD (Local solid state drive), to deliver fast disk I/O (Local solid state drive)

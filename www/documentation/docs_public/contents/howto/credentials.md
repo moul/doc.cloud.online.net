@@ -1,14 +1,19 @@
 ---
-title: Generating your API Token
+title: Generating an API Token
 template: article.jade
-position: 3
+position: 12
 ---
 
-This page shows you how to authenticate against our API
+><strong>Security information:</strong> API tokens are like password, they allow total
+access to your account, do no share them! If you believe one of your tokens was
+compromised, delete it and create a new one.
 
-Before you can start using our APIs, you will need to get your API Token.
+Before you can start using our API, you will need to get an API token.
+This page shows you how to get one and how to use it to authenticate against our API.
 
-Your API Token is a unique identifier associated with your account. We use this token to authenticate commands in our [APIs](//doc.cloud.online.net/api/).
+API tokens are unique identifier associated with your account. We use them
+to authenticate commands in our [API](//doc.cloud.online.net/api/).
+
 
 - Open the pull-down menu on your account name and click on "My credentials" link.
 

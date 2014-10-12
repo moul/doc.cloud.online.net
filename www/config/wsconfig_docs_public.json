@@ -14,9 +14,7 @@
 		"author": "labs.online.net",
 		"menu" : {
 			"faq": "FAQ",
-			"account": "Account managment",
 			"howto": "Getting started",
-			"network": "Network",
 			"advanced": "Advanced topics"
 		}
 	},
