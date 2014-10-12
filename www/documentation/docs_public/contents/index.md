@@ -1,27 +1,30 @@
 ---
-title: What is Online labs ?
+title: Introduction
 template: article.jade
+position: 0
 ---
 
-[Online labs](http://labs.online.net) provides a highly customizable physical server management platform.
+## What is this cloud platform ?
 
-Using [Online labs](http://labs.online.net) eliminates the complexity of traditional architecture, so that you can develop, deploy, and scale applications faster than ever before.<br/> 
-We let you configure your own physical servers.
+This platform is a technical preview of cloud computing's future created by [Online](http://online.net).
+It's about providing resources you can rely on.
 
-You will be able to leverage at least the two following advantages:
+This platform is designed for people who want to launch and scale their
+applications on trustable resources. If you hate unpredictable resources, it's
+the place to be.
 
-- The flexibility of the cloud
-- The guarantee of a dedicated server
+This platform is made for people who need an easy to use web hosting platform with on demand
+resources. You can get your own Linux server on SSD in 44 seconds and with only two clicks !
 
-You can launch as many physical servers as you need in seconds, configure networking and manage storage.
 
-# What makes Online labs different ?
+<hr/>
+## What makes Online labs cloud different ?
 
-We've built the Online labs platform, the control panel that let's you perform the same actions as you would on a physical machine on your desk.
+In our cloud, servers are dedicated. You have dedicated, constant and
+predictible performances you can rely on. We are not speaking about dedicated
+hosting, it comes with all the benefits of the cloud!
 
-Operating a server at Online labs is as simple as managing your PC. The key difference is that Online labs servers are on-demand.
-
-Our powerful platform provides:
+Our platform provides:
 
 - On-demand physical computing servers. [Read more](/howto/create_instance.html)
 
@@ -31,6 +34,26 @@ Our powerful platform provides:
 
 - Snapshot to backup your servers and their data. [Read more](/howto/create_snapshot.html)
 
-- IP addresses, dynamic or reserved to attach on your servers [Read more](/network/ip_addresses.html)
+- Reserved IP addresses movable between your servers for live migration. [Read more](/network/ip_addresses.html)
 
-- Secure login information for your servers using key pairs. [Read more](/account/ssh_keys.html)
+- Object storage to upload all your files. [Read more](/howto/s3.html)
+
+You can launch as many physical servers (and not VMs) as you need in seconds, configure networking and manage storage.
+
+Want more details? Go read our [server FAQ](server_faq.html) or [object
+storage FAQ](object_storage_faq.html).
+
+<hr/>
+## How much does it cost?
+
+The preview is free! You should except good prices as we designed our own
+hardware for the cloud.
+
+
+<hr/>
+## How can I access the preview?
+
+Get an invitation ! Find a friend who is already invited or follow [@labs_online](//twitter.com/labs_online) on Twitter and send us a direct message with your email.
+
+Invitations are validated progressivly so that we can raise our capacity
+accordingly.

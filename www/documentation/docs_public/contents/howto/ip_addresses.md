@@ -1,7 +1,7 @@
 ---
 title: IP Addresses
 template: article.jade
-position: 1
+position: 11
 ---
 
 This page shows you how to create, attach, and delete a reserved IP address to a server.
