@@ -1,6 +1,6 @@
 ---
 title: Create a LEMP stack Image
-template: article_community.jade
+template: article.jade
 position: 1
 ---
 
@@ -13,7 +13,7 @@ This page shows you how to create a LEMP stack Image.
 LEMP stack is a group of open source software to get all tools to run a web application.
 The acronym stands for Linux, nginx (pronounced "engine-x") , MySQL, and PHP. 
 
-The image we will create will allow you to create servers with predefined configuration for the LEMP stack.<br />
+The image you will create would allow you to create servers with predefined configuration for the LEMP stack.<br />
 For instance, you will be able to deploy an infinity of servers serving the LEMP stack in seconds.
 
 
@@ -27,7 +27,7 @@ There are five steps to create a LEMP Image
 - [Create the LEMP Image](/community/lemp.html#step-5-create-the-lemp-image)
 
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/0DL9gM2NaSs" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/RZl-OQpx8mc" frameborder="0" allowfullscreen></iframe>
 
 ### Step 1 - Create a new server
 
