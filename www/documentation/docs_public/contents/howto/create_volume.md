@@ -1,7 +1,7 @@
 ---
 title: Attach and detach a volume
 template: article.jade
-position: 2
+position: 3
 ---
 
 This page shows you how to attach and detach additional volumes to an existing server.

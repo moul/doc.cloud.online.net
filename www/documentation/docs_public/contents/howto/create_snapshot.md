@@ -1,14 +1,14 @@
 ---
 title: Backup your data with snapshots
 template: article.jade
-position: 3
+position: 4
 ---
 
 This page shows you how to backup your servers and their data.
 
 > <strong>Requirements</strong>
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
-- You have configured your [SSH Key](/account/ssh_keys.html)
+- You have configured your [SSH Key](/howto/ssh_keys.html)
 - You have a running [server](/howto/create_instance.html)
 
 A snapshot is a full-volume copy stored in our secure data centers.<br/>

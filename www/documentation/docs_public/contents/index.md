@@ -34,13 +34,13 @@ Our platform provides:
 
 - Snapshot to backup your servers and their data. [Read more](/howto/create_snapshot.html)
 
-- Reserved IP addresses movable between your servers for live migration. [Read more](/network/ip_addresses.html)
+- Reserved IP addresses movable between your servers for live migration. [Read more](/howto/ip_addresses.html)
 
 - Object storage to upload all your files. [Read more](/howto/s3.html)
 
 You can launch as many physical servers (and not VMs) as you need in seconds, configure networking and manage storage.
 
-Want more details? Go read our [server FAQ](server_faq.html) or [object
+Want more details? Go read our [server FAQ](/faq/server_faq.html) or [object
 storage FAQ](object_storage_faq.html).
 
 <hr/>
@@ -53,7 +53,7 @@ hardware for the cloud.
 <hr/>
 ## How can I access the preview?
 
-Get an invitation ! Find a friend who is already invited or follow [@labs_online](//twitter.com/labs_online) on Twitter and send us a direct message with your email.
+Get an invitation ! Find a friend who is already invited or follow [@online_fr](https://twitter.com/online_fr) on Twitter and send us a direct message with your email.
 
 Invitations are validated progressivly so that we can raise our capacity
 accordingly.

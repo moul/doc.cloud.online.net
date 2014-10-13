@@ -5,9 +5,9 @@ div(role="navigation").col-xs-12.col-sm-3.sidebar-offcanvas
 				h4.list-group-item.menu-header #{val}
 				- each item in _.sortBy(contents[key], function(v){ return v.metadata.position})
 					- if (page.metadata.title == item.title)
-						a(href=item.url).list-group-item.active.active-url #{item.title}
+						a(href=item.url).list-group-item.active.active-url.item-doc #{item.title}
 					- else
-						a(href=item.url).list-group-item #{item.title}
+						a(href=item.url).list-group-item.item-doc #{item.title}
 		- else if (contents[key] && _.isObject(val))
 			div.list-group
 				h4.list-group-item.menu-header #{val.name}
@@ -15,7 +15,7 @@ div(role="navigation").col-xs-12.col-sm-3.sidebar-offcanvas
 					h5.list-group-item.sub-menu-header #{v}
 					- each sub_item_v, sub_item_k in _.sortBy(contents[key][k], function(v){ return v.metadata.position })
 						- if (page.metadata.title == sub_item_v.title)
-							a(href=sub_item_v.url).list-group-item.active.active-url #{sub_item_v.title}
+							a(href=sub_item_v.url).list-group-item.active.active-url.item-doc #{sub_item_v.title}
 						- else
-							a(href=sub_item_v.url).list-group-item #{sub_item_v.title}
+							a(href=sub_item_v.url).list-group-item.item-doc #{sub_item_v.title}
 

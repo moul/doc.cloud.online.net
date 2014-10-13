@@ -1,14 +1,14 @@
 ---
 title: IP Addresses
 template: article.jade
-position: 11
+position: 5
 ---
 
 This page shows you how to create, attach, and delete a reserved IP address to a server.
 
 > <strong>Requirements</strong>
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
-- You have configured your [SSH Key](/account/ssh_keys.html)
+- You have configured your [SSH Key](/howto/ssh_keys.html)
 - You have a running [server](/howto/create_instance.html)
 
 A freshly-created server has a dynamic IP address.<br/>

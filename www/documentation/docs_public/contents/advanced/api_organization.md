@@ -8,7 +8,7 @@ This page shows you how to identify your organization ID through the API.
 
 > <strong>Requirements</strong>
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
-- You have generated a [token](/account/credentials.html)
+- You have generated a [token](/howto/credentials.html)
 
 Our system attributes an organization ID to each user.<br/>
 The API requires your organization ID for many actions, for instance:

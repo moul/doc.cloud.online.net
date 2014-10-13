@@ -1,7 +1,7 @@
 ---
 title: Provisioning your server
 template: article.jade
-position: 1
+position: 2
 ---
 
 This page shows you how to launch and connect to your servers.
