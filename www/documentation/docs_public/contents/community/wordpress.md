@@ -18,13 +18,14 @@ For instance, you will be able to deploy an infinity of servers serving a Wordpr
 
 Working with the LEMP Image will significantly save you time and effort as a large base of packages are already installed and configured.
 
-There are five steps to create a Wordpress Image
+There are four steps to create a Wordpress Image
 
 - [Create a new server using the LEMP image](/community/lemp.html#step-1-create-a-new-server)
 - [Install required packages](/community/lemp.html#step-2-install-required-packages)
 - [Configure nginx & Wordpress](/community/lemp.html#step-3-configure-nginx)
-- [Check Wordpress installation](/community/lemp.html#step-4-check-php-and-mysql-installation)
-- [Create the Wordpress Image](/community/lemp.html#step-5-create-the-lemp-image)
+- [Create the Wordpress Image](/community/lemp.html#step-4-create-the-lemp-image)
+
+<iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/0-neudo_yhE" frameborder="0" allowfullscreen></iframe>
 
 ### Step 1 - Create a new server using the LEMP image
 
@@ -56,7 +57,7 @@ In the terminal program and in the shell run an `apt-get update` to update packa
 The next step is to install packages required for Wordpress. In a terminal, execute the following command
 
 ```
-apt-get install php5-gd libssh2-php
+apt-get install php5-gd
 ```
 
 ### Step 3 - Configure nginx & Wordpress
@@ -149,7 +150,7 @@ define('DB_PASSWORD', 'password');
 
 In your browser, try to access to the public IP address of your server. You should land on the Wordpress configuration webpage.
 
-### Step 5 - Create the Wordpress Image
+### Step 4 - Create the Wordpress Image
 
 You are now ready to create the Wordpress image.
 
