@@ -6,7 +6,7 @@ position: 0
 
 ## What is this cloud platform ?
 
-This platform is a technical preview of cloud computing's future created by [Online](http://online.net).
+This platform is a technical preview of the future of cloud computing created by [Online](http://online.net).
 It's about providing resources you can rely on.
 
 This platform is designed for people who want to launch and scale their
