@@ -10,7 +10,7 @@ The following procedure will create an Ubuntu based image from scratch.
 
 > <strong>Requirements</strong>
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
-- You have configured your [SSH Key](/account/ssh_keys.html)
+- You have configured your [SSH Key](/howto/ssh_keys.html)
 - You have a server running with an additional volume [Provisioning your server](/howto/create_instance.html)
 
 When you create a server you have to select a base image. If you create your own base image, you can customize more deeply.

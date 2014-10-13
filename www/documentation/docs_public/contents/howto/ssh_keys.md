@@ -1,7 +1,7 @@
 ---
 title: Configuring SSH Keys
 template: article.jade
-position: 2
+position: 1
 ---
 
 This page shows you how to create and enable SSH Keys.

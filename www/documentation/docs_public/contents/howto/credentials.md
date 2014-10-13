@@ -1,7 +1,7 @@
 ---
 title: Generating an API Token
 template: article.jade
-position: 12
+position: 7
 ---
 
 ><strong>Security information:</strong> API tokens are like password, they allow total

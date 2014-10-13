@@ -8,7 +8,7 @@ This page shows you how to connect a block device manually.
 
 > <strong>Requirements</strong>
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
-- You have configured your [SSH Key](/account/ssh_keys.html)
+- You have configured your [SSH Key](/howto/ssh_keys.html)
 - You have a running [server](/howto/create_instance.html)
 - Your server has additional [volumes](/howto/create_instance.html#step-3-add-storage)
 
