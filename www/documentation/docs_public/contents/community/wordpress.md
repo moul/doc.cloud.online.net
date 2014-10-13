@@ -1,6 +1,6 @@
 ---
 title: Create a Wordpress Image
-template: article_community.jade
+template: article.jade
 position: 2
 ---
 
