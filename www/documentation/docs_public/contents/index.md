@@ -41,7 +41,7 @@ Our platform provides:
 You can launch as many physical servers (and not VMs) as you need in seconds, configure networking and manage storage.
 
 Want more details? Go read our [server FAQ](/faq/server_faq.html) or [object
-storage FAQ](object_storage_faq.html).
+storage FAQ](/faq/object_storage_faq.html).
 
 <hr/>
 ## How much does it cost?
