@@ -86,7 +86,7 @@ if [ ! `mountpoint -q $DEBOOTSTRAP_DIR` ]; then
 fi
 
 # Bootstrap a basic Ubuntu trusty system
- debootstrap --arch $ARCH --variant=$VARIANT --components $COMPONENTS --include $PKGS_INCLUDE trusty $DEBOOTSTRAP_DIR $MIRROR
+ debootstrap --arch $ARCH --variant=$VARIANT --components "$COMPONENTS" --include "$PKGS_INCLUDE" trusty $DEBOOTSTRAP_DIR "$MIRROR"
 
 for i in {1..6}
 do
