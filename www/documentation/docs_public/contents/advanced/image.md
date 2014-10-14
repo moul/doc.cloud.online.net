@@ -65,7 +65,9 @@ DEBOOTSTRAP_DIR=/mnt/ubuntu-tpl/
 
 # The list of packages included in the system
 
-PKGS_INCLUDE='ca-certificates, cron, curl, iptables, iputils-ping, isc-dhcp-client, less, man-db, nano, nbd-client, net-tools, ntp, ntpdate, rsyslog, ssh, sudo, vim, wget, whiptail, xnbd-client'
+PKGS_INCLUDE='ca-certificates, cron, curl, iptables, iputils-ping, isc-dhcp-client, less,libnss-myhostname, man-db, nano, nbd-client, net-tools, ntp, ntpdate, rsyslog, ssh, sudo, vim, wget, whiptail, xnbd-client'
+
+MIRROR=http://mirror.cloud.online.net/ubuntu-ports/
 
 DEVICE=/dev/nbd1
 
@@ -84,7 +86,7 @@ if [ ! `mountpoint -q $DEBOOTSTRAP_DIR` ]; then
 fi
 
 # Bootstrap a basic Ubuntu trusty system
-debootstrap --arch $ARCH --variant=$VARIANT --components $COMPONENTS --include $PKGS_INCLUDE trusty $DEBOOTSTRAP_DIR
+ debootstrap --arch $ARCH --variant=$VARIANT --components $COMPONENTS --include $PKGS_INCLUDE trusty $DEBOOTSTRAP_DIR $MIRROR
 
 for i in {1..6}
 do
@@ -138,8 +140,10 @@ FILES_TO_COPY+=" /usr/local/bin/oc-metadata"
 # Executable which retrieves server metadata (JSON)
 FILES_TO_COPY+=" /usr/local/bin/oc-metadata-json"
 
+# DHCP hook
+FILES_TO_COPY+=" /etc/dhcp/dhclient-exit-hooks.d/hostname"
+
 # Copy files above in the appropriate directory
-mkdir -p ${DEBOOTSTRAP_DIR}/usr/local/bin
 for FILE in ${FILES_TO_COPY}
 do
   cp ${FILE} ${DEBOOTSTRAP_DIR}${FILE}
