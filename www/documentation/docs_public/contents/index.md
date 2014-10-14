@@ -46,7 +46,7 @@ storage FAQ](/faq/object_storage_faq.html).
 <hr/>
 ## How much does it cost?
 
-The preview is free! You should except good prices as we designed our own
+The preview is free! You should expect good prices as we designed our own
 hardware for the cloud.
 
 
