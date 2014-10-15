@@ -1,8 +1,10 @@
 ChangeLog
 =========
 
-2.0.0 (unreleased)
+0.2.7 (2014-10-14)
 ------------------
+- Review typo
+- Adding putty ssh keys doc
 
 0.2.6 (2014-10-14)
 ------------------
