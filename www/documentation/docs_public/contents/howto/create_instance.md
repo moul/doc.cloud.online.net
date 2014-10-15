@@ -84,7 +84,7 @@ When your server is running, you can see the server's IP address in the server l
 On a Mac or Linux computer, open your terminal program and in the shell just type the following command:
 
 ```
-[john]$ssh root@<your_server_ip>
+john@localhost:~$ ssh root@<your_server_ip>
 ```
 
 Allow the connection to the host<br/>
@@ -110,7 +110,7 @@ If the new volume has never been formatted, you need to format the volume using 
 For instance, the following command creates an `ext4` file system on the volume.
 
  ```
-[root]$mkfs -t ext4 /dev/nbd1
+root@c1-X-Y-Z-T:~# mkfs -t ext4 /dev/nbd1
 mke2fs 1.42.9 (4-Feb-2014)
 Filesystem label=
 OS type: Linux
@@ -136,9 +136,9 @@ Writing superblocks and filesystem accounting information: done
 Then, to mount the device as /mnt/data, run the following commands.
 
 ```
-[root]$mkdir -p /mnt/data
-[root]$mount /dev/nbd1 /mnt/data
-[root]$ls -la /mnt/data/
+root@c1-X-Y-Z-T:~# mkdir -p /mnt/data
+root@c1-X-Y-Z-T:~# mount /dev/nbd1 /mnt/data
+root@c1-X-Y-Z-T:~# ls -la /mnt/data/
 total 24
 drwxr-xr-x 3 root root  4096 Jan  1 00:07 .
 drwxr-xr-x 3 root root  4096 Jan  1 00:07 ..
@@ -148,7 +148,7 @@ drwx------ 2 root root 16384 Jan  1 00:07 lost+found
 Now run the `df -h` command, this command will list all your devices and where they are mounted
 
 ```
-[root]$df -h
+root@c1-X-Y-Z-T:~# df -h
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/nbd0        23G  420M   22G   2% /
 none           1010M   36K 1010M   1% /dev
