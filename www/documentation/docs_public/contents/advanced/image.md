@@ -4,42 +4,45 @@ template: article.jade
 position: 4
 ---
 
-This page shows you how to create a new image from scratch. This process consists in building a rootfs in an extra volume of one of your servers.
+This page shows how to create a new image from scratch.
+This process consists in building a root filesystem in an extra volume of one of your servers.
 
 The following procedure will create an Ubuntu based image from scratch.
 
 > <strong>Requirements</strong>
+>
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
 - You have configured your [SSH Key](/howto/ssh_keys.html)
 - You have a server running with an additional volume [Provisioning your server](/howto/create_instance.html)
 
-When you create a server you have to select a base image. If you create your own base image, you can customize more deeply.
+When you create a server you have to select a base image.
+If you create your own base image, you can customize more deeply.
 
-There are five steps to create a new image from scratch (example given is for Debian-like system)
+There are five steps to create a new image from scratch (example given is for a Debian-like system)
 
 - [Install deboostrap](/advanced/image.html#step-1-install-debootstrap)
 - [Create and execute image-creation script](/advanced/image.html#step-2-create-and-execute-image-creation-script)
 - [Create a snapshot](/advanced/image.html#step-3-create-a-snapshot)
-- [Create an image from snapshot](/advanced/image.html#step-4-create-an-image-from-snapshot)
+- [Create an image from a snapshot](/advanced/image.html#step-4-create-an-image-from-snapshot)
 - [Create a new server with your image](/advanced/image.html#step-5-create-a-new-server-with-your-image)
 
 ### Step 1 - Install debootstrap
 
-Connect your server and execute the following command
+Connect to your server and execute the following command:
 
 ```
 apt-get update
 apt-get install debootstrap
 ```
 
-Debootstrap is used to install Debian-like system without using an installation disk.
-This way you can create a full (minimal) installation.
+Debootstrap is used to install Debian-like systems without using an installation disk.
+This way, you can create a fully functioning minimal installation.
 
 ### Step 2 - Create and execute image creation script
 
 Then, we create a bash script to build our image.
 
-Each part of the script is describe line by line.
+Each part of the script is described line by line.
 
 ```
 #!/bin/bash
@@ -152,17 +155,18 @@ done
 umount $DEBOOTSTRAP_DIR
 ```
 
-<strong>Important</strong>: All scripts source are available on the official image
+<strong>Important</strong>: All scripts source are available on the official image.
 
 Execute the script above on your server `chmod +x ./image_creation.sh && ./image_creation.sh`.<br/>
-Finally, poweroff your server from the control panel
+Finally, stop your server.
 
 ### Step 3 - Create a snapshot
 
-At this point the extra volume contains a valid Ubuntu rootfs. We now must transform this volume into a snapshot.
+At this point the extra volume contains a valid Ubuntu root filesystem.
+We must now transform this volume into a snapshot.
 
-Once you server is powered off, from the servers page, select the server you create the image with.<br/>
-Click the "Snapshot" button on the extra volume (in our example "volume_to_backup" - /dev/nbd1)
+Once you server is powered off, from the servers page, select the server you created the image with.<br/>
+Click the "Snapshot" button on the extra volume (in our example "volume_to_backup" - /dev/nbd1).
 
 ![Volume snapshot](../../images/volume_snapshot.png "Volume snapshot")
 
@@ -175,4 +179,4 @@ On this page, select the snapshot containing your rootfs and click "Create an im
 
 Create a new server and choose your image in "My images" section.
 
-Your server will start on your own from scratch image.
+Your server will start on your own "from scratch" image.
