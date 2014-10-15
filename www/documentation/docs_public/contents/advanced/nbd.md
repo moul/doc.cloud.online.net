@@ -37,7 +37,7 @@ You can also use "server metadata" which give you a lot of information.<br/>
 Execute the following command on your server to display server metadata
 
 ```
-[root]$metadata
+root@c1-X-Y-Z-T:~# oc-metadata
 NAME=myc1
 TAGS=1
 TAGS_0=test
@@ -87,11 +87,11 @@ An instance of the NBD client must be started for each block device to import.
 
 For instance: 
 ```
-[root]$nbd-client 10.1.0.44 4321 /dev/nbd1
+root@c1-X-Y-Z-T:~# nbd-client 10.1.0.44 4321 /dev/nbd1
 Negotiation: ..size = 9536MB
 bs=1024, sz=9999998976 bytes
 
-[root]$fdisk -l -u /dev/nbd1
+root@c1-X-Y-Z-T:~# fdisk -l -u /dev/nbd1
 Disk /dev/nbd1: 100.0 GB, 99999997952 bytes
 255 heads, 63 sectors/track, 12157 cylinders, total 195312496 sectors
 Units = sectors of 1 * 512 = 512 bytes
@@ -113,7 +113,7 @@ If the new volume has never been formatted, you need to format the volume using 
 For instance, the following command creates an `ext4` file system on the volume.
 
  ```
-[root]$mkfs -t ext4 /dev/nbd1
+root@c1-X-Y-Z-T:~# mkfs -t ext4 /dev/nbd1
 mke2fs 1.42.9 (4-Feb-2014)
 Filesystem label=
 OS type: Linux
@@ -141,9 +141,9 @@ done
 Then, to mount the device as /mnt/data, run the following commands.
 
 ```
-[root]$mkdir -p /mnt/data
-[root]$mount /dev/nbd1 /mnt/data
-[root]$ls -la /mnt/data/
+root@c1-X-Y-Z-T:~# mkdir -p /mnt/data
+root@c1-X-Y-Z-T:~# mount /dev/nbd1 /mnt/data
+root@c1-X-Y-Z-T:~# ls -la /mnt/data/
 total 24
 drwxr-xr-x 3 root root  4096 Jan  1 00:07 .
 drwxr-xr-x 3 root root  4096 Jan  1 00:07 ..
@@ -153,7 +153,7 @@ drwx------ 2 root root 16384 Jan  1 00:07 lost+found
 Now run the `df -h` command, this command will list all your devices and where they are mounted
 
 ```
-[root]$df -h
+root@c1-X-Y-Z-T:~# df -h
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/nbd0        19G  614M   17G   4% /
 none           1011M   36K 1011M   1% /dev
