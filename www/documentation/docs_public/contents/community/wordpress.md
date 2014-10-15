@@ -50,7 +50,7 @@ Click the "Create Server" button. This action creates and starts your server. In
 
 ### Step 2 - Install required packages
 
-When your server is running, you can log into your server using it's public IP address.
+When your server is running, you can log into your server using its public IP address.
 
 In the terminal program and in the shell run an `apt-get update` to update packages list.
 

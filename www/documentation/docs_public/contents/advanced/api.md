@@ -112,18 +112,19 @@ Response
 }
 ```
 
-The response above returns an HTTP 201 code and return the server details.
+The response above returns an HTTP 201 code with the server details.
 
 #### Step 3 - Create a new volume
 
-To create a volume, you have to filled out the following input:
+To create a volume, you have to fill out the following input:
 
 - A volume name
 - An [Organization ID](/advanced/api_organization.html)
 - A size in GB
 - The volume type - LSSD (Local solid state drive) or LHDD (Local spinning disk)
 
-You can create and attach additional volumes to an existing server. (The server must be stopped)
+You can create and attach additional volumes to an existing server.
+The server must be stopped.
 
 Let's create a new volume of type SSD with a size of 10GB.
 
@@ -154,7 +155,7 @@ Response
 }
 ```
 
-The response above returns an HTTP 201 code and return the volume details.
+The response above returns an HTTP 201 code with the volume details.
 
 #### Step 4 - Attach the volume to the server
 
@@ -242,7 +243,7 @@ Response
 
 #### Step 5 - Start a server
 
-To poweron your server, execute the following request where `<YOUR_SERVER_ID>` is your server id
+To start your server, execute the following request where `<YOUR_SERVER_ID>` is your server id.
 
 Request
 ```
