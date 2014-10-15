@@ -161,7 +161,6 @@ The response above returns an HTTP 201 code with the volume details.
 
 To attach an additional volume to an existing server, you have to perform a PUT method requests on the server.
 
-
 Request
 ```
 curl https://api.cloud.online.net/servers/<YOUR_SERVER_ID> \
