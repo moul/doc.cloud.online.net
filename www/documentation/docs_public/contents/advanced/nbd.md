@@ -4,9 +4,10 @@ template: article.jade
 position: 3
 ---
 
-This page shows you how to connect a block device manually.
+This page shows how to connect a block device manually.
 
 > <strong>Requirements</strong>
+>
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
 - You have configured your [SSH Key](/howto/ssh_keys.html)
 - You have a running [server](/howto/create_instance.html)
@@ -14,27 +15,27 @@ This page shows you how to connect a block device manually.
 
 When you create a server with additional storage, the connection to a block device is automatic at the server boot.
 
-If you want to avoid this behavior and connect additional block device manually, execute the following command on your server `echo manual > /etc/init/nbd-add-extra-volumes.override`
+If you want to avoid this behavior and connect additional block devices manually, execute the following command on your server `echo manual > /etc/init/nbd-add-extra-volumes.override`.
 
-There are three steps to connect a block device manually
+There are three steps to connect a block device manually:
 
 - [Identify NBD server and port](/advanced/nbd.html#step-1-identify-nbd-server-and-port)
 - [Connect to a block device](/advanced/nbd.html#step-2-connect-to-a-block-device)
 - [Format and mount the volume](/advanced/nbd.html#step-3-format-and-mount-the-volume)
 
-<strong>Important</strong>: The maximum number of volumes attach to C1 server is limited at 15 devices.<br/>
+<strong>Important</strong>: The maximum number of volumes attach to C1 server is limited to 15 devices.
 
 ### Step 1 - Identify NBD server and port
 
 The NBD client requires the IP address and the port number of our NBD server exporting your volume.<br/>
-These settings are available from your server details page on the control panel
+These settings are available from your server details page on the control panel.
 
 ![Server details](../../images/server_details.png "Server details")
 
 The above picture shows the IP address and the port number required to export the volume in our example.
 
-You can also use "server metadata" which give you a lot of information.<br/>
-Execute the following command on your server to display server metadata
+You can also use "server metadata" which gives you a lot of information.<br/>
+Execute the following command on your server to display server metadata:
 
 ```
 root@c1-X-Y-Z-T:~# oc-metadata
@@ -75,9 +76,9 @@ ORGANIZATION=ecc1c86a-1122-43a7-9c0a-77e3123456789
 ID=838271d7-9744-4b3e-b29c-1c38c7c435e8
 ```
 
-- VOLUMES_0 / VOLUMES_0_* always match the root volume of the server. Server connects and mount it automatically at boot time
+- VOLUMES_0 / VOLUMES_0_* always match the root volume of the server. Server connects and mounts it automatically at boot time.
 
-- VOLUMES_[1-15] / VOLUMES_[1-15]_* is an additional volume(s) attach to the server.
+- VOLUMES_[1-15] / VOLUMES_[1-15]_* are additional volumes attached to the server.
 
 `VOLUMES_[1-15_EXPORT_URI=nbd://10.1.0.44:4321` this entry shows NBD server IP address and the port number of our NBD server exporting your volume.
 
@@ -98,7 +99,6 @@ Units = sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 Disk identifier: 0x00000000
-
 ```
 
 In the above example, `nbd-client 10.1.2.21 4129 /dev/nbd1` connects to the NBD server.<br/>
@@ -110,9 +110,9 @@ In the previous step, the new volume was attached to `/dev/nbd1`.
 
 If the new volume has never been formatted, you need to format the volume using `mkfs` before you can mount it.
 
-For instance, the following command creates an `ext4` file system on the volume.
+For instance, the following command creates an `ext4` file system on the volume:
 
- ```
+```
 root@c1-X-Y-Z-T:~# mkfs -t ext4 /dev/nbd1
 mke2fs 1.42.9 (4-Feb-2014)
 Filesystem label=
@@ -138,7 +138,7 @@ Writing superblocks and filesystem accounting information:
 done
 ```
 
-Then, to mount the device as /mnt/data, run the following commands.
+Then, to mount the device as /mnt/data, run the following commands:
 
 ```
 root@c1-X-Y-Z-T:~# mkdir -p /mnt/data
@@ -150,7 +150,7 @@ drwxr-xr-x 3 root root  4096 Jan  1 00:07 ..
 drwx------ 2 root root 16384 Jan  1 00:07 lost+found
 ```
 
-Now run the `df -h` command, this command will list all your devices and where they are mounted
+Now run the `df -h` command, this command will list all your devices and where they are mounted.
 
 ```
 root@c1-X-Y-Z-T:~# df -h
@@ -162,5 +162,4 @@ none            5.0M     0  5.0M   0% /run/lock
 none           1013M     0 1013M   0% /run/shm
 none            100M     0  100M   0% /run/user
 /dev/nbd1        92G  188M   87G   1% /mnt/data
-
 ```
