@@ -4,7 +4,7 @@ template: article.jade
 position: 6
 ---
 
-This page shows you some basics to interact with our Compute API
+This page shows you some basics to interact with our Compute API.
 
 > <strong>Requirements</strong>
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
@@ -22,7 +22,7 @@ There are five steps to provision and start a server with additional volume from
 
 #### Step 1 - Retrieve the list of images available
 
-The following request return the list of images available. In this example we only have one image which is named `Ubuntu Trusty (14.04) on SSD 2014.06.04` and has id `fe8dfea7-bb8c-490c-a554-1a44a3c4af8c`
+The following request returns the list of available images. In this example we only have one image which is named `Ubuntu Trusty (14.04) on SSD 2014.06.04` and has id `fe8dfea7-bb8c-490c-a554-1a44a3c4af8c`.
 
 Request
 ```
@@ -264,4 +264,4 @@ Response
 }
 ```
 
-To go even further you can access the [API Documentation](/api/)
+To go even further you can access the [API Documentation](/api/).
