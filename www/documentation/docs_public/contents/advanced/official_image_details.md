@@ -4,7 +4,7 @@ template: article.jade
 position: 1
 ---
 
-This page describes the content of the official image Ubuntu Trusty (14.04)
+This page describes the content of the official image __Ubuntu Trusty (14.04)__.
 
 When you create a new server for the first time you have to select an official image.<br/>
 This image has the following characteristics.
@@ -20,17 +20,17 @@ These packages are official packages without patches.
 
 ### Included services
 
-All the following services are present by default on all servers
+All the following services are present by default on all servers.
 
 #### NTP Server
 
 Network Time Protocol (NTP) is configured by default on every server.
 The system time is synchronized with our NTP servers and set to the UTC timezone.
 
-You can execute the ntpq -p command on your server to see the details list of peers known to the NTP server.
+You can execute the `ntpq -p` command on your server to see the details list of peers known to the NTP server.
 
 ```
-ntpq -p
+root@c1-X-Y-Z-T:~# ntpq -p
      remote           refid      st t when poll reach   delay   offset  jitter
 ==============================================================================
  10.1.31.38      172.16.2.6       4 u   15   64    7    0.311    2.796   2.392
@@ -45,8 +45,7 @@ Every server are configured to use our DNS servers to resolve domain name.
 
 #### Mirror
 
-Every Ubuntu server use the following mirror `http://mirror.cloud.online.net` for fast updates as is it close from your servers.
-
+Every Ubuntu server uses the following mirror `http://mirror.cloud.online.net` for fast updates as is it close to your servers.
 
 ### Additional upstart jobs
 
@@ -63,15 +62,12 @@ The following scripts and configurations ensure that your server works properly 
 
 Often you will want to automate your server configuration based on data unavailable before start.
 
-For instance, if you use server tags to configure your monitoring, you can retrieve these data using the following executable.
+For instance, if you use server tags to configure your monitoring, you can retrieve this data using the following executables.
 
-- `/usr/local/bin/oc-metadata` Executable which retrieves server metadata (TEXT)
-- `/usr/local/bin/oc-metadata-json` Executable which retrieves server metadata (JSON)
-- `/usr/sbin/oc-sync-kernel-module` Executable which synchronizes kernel modules
+- `/usr/local/bin/oc-metadata`: Executable which retrieves server metadata (TEXT).
+- `/usr/local/bin/oc-metadata-json`: Executable which retrieves server metadata (JSON).
+- `/usr/sbin/oc-sync-kernel-module`: Executable which synchronizes kernel modules.
 
-In addition, this script is required by `/nbd-root-disconnect.conf` to disconnect root volume gracefully.
+In addition, this script is required by `/etc/init/nbd-root-disconnect.conf` to disconnect root volume gracefully.
 
 - `/usr/sbin/nbd-disconnect-root`
-
-
-
