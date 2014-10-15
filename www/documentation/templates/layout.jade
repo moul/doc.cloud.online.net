@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 html
-	include partials/header
-	body
-		include partials/menu
-		div.container.documentation
-			div.row.row-offcanvas.row-offcanvas-right
-				include partials/left_menu
-				div.col-xs-12.col-sm-9
-					block content
-			<hr />
-			include partials/footer
-		include partials/scripts
+  include partials/header
+  body
+    include partials/menu
+    div.container.documentation
+      div.row.row-offcanvas.row-offcanvas-right
+        include partials/left_menu
+        div.col-xs-12.col-sm-9
+          block content
+      <hr />
+      include partials/footer
+    include partials/scripts
+    
+    script(type='text/javascript').
+      var _paq = _paq || [];
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//stats.cloud.online.net/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 3]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+
+    noscript
+        p
+            img(src="//stats.cloud.online.net/piwik.php?idsite=3" style="border:0;" alt="")
