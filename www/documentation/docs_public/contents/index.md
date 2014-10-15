@@ -46,7 +46,7 @@ storage FAQ](/faq/object_storage_faq.html).
 <hr/>
 ## How much does it cost?
 
-The preview is free! You should except good prices as we designed our own
+The preview is free! You should expect good prices as we designed our own
 hardware for the cloud.
 
 
@@ -55,5 +55,5 @@ hardware for the cloud.
 
 Get an invitation ! Find a friend who is already invited or follow [@online_fr](https://twitter.com/online_fr) on Twitter and send us a direct message with your email.
 
-Invitations are validated progressivly so that we can raise our capacity
+Invitations are validated progressively so that we can raise our capacity
 accordingly.
