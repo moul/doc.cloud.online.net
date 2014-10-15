@@ -7,11 +7,11 @@ position: 0
 ## What is this cloud platform ?
 
 This platform is a technical preview of the future of cloud computing created by [Online](http://online.net).
-It's about providing resources you can rely on.
+It is about providing resources you can rely on.
 
 This platform is designed for people who want to launch and scale their
-applications on trustable resources. If you hate unpredictable resources, it's
-the place to be.
+applications on trustable resources.
+If you hate unpredictable resources, it is the place to be.
 
 This platform is made for people who need an easy to use web hosting platform with on demand
 resources. You can get your own Linux server on SSD in 44 seconds and with only two clicks !
