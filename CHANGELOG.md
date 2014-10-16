@@ -1,6 +1,10 @@
 ChangeLog
 =========
 
+0.2.9 (2014-10-15)
+------------------
+- Change online_fr to online_en
+
 0.2.8 (2014-10-14)
 ------------------
 - Adding Piwik
