@@ -53,7 +53,7 @@ hardware for the cloud.
 <hr/>
 ## How can I access the preview?
 
-Get an invitation ! Find a friend who is already invited or follow [@online_fr](https://twitter.com/online_fr) on Twitter and send us a direct message with your email.
+Get an invitation ! Find a friend who is already invited or follow [@online_en](https://twitter.com/online_en) on Twitter and send us a direct message with your email.
 
 Invitations are validated progressively so that we can raise our capacity
 accordingly.
