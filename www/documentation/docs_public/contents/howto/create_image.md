@@ -4,9 +4,10 @@ template: article.jade
 position: 5
 ---
 
-This page shows you how to create an image from a server.
+This page shows how to create an image from a server.
 
 > <strong>Requirements</strong>
+>
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
 - You have configured your [SSH Key](/howto/ssh_keys.html)
 - You have a running [server](/howto/create_instance.html)
@@ -16,14 +17,14 @@ This page shows you how to create an image from a server.
 Images allow you to create series of servers with predefined configuration.<br/>
 For instance, you can prepare to scale your serving capacity with a frontend image for an Apache server.
 
-Potential uses
+Some potential uses:
 
 - Automate Server Builds
 - Create a Software Testing Environment
 
 There are three steps to create an Image:
 
-- Powered off your server
+- Power off your server
 - Create an Image
 - Verify Image creation
 

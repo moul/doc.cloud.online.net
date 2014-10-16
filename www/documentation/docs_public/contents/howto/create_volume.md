@@ -4,9 +4,10 @@ template: article.jade
 position: 3
 ---
 
-This page shows you how to attach and detach additional volumes to an existing server.
+This page shows how to attach and detach additional volumes to an existing server.
 
 > <strong>Requirements</strong>
+>
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
 - You have configured your [SSH Key](/howto/ssh_keys.html)
 - You have a [server](/howto/create_instance.html)
