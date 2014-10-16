@@ -12,7 +12,7 @@ This page shows how to create a LEMP stack Image.
 - You have configured your [SSH Key](/howto/ssh_keys.html)
 
 LEMP stack is a group of open source software to get all tools to run a web application.
-The acronym stands for Linux, nginx (pronounced "engine-x"), MySQL, and PHP. 
+The acronym stands for Linux, nginx (pronounced "engine-x"), MySQL, and PHP.
 
 The image you will create would allow you to create servers with predefined configuration for the LEMP stack.<br />
 For instance, you will be able to deploy an infinity of servers serving the LEMP stack in seconds.
@@ -165,9 +165,9 @@ Click the name of your Snapshot and rename the Snapshot to `LEMP Snapshot`.
 Select the Snapshot and click the "Create an image from Snapshot" button.
 Set your image name as `LEMP` and validate.
 
-Create a new server using the `LEMP` Image and power it on. 
+Create a new server using the `LEMP` Image and power it on.
 
 ![New LEMP server](../../images/new_lemp_server.png "New LEMP server")
 
 Once your server is started, it contains the LEMP stack as you configured it.<br />
-You now can deploy an infinity of servers using this Image and serving the LEMP stack in seconds.
+You now can deploy an infinity of servers using the LEMP stack in seconds.
