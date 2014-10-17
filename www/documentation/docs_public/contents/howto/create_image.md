@@ -47,15 +47,15 @@ In the Control Panel, click "Snapshot" in the compute section.
 
 ### Step 1 - Create an Image from a volume snapshot
 
-On the page you land, are displayed the list of your snapshots.
+The page you land on contains the list of your snapshosts.
 
 ![Snapshots list](../../images/create_image_from_snapshot.png "Snapshots list")
 
-Select the snapshot to use for create an Image and click "Image from snapshot" button
+Select the snapshot to use to create an Image and click "Image from snapshot" button.
 
 ### Step 2 - Image creation
 
-You are now asked to give a name to your Image
+You are now asked to give a name to your Image.
 
 ![Create new Image](../../images/create_image.png "Create new Image")
 
@@ -63,14 +63,14 @@ Click the "Create Image" buttons, your Image is now ready to use.
 
 ### Step 3 - Verify Image creation
 
-In the Compute section of the console click "Images". Your new Image should be present on Images list.
+In the Compute section of the console click "Images". Your new Image should be present in the Images list.
 
 ![Image details](../../images/image_details.png "Image details")
 
 ## Create a server from your own image
 
-In the previous steps, we create a new Image.
-We will create a new server based on the Image we take previously.
+In the previous steps, we created a new Image.
+We will create a new server based on the Image we previously created.
 
 In the Control Panel, click the "Create Server" button.
 
@@ -81,11 +81,11 @@ You will land on the server-creation page where you must input basic information
 ### Step 2 - Choose your Image
 
 In the Image section click the Images tab.
-Select the Image you take previously from the list below.
+Select the Image you created previously from the list below.
 
 ### Step 3 - Create your server
 
 Click the "Create Server" button. This action starts your server. In a few seconds, your server will be ready to use.
 
-The running server will be a template from your image.
+The running server will be an exact copy of your Image.
 
