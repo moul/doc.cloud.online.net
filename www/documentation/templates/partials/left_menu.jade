@@ -1,4 +1,5 @@
 div(role="navigation").col-xs-12.col-sm-3.sidebar-offcanvas
+
 	- each val, key in locals.menu
 		- if (contents[key] && _.isString(val))
 			div.list-group
@@ -19,3 +20,7 @@ div(role="navigation").col-xs-12.col-sm-3.sidebar-offcanvas
 						- else
 							a(href=sub_item_v.url).list-group-item.item-doc #{sub_item_v.title}
 
+//	- if (page.metadata.title == "Community")
+//		a(href="/community.html").faqbtn.list-group-item.active.active-url Community
+//	- else
+//		a(href="/community.html").faqbtn.list-group-item Community
