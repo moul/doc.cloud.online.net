@@ -21,7 +21,7 @@ resources. You can get your own Linux server on SSD in 44 seconds and with only 
 ## What makes Online labs cloud different ?
 
 In our cloud, servers are dedicated. You have dedicated, constant and
-predictible performances you can rely on. We are not speaking about dedicated
+predictable performances you can rely on. We are not speaking about dedicated
 hosting, it comes with all the benefits of the cloud!
 
 Our platform provides:
