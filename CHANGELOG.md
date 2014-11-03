@@ -1,9 +1,9 @@
 ChangeLog
 =========
 
-0.2.13 (unreleased)
+0.2.13 (2014-11-03)
 ------------------
-- No entry
+- New documentation (kernel, applications, bootscripts)
 
 0.2.12 (2014-10-28)
 ------------------
