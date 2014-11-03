@@ -39,6 +39,7 @@ The response is an object that has a key called `server`. This key contain a sta
 
         {
           "server": {
+            "bootscript": null,
             "dynamic_public_ip": false,
             "id": "3cb18e2d-f4f7-48f7-b452-59b88ae8fc8c",
             "image": {
@@ -82,6 +83,7 @@ The response is an object that has a key called `servers`. This key contain an a
         {
           "servers": [
             {
+              "bootscript": null,
               "dynamic_public_ip": false,
               "id": "741db378-6b87-46d4-a8c5-4e46a09ab1f8",
               "image": {
@@ -113,6 +115,7 @@ The response is an object that has a key called `servers`. This key contain an a
               }
             },
             {
+              "bootscript": null,
               "dynamic_public_ip": false,
               "id": "0e9f85af-b6aa-401e-a00d-484f832c5024",
               "image": {
@@ -163,6 +166,7 @@ The response is an object that has a key called `server`. This key contain a sta
 
         {
           "server": {
+            "bootscript": null,
             "dynamic_public_ip": false,
             "id": "741db378-6b87-46d4-a8c5-4e46a09ab1f8",
             "image": {
@@ -206,6 +210,7 @@ The response is an object that has a key called `server`. This key contain a sta
     + Body
 
         {
+          "bootscript": null,
           "dynamic_public_ip": false, 
           "id": "741db378-6b87-46d4-a8c5-4e46a09ab1f8",
           "image": {
@@ -243,6 +248,7 @@ The response is an object that has a key called `server`. This key contain a sta
 
         {
           "server": {
+            "bootscript": null,
             "dynamic_public_ip": false,
             "id": "741db378-6b87-46d4-a8c5-4e46a09ab1f8",
             "image": {
