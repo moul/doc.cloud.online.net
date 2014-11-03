@@ -1,6 +1,9 @@
 ChangeLog
 =========
 
+0.2.14 (unreleased)
+------------------
+
 0.2.13 (2014-11-03)
 ------------------
 - New documentation (kernel, applications, bootscripts)
