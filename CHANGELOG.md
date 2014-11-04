@@ -1,6 +1,10 @@
 ChangeLog
 =========
 
+0.2.14 (2014-11-04)
+------------------
+- New documentation (kernel, applications, bootscripts)
+
 0.2.13 (2014-11-03)
 ------------------
 - New documentation (kernel, applications, bootscripts)

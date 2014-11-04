@@ -12,24 +12,29 @@ This page shows you how to spawn an Owncloud application with Cloud Storage.
 - You have configured your [SSH Key](/howto/ssh_keys.html)
 - You have generate your [API Token](/howto/credentials.html)
 
+> <strong>The Owncloud application comes with the following packages</strong> :
+```
+mysql-server,owncloud,pwgen
+```
+
+
 With ownCloud you can sync & share your files, calendar, contacts and more.
 Access your data from all your devices, on an open platform you can extend and modify.
 
 There are two steps to deploy the Owncloud application
 
-- [Name & tag your server](/applications/owncloud.html#step-1-name-tag-your-server)
-- [Choose the Owncloud application](/applications/owncloud.html#step-2-choose-the-owncloud-application)
-- [Start the server](/applications/owncloud.html#step-3-start-your-server)
-- [Access your server URL](/applications/owncloud.html#step-4-access-your-server-url)
-- [Configure Owncloud](/applications/owncloud.html#step-5-configure-owncloud)
-- [Login and start using Owncloud](/applications/owncloud.html#step-6-login-and-start-using-owncloud)
-- [Configure Owncloud with Cloud Storage](/applications/owncloud.html#step-7-configure-owncloud-with-cloud-storage)
+- [Deploy Owncloud](/applications/owncloud.html#step-1-deploy-owncloud)
+- [Configure Owncloud](/applications/owncloud.html#step-2-configure-owncloud)
+- [Login and start using Owncloud](/applications/owncloud.html#step-3-login-and-start-using-owncloud)
+- [Configure Owncloud with Cloud Storage](/applications/owncloud.html#step-4-configure-owncloud-with-cloud-storage)
+
+
 
 Before starting, click the "Create Server" button in the control panel.
 
 ![Control Panel](../../images/dashboard.png "Control Panel")
 
-### Step 1 - Name & tag your server
+### Step 1 - Deploy Owncloud
 
 You will land on the server-creation page where you must input basic information for your server:
 
@@ -38,24 +43,18 @@ You will land on the server-creation page where you must input basic information
 
 ![Create server basic information](../../images/server_basic_information.png "Create server basic information")
 
-### Step 2 - Choose the Owncloud application
 
-After inputting your server basic information, you have to choose a starting application for your server.
-
+After inputting your server basic information, you have to choose a starting application for your server.<br />
 On the Applications tab, select Owncloud. The server will be created with a ready to use Owncloud.
 
-![Create server image](../../images/server_image.png "Create server image")
-
-### Step 3 - Start your server
 
 Click the "Create Server" button. This action starts your server.
 In a few seconds, the Owncloud application will be ready to use.
 
-### Step 4 - Access your server URL
+### Step 2 - Configure Owncloud
 
 When your server is running, you can see the server's IP address in the server list on the control panel. Copy this IP address and paste it in your favorite browser.
 
-### Step 5 - Configure Owncloud
 
 You land on the Owncloud configuration page.
 
@@ -63,7 +62,7 @@ You land on the Owncloud configuration page.
 
 Fill-in the admin account with your username and password.
 
-Owncloud uses a MySQL database. To retrieve the database credentials, connect your server using a terminal `ssh root@<your_server_ip>`.
+Owncloud uses a MySQL database. To retrieve the database credentials, connect your server using a terminal `ssh root@<your_server_ip>`.<br />
 If you are not familiar with ssh, you can read the following documentation: [Log-into your server](/howto/create_instance.html#log-into-your-server)
 
 In the root directory of your server, execute the following command `cat .my.cnf`. It will display your database credential (user and password).
@@ -75,15 +74,15 @@ user = root
 password = chalapookeechooquailaizaexareiyughieriofoo
 ```
 
-In the Owncloud setup, fill-in the database user and password  you retrieve from the `.my.cnf` file. Set the database name to `owncloud` and click the "Finish Setup" button
+In the Owncloud setup, fill-in the database user and password you retrieve from the `.my.cnf` file.<br />Set the database name to `owncloud` and click the "Finish Setup" button.
 
-### Step 6 - Login and start using Owncloud
+### Step 3 - Login and start using Owncloud
 
 Owncloud is now installed and ready to use.
 
 ![Owncloud home](../../images/owncloud_home.png "Owncloud home")
 
-### Step 7 - Configure Owncloud with Cloud Storage
+### Step 4 - Configure Owncloud with Cloud Storage
 
 Before starting, click the "Storage" button in the Online Labs control panel.
 You will land on the Storage page.

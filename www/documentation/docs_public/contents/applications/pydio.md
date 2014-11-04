@@ -12,25 +12,29 @@ This page shows you how to spawn a Pydio application with Cloud Storage.
 - You have configured your [SSH Key](/howto/ssh_keys.html)
 - You have generate your [API Token](/howto/credentials.html)
 
+> <strong>The Pydio application comes with the following packages</strong> :
+```
+libapache2-mod-php5,php5-cgi,php5,apache2,php5-gd,php5-mcrypt,php5-cli,php5-mysqlnd,pwgen,php5-curl,mysql-server
+```
+
 Pydio is an open source software solution for file sharing and synchronization. With intuitive user interfaces (web / mobile / desktop).
 
 The Pydio application will store files in our Cloud Storage thereby you have an highly available and unilimited storage.
 
 There are two steps to deploy the Pydio application
 
-- [Name & tag your server](/applications/pydio.html#step-1-name-tag-your-server)
-- [Choose the Pydio application](/applications/pydio.html#step-2-choose-the-pydio-application)
-- [Start the server](/applications/pydio.html#step-3-start-your-server)
-- [Access your server URL](/applications/pydio.html#step-4-access-your-server-url)
-- [Configure Pydio](/applications/pydio.html#step-5-configure-pydio)
-- [Login and start using Pydio](/applications/pydio.html#step-6-login-and-start-using-pydio)
-- [Configure Pydio with Cloud Storage](/applications/pydio.html#step-7-configure-pydio-with-cloud-storage)
+- [Deploy Pydio](/applications/pydio.html#step-1-deploy-pydio)
+- [Configure Pydio](/applications/pydio.html#step-2-configure-pydio)
+- [Login and start using Pydio](/applications/pydio.html#step-3-login-and-start-using-pydio)
+- [Configure Pydio with Cloud Storage](/applications/pydio.html#step-4-configure-pydio-with-cloud-storage)
+
+
+
+### Step 1 - Deploy Pydio
 
 Before starting, click the "Create Server" button in the control panel.
 
 ![Control Panel](../../images/dashboard.png "Control Panel")
-
-### Step 1 - Name & tag your server
 
 You will land on the server-creation page where you must input basic information for your server:
 
@@ -39,24 +43,17 @@ You will land on the server-creation page where you must input basic information
 
 ![Create server basic information](../../images/server_basic_information.png "Create server basic information")
 
-### Step 2 - Choose the Pydio application
 
-After inputting your server basic information, you have to choose a starting application for your server.
-
+After inputting your server basic information, you have to choose a starting application for your server.<br />
 On the Applications tab, select Pydio. The server will be created with a ready to use Pydio.
-
-![Create server image](../../images/server_image.png "Create server image")
-
-### Step 3 - Start your server
 
 Click the "Create Server" button. This action starts your server.
 In a few seconds, the Pydio application will be ready to use.
 
-### Step 4 - Access your server URL
+### Step 2 - Configure Pydio
 
 When your server is running, you can see the server's IP address in the server list on the control panel. Copy this IP address and paste it in your favorite browser.
 
-### Step 5 - Configure Pydio
 
 You land on the Pydio diagnostic page. All checks are "OK" except the SSL encryption which is disabled.
 
@@ -70,14 +67,13 @@ You are asked to fill-in:
 
 ![Pydio admin](../../images/pydio_admin.png "Pydio admin")
 
-
 #### The global options
 
 ![Pydio options](../../images/pydio_global_options.png "Pydio options")
 
 #### The configuration storage
 
-Pydio uses a MySQL database as configuration storage. To retrieve the database credentials, connect your server using a terminal `ssh root@<your_server_ip>`.
+Pydio uses a MySQL database as configuration storage. To retrieve the database credentials, connect your server using a terminal `ssh root@<your_server_ip>`.<br />
 If you are not familiar with ssh, you can read the following documentation: [Log-into your server](/howto/create_instance.html#log-into-your-server)
 
 In the root directory of your server, execute the following command `cat .my.cnf`. It will display your database credential (user and password).
@@ -93,13 +89,13 @@ In the Pydio setup wizard, fill-in the database user and password you retrieve f
  
 ![Pydio storage](../../images/pydio_storage.png "Pydio storage")
 
-### Step 6 - Login and start using Pydio
+### Step 3 - Login and start using Pydio
 
 Pydio is now installed and ready to use. Input the username and password you set during the configuration and login
 
 ![Pydio home](../../images/pydio_home.png "Pydio home")
 
-### Step 7 - Configure Pydio with Cloud Storage
+### Step 4 - Configure Pydio with Cloud Storage
 
 Before starting, click the "Storage" button in the Online Labs control panel.
 You will land on the Storage page.
