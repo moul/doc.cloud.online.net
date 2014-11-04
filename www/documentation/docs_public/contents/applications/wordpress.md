@@ -1,5 +1,5 @@
 ---
-title: Wordpress in 1 minute
+title: Wordpress
 template: article.jade
 position: 1
 ---
@@ -10,6 +10,10 @@ This page shows you how to spawn a Wordpress application in seconds.
 >
 - You have an account and are logged into [cloud.online.net](//cloud.online.net)
 
+> <strong>The Wordpress application comes with the following packages</strong> :
+```
+nginx,mysql-server,php5,php5-cli,php5-fpm,php5-mysql,php5-gd,php5-mcrypt,pwgen
+```
 
 WordPress is a popular, free and open source blogging tool and a content management system (CMS) based on PHP and MySQL.
 
@@ -17,18 +21,15 @@ Working with the Wordpress application will significantly save you time and effo
 
 There are six steps to deploy the Wordpress application
 
-- [Name & tag your server](/howto/wordpress.html#step-1-name-tag-your-server)
-- [Choose the Wordpress application](/howto/wordpress.html#step-2-choose-the-wordpress-application)
-- [Start the server](/howto/wordpress.html#step-3-start-your-server)
-- [Access your server URL](/howto/wordpress.html#step-4-access-your-server-url)
-- [Configure your blog](/howto/wordpress.html#step-5-configure-your-wordpress)
-- [Login and start using Wordpress](/howto/wordpress.html#step-6-login-and-start-using-wordpress)
+- [Deploy Wordpress](/applications/wordpress.html#step-1-deploy-wordpress)
+- [Configure Wordpress](/applications/wordpress.html#step-2-configure-wordpress)
+- [Login and start using Wordpress](/applications/wordpress.html#step-3-login-and-start-using-wordpress)
+
+### Step 1 - Deploy Wordpress
 
 Before starting, click the "Create Server" button in the control panel.
 
 ![Control Panel](../../images/dashboard.png "Control Panel")
-
-### Step 1 - Name & tag your server
 
 You will land on the server-creation page where you must input basic information for your server:
 
@@ -37,24 +38,15 @@ You will land on the server-creation page where you must input basic information
 
 ![Create server basic information](../../images/server_basic_information.png "Create server basic information")
 
-### Step 2 - Choose the Wordpress application
-
-After inputting your server basic information, you have to choose a starting application for your server.
-
+After inputting your server basic information, you have to choose a starting application for your server.<br />
 On the Applications tab, select Wordpress. The server will be created with a ready to use wordpress.
-
-![Create server image](../../images/server_image.png "Create server image")
-
-### Step 3 - Start your server
 
 Click the "Create Server" button. This action starts your server.
 In a few seconds, the Wordpress application will be ready to use.
 
-### Step 4 - Access your server URL
+### Step 2 - Configure Wordpress
 
 When your server is running, you can see the server's IP address in the server list on the control panel. Copy this IP address and paste it in your favorite browser.
-
-### Step 5 - Configure your Wordpress
 
 On the page you land, fill-in the wordpress information and click the "Install Wordpress" button.
 
@@ -62,7 +54,7 @@ On the page you land, fill-in the wordpress information and click the "Install W
 
 The installation takes few seconds.
 
-## Step 6 - Login and start using Wordpress
+## Step 3 - Login and start using Wordpress
 
 On the login page, input the username and password you set previously and click the "Log In" button
 
