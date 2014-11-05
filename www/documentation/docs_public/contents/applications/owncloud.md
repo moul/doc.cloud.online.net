@@ -1,10 +1,10 @@
 ---
-title: Owncloud with Cloud Storage
+title: Owncloud with Object Storage
 template: article.jade
 position: 2
 ---
 
-This page shows you how to spawn an Owncloud application with Cloud Storage.
+This page shows you how to spawn an Owncloud application with Object Storage.
 
 > <strong>Requirements</strong>
 >
@@ -26,7 +26,7 @@ There are two steps to deploy the Owncloud application
 - [Deploy Owncloud](/applications/owncloud.html#step-1-deploy-owncloud)
 - [Configure Owncloud](/applications/owncloud.html#step-2-configure-owncloud)
 - [Login and start using Owncloud](/applications/owncloud.html#step-3-login-and-start-using-owncloud)
-- [Configure Owncloud with Cloud Storage](/applications/owncloud.html#step-4-configure-owncloud-with-cloud-storage)
+- [Configure Owncloud with Object Storage](/applications/owncloud.html#step-4-configure-owncloud-with-cloud-storage)
 
 
 
@@ -82,7 +82,7 @@ Owncloud is now installed and ready to use.
 
 ![Owncloud home](../../images/owncloud_home.png "Owncloud home")
 
-### Step 4 - Configure Owncloud with Cloud Storage
+### Step 4 - Configure Owncloud with Object Storage
 
 Before starting, click the "Storage" button in the Online Labs control panel.
 You will land on the Storage page.
@@ -91,10 +91,10 @@ The first thing to do is to create a new bucket for Owncloud to store files insi
 A bucket name must contain only alphanumeric and lowercase characters
 
 Then, click on the "S3 Credentials" button.<br/>
-The credentials required to access Cloud Storage are displayed:
+The credentials required to access Object Storage are displayed:
 
-- `host_base`  base url to access Cloud Storage service
-- `access_key` the access key required for Cloud Storage 
+- `host_base`  base url to access Object Storage service
+- `access_key` the access key required for Object Storage 
 - `secret_key` the API Token you generated previously.
 
 ![S3 Crendentials](../images/s3.png "S3-credentials")
@@ -105,7 +105,7 @@ On the bottom of the left panel click the "Apps" button. Select `External storag
 ![Owncloud external storage](../images/owncloud_external_storage.png "Owncloud external storage")
 
 
-On the admin panel, create a new folder for Cloud Storage and configure it
+On the admin panel, create a new folder for Object Storage and configure it
 
 ![Owncloud configure storage](../images/owncloud_configure_storage.png "Owncloud configure storage")
 
@@ -119,7 +119,7 @@ Select "Amazon S3" as External storage and fill-in with your S3 credential.
 - Hostname: `host_base`
 - Enable SSL
 
-You now have a new foler using Cloud Storage that allow you to have an highly available and unilimited storage.
+You now have a new foler using Object Storage that allow you to have an highly available and unilimited storage.
 
 
 
