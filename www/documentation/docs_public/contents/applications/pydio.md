@@ -1,10 +1,10 @@
 ---
-title: Pydio with Cloud Storage
+title: Pydio with Object Storage
 template: article.jade
 position: 2
 ---
 
-This page shows you how to spawn a Pydio application with Cloud Storage.
+This page shows you how to spawn a Pydio application with Object Storage.
 
 > <strong>Requirements</strong>
 >
@@ -19,14 +19,14 @@ libapache2-mod-php5,php5-cgi,php5,apache2,php5-gd,php5-mcrypt,php5-cli,php5-mysq
 
 Pydio is an open source software solution for file sharing and synchronization. With intuitive user interfaces (web / mobile / desktop).
 
-The Pydio application will store files in our Cloud Storage thereby you have an highly available and unilimited storage.
+The Pydio application will store files in our Object Storage thereby you have an highly available and unilimited storage.
 
 There are two steps to deploy the Pydio application
 
 - [Deploy Pydio](/applications/pydio.html#step-1-deploy-pydio)
 - [Configure Pydio](/applications/pydio.html#step-2-configure-pydio)
 - [Login and start using Pydio](/applications/pydio.html#step-3-login-and-start-using-pydio)
-- [Configure Pydio with Cloud Storage](/applications/pydio.html#step-4-configure-pydio-with-cloud-storage)
+- [Configure Pydio with Object Storage](/applications/pydio.html#step-4-configure-pydio-with-cloud-storage)
 
 
 
@@ -95,7 +95,7 @@ Pydio is now installed and ready to use. Input the username and password you set
 
 ![Pydio home](../../images/pydio_home.png "Pydio home")
 
-### Step 4 - Configure Pydio with Cloud Storage
+### Step 4 - Configure Pydio with Object Storage
 
 Before starting, click the "Storage" button in the Online Labs control panel.
 You will land on the Storage page.
@@ -104,10 +104,10 @@ The first thing to do is to create a new bucket for Pydio to store files inside.
 A bucket name must contain only alphanumeric and lowercase characters
 
 Then, click on the "S3 Credentials" button.<br/>
-The credentials required to access Cloud Storage are displayed:
+The credentials required to access Object Storage are displayed:
 
-- `host_base`  base url to access Cloud Storage service
-- `access_key` the access key required for Cloud Storage 
+- `host_base`  base url to access Object Storage service
+- `access_key` the access key required for Object Storage 
 - `secret_key` the API Token you generated previously.
 
 ![S3 Crendentials](../images/s3.png "S3-credentials")
@@ -124,7 +124,7 @@ When you have filled all inputs, submit.
 
 ![Pydio settings](../images/pydio_settings.png "Pydio settings")
 
-You now have a new workspace using Cloud Storage that allow you to have an highly available and unilimited storage.
+You now have a new workspace using Object Storage that allow you to have an highly available and unilimited storage.
 
 
 ![Pydio cs](../images/pydio_cs.png "Pydio cs")
