@@ -106,9 +106,17 @@ Well done, you are now logged into your server!
 
 On Windows, you will need a small application named PuTTy, an SSH client.
 You can download putty [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
-Once you have installed PuTTY, just start the program.
 
-Fill the "Hostname" field with your server's IP address and click "Connect".
+Once you have downloaded PuTTY, just start the program.
+
+- Fill the "Hostname" field with your server's IP address
+- In the left-side menu, under Connection, expand the SSH sub-category
+- Select the Auth sub-category and click the "Browse" button
+- Select the private key file you generated previously
+- Return in the Session category and click the "Open" button
+
+![Import your SSH key on Putty](../../images/puttygen-3.png "Import your SSH key on Putty")
+
 You are now logged into your server from Windows!
 
 ## Mount additional volumes
