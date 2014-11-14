@@ -93,6 +93,3 @@ You now must save the content of the public Key in the Control Panel.
 
 
 You are now ready to [provision your first server](/howto/create_instance.html)
-
-
-
