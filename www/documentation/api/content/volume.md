@@ -14,7 +14,7 @@ The response is an object that has a key called `volume`. This key contain a sta
     + name (required, string, `volume-0-3`)... The volume name
     + organization (required, string, `000a115d-2852-4b0a-9ce8-47f1134ba95a`)... Unique organization identifier
     + volume_type (required, string, `l_hdd`)... The volume type l_hdd or l_ssd
-    + size (required, integer, `10000000000`) The volume size
+    + size (required, integer, `10000000000`)... The volume size
 
 + Request (application/json)
 
