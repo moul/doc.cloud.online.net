@@ -1,6 +1,13 @@
-# doc.cloud.online.net
+# Online Labs documentation
 
-## Install dependencies
+This repository contains the source for Online Labs documentation.
+
+- Documentation files are in `doc.cloud.online.net/www/documentation/docs_public/contents` and use Markdown.
+- API Documentation files are in `doc.cloud.online.net/www/documentation/api/contents` and use [API Blueprint](https://github.com/apiaryio/api-blueprint).
+
+## Getting started
+
+### Install dependencies
 ```
 cd www
 npm install
@@ -8,14 +15,14 @@ npm install -g grunt-cli aglio
 bower install
 ```
 
-## Edit public documentation (livereload)
+### Edit public documentation (livereload)
 ```
 cd www/utils/bin
 node wintersmit_docs_public.js
 browser : http://localhost:8080
 ```
 
-## Edit api documentation (livereload)
+### Edit api documentation (livereload)
 ```
 cd www/documentation/api
 aglio -i <input-file>.md -s
@@ -31,3 +38,4 @@ Run:
 Build:
 
 `docker build -t onlinelabs/doc.cloud.online.net .`
+
