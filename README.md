@@ -2,8 +2,8 @@
 
 This repository contains the source for Online Labs documentation.
 
-- Documentation files are in `doc.cloud.online.net/www/documentation/docs_public/contents` and use Markdown.
-- API Documentation files are in `doc.cloud.online.net/www/documentation/api/contents` and use [API Blueprint](https://github.com/apiaryio/api-blueprint).
+- Documentation files are [here](https://github.com/online-labs/doc.cloud.online.net/tree/master/www/documentation/docs_public/contents) and use Markdown.
+- API Documentation files are [here](https://github.com/online-labs/doc.cloud.online.net/tree/master/www/documentation/api/content) and use [API Blueprint](https://github.com/apiaryio/api-blueprint).
 
 ## Getting started
 
