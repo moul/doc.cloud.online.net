@@ -21,12 +21,3 @@ cd www/documentation/api
 aglio -i <input-file>.md -s
 browser : http://localhost:3000
 ```
-
-## Generate static files for deployment
-```
-grunt
-```
-
-- API static files are in dist/api
-
-- Public documentation static files are in dist/docs_public/
