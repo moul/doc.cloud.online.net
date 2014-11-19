@@ -21,3 +21,13 @@ cd www/documentation/api
 aglio -i <input-file>.md -s
 browser : http://localhost:3000
 ```
+
+## Docker
+
+Run:
+
+`docker run -it --rm -p 8080:8080 onlinelabs/doc.cloud.online.net`
+
+Build:
+
+`docker build -t onlinelabs/doc.cloud.online.net .`
