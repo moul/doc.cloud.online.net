@@ -89,7 +89,7 @@ When your server is running, you can see the server's IP address in the server l
 On a Mac or Linux computer, open your terminal program and in the shell just type the following command:
 
 ```
-john@localhost:~$ ssh root@<your_server_ip>
+john@localhost:~$ ssh -i ~/.ssh/rroot@<your_server_ip>
 ```
 
 Allow the connection to the host:
@@ -121,6 +121,8 @@ You are now logged into your server from Windows!
 
 ## Mount additional volumes
 
+### Format additional volumes
+
 If the new volume has never been formatted, you need to format the volume using `mkfs` before you can mount it.
 
 For instance, the following command creates an `ext4` file system on the volume:
@@ -149,7 +151,9 @@ Creating journal (32768 blocks): done
 Writing superblocks and filesystem accounting information: done
 ```
 
-Then, to mount the device as /mnt/data, run the following commands:
+### Mount additional volumes manually
+
+To mount the device manually as /mnt/data, run the following commands:
 
 ```
 root@c1-X-Y-Z-T:~# mkdir -p /mnt/data
@@ -160,6 +164,38 @@ drwxr-xr-x 3 root root  4096 Jan  1 00:07 .
 drwxr-xr-x 3 root root  4096 Jan  1 00:07 ..
 drwx------ 2 root root 16384 Jan  1 00:07 lost+found
 ```
+
+### Mount additional volumes with fstab (automatic mount)
+
+To mount additional volumes automatically, you have to reference your devices in the `/etc/fstab` file.<br />
+`/etc/fstab` references all devices to mount when they are connected.
+
+For instance to mount `/dev/nbd1` device automatically to the `/mnt/data` directory, the `/etc/fstab` has the following content:
+
+```
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+
+/dev/nbd1 /mnt/data auto  defaults,nobootwait,errors=remount-ro 0 2
+```
+
+The configuration above mounts the /dev/nbd1 device to the `/mnt/data` directory with fstab default option and `nobootwait`.<br />
+`nobootwait` is set to prevent boot problems in the case your volume is not yet downloaded to the local storage.
+
+Create the /mnt/data directory if it doesn't exist.
+
+```
+root@c1-X-Y-Z-T:~# mkdir -p /mnt/data
+```
+
+To check devices are mounted properly, run the `mount -a` command to mount all devices.
+
+<strong>Important</strong>: On the next server boot, your volumes will be mount automatically.
 
 Now run the `df -h` command, this command will list all your devices and where they are mounted:
 
