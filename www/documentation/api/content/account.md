@@ -28,7 +28,7 @@ The response is an object that has a key called `token`. This key contain a stan
 + Response 201
 
     + Headers (application/json)
-           
+
             location: https://account.cloud.online.net/tokens/9de8f869-c58e-4aa3-9208-2d4eaff5fa20
 
     + Body
@@ -39,7 +39,6 @@ The response is an object that has a key called `token`. This key contain a stan
                     "expires": null,
                     "id": "9de8f869-c58e-4aa3-9208-2d4eaff5fa20",
                     "inherits_user_perms": true,
-                    "permissions": [],
                     "roles": {
                       "organization": null,
                       "role": null
@@ -64,7 +63,6 @@ The response is an object that has a key called `tokens`. This key contain an ar
                         "expires": null,
                         "id": "4e5570fb-c854-5349-979f-9f51d608d34z",
                         "inherits_user_perms": true,
-                        "permissions": [],
                         "roles": {
                             "organization": null,
                             "role": null
@@ -76,7 +74,6 @@ The response is an object that has a key called `tokens`. This key contain an ar
                         "expires": "2014-05-20T14:05:06.393875+00:00",
                         "id": "654c95b0-2cf5-41a3-b3cc-733ffba4b4b7",
                         "inherits_user_perms": true,
-                        "permissions": [],
                         "roles": {
                             "organization": null,
                             "role": null
@@ -107,7 +104,6 @@ The response is an object that has a key called `token`. This key contain a stan
                 "expires": "2014-05-20T14:05:06.393875+00:00",
                 "id": "654c95b0-2cf5-41a3-b3cc-733ffba4b4b7",
                 "inherits_user_perms": true,
-                "permissions": [],
                 "roles": {
                     "organization": null,
                     "role": null
@@ -131,7 +127,6 @@ The response is an object that has a key called `token`. This key contain a stan
                 "expires": "2014-05-22T11:18:07.786841+00:00",
                 "id": "654c95b0-2cf5-41a3-b3cc-733ffba4b4b7",
                 "inherits_user_perms": true,
-                "permissions": [],
                 "roles": {
                     "organization": null,
                     "role": null
