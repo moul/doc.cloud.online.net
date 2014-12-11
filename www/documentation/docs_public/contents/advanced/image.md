@@ -18,11 +18,12 @@ The following procedure will create an Ubuntu based image from scratch.
 When you create a server you have to select a base image.
 If you create your own base image, you can customize more deeply.
 
-There are three steps to create a new image from scratch:
+There are four steps to create a new image from scratch:
 
 - [Create the root filesystem](/advanced/image.html#step-1-create-the-root-filesystem)
-- [Create an image from a snapshot](/advanced/image.html#step-4-create-an-image-from-snapshot)
-- [Create a new server with your image](/advanced/image.html#step-5-create-a-new-server-with-your-image)
+- [Create a snapshot](/advanced/image.html#step-2-create-a-snapshot)
+- [Create an image from a snapshot](/advanced/image.html#step-3-create-an-image-from-snapshot)
+- [Create a new server with your image](/advanced/image.html#step-4-create-a-new-server-with-your-image)
 
 ### Step 1 - Create the root filesystem
 
@@ -183,7 +184,7 @@ cd image-helloworld
 It is composed of two files:
 
 * a `Makefile`, which contains variables describing your image (version, name, title, description, URL)
-* a `Dockerfile`, which tells how your image is built ([Dockerfile Reference](https://docs.docker.com/reference/builder/))
+* a `Dockerfile`, which tells how your image is built (see the [Dockerfile Reference](https://docs.docker.com/reference/builder/))
 
 The image can then be built on `/dev/nbd1`:
 
@@ -191,7 +192,7 @@ The image can then be built on `/dev/nbd1`:
 make install_on_disk
 ```
 
-### Step 3 - Create a snapshot
+### Step 2 - Create a snapshot
 
 At this point the extra volume contains a valid Ubuntu root filesystem.
 We must now transform this volume into a snapshot.
@@ -201,12 +202,12 @@ Click the "Snapshot" button on the extra volume (in our example "volume_to_backu
 
 ![Volume snapshot](../../images/volume_snapshot.png "Volume snapshot")
 
-### Step 4 - Create an image from snapshot
+### Step 3 - Create an image from snapshot
 
 In the Control Panel, click "Volumes" in the compute section.<br/>
 On this page, select the snapshot containing your rootfs and click "Create an image from snapshot".
 
-### Step 5 - Create a new server with your image
+### Step 4 - Create a new server with your image
 
 Create a new server and choose your image in "My images" section.
 
