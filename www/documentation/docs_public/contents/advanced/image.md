@@ -189,7 +189,7 @@ It is composed of two files:
 The image can then be built on `/dev/nbd1`:
 
 ```
-make install_on_disk
+make install
 ```
 
 ### Step 2 - Create a snapshot
