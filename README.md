@@ -1,5 +1,7 @@
 # Online Labs documentation
 
+[![GuardRails badge](https://badges.production.guardrails.io/moul/doc.cloud.online.net.svg)](https://www.guardrails.io)
+
 This repository contains the source for Online Labs documentation.
 
 - Documentation files are [here](https://github.com/online-labs/doc.cloud.online.net/tree/master/www/documentation/docs_public/contents) and use Markdown.
